@@ -30,13 +30,14 @@
         {
             this.SuspendLayout();
             // 
-            // Form1
+            // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(589, 332);
             this.Name = "Main";
-            this.Text = "Main";
+            this.Style = MetroFramework.MetroColorStyle.Silver;
+            this.Text = "Rem\'s Tasty Threats";
             this.ResumeLayout(false);
 
         }
