@@ -129,5 +129,20 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tick_box_24px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\trash_24px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Done_24px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Done_24px1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Done_22px.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
