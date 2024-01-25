@@ -26,7 +26,6 @@ namespace reme
 
         private void InitializeDataGridView()
         {
-
             // Set up the DataGridView columns and bind it to the data list
             // Load data from JSON file
             if (File.Exists("data.json"))
@@ -131,5 +130,44 @@ namespace reme
                 MessageBox.Show("Please select a row to update.");
             }
         }
+
+        private void button_Export_Click(object sender, EventArgs e)
+        {
+            using (FolderBrowserDialog folderBrowser = new FolderBrowserDialog())
+            {
+                if (folderBrowser.ShowDialog() == DialogResult.OK)
+                {
+                    ExportDataToCSV(folderBrowser.SelectedPath);
+                }
+            }
+        }
+
+        private void ExportDataToCSV(string filePath)
+        {
+            StringBuilder csvContent = new StringBuilder();
+
+            // Add header line
+            csvContent.AppendLine("ID,ITEM,PRICE");
+
+            // Add data lines
+            foreach (DataModel data in dataList)
+            {
+                csvContent.AppendLine($"{data.ID},{data.ITEM},{data.PRICE}");
+            }
+
+            // Append the current date to the filename
+            string currentDate = DateTime.Now.ToString("yyyyMMdd");
+            string filename = $"MENU_ITEMS_{currentDate}.csv";
+
+            // Combine the custom filepath and generated filename
+            string fullFilePath = Path.Combine(filePath, filename);
+
+            // Write the CSV content to the specified file
+            File.WriteAllText(fullFilePath, csvContent.ToString());
+
+            MessageBox.Show($"Data exported to CSV successfully!\nFile saved at: {fullFilePath}");
+        }
+
+
     }
 }
