@@ -51,8 +51,8 @@ namespace reme
                 // Create a new YourDataModel instance with auto-generated ID
                 DataModel newData = new DataModel
                 {
-                    ITEMS = item,
-                   PRICE = price
+                    ITEM = item,
+                    PRICE = price
                 };
 
                 // Add the new data to the existing list
@@ -77,6 +77,12 @@ namespace reme
 
         private void SaveDataToJson()
         {
+            // Update the IDs based on the current order in dataList
+            for (int i = 0; i < dataList.Count; i++)
+            {
+                dataList[i].ID = i + 1;
+            }
+
             // Serialize the data list to JSON
             string jsonData = JsonConvert.SerializeObject(dataList, Formatting.Indented);
 
@@ -117,7 +123,7 @@ namespace reme
                 int selectedIndex = GridOrderPreview.SelectedRows[0].Index;
 
                 // Populate text boxes with data from the selected row
-                textBox_Item.Text = dataList[selectedIndex].ITEMS.ToString();
+                textBox_Item.Text = dataList[selectedIndex].ITEM.ToString();
                 textBox_Price.Text = dataList[selectedIndex].PRICE.ToString();
             }
             else

@@ -148,5 +148,11 @@
   <ItemGroup>
     <None Include="Resources\Done_22px.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\update_file_22px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit_property_22px.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

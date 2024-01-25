@@ -10,7 +10,7 @@ namespace reme
     public class DataModel
     {
         public int ID { get; set; }
-        public string ITEMS { get; set; }
+        public string ITEM { get; set; }
         public int PRICE { get; set; }
         // Add other properties as needed
 

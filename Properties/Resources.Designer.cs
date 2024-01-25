@@ -93,6 +93,16 @@ namespace reme.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap edit_property_22px {
+            get {
+                object obj = ResourceManager.GetObject("edit_property_22px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap four_squares_48px {
             get {
                 object obj = ResourceManager.GetObject("four_squares_48px", resourceCulture);
@@ -116,6 +126,16 @@ namespace reme.Properties {
         internal static System.Drawing.Bitmap trash_24px {
             get {
                 object obj = ResourceManager.GetObject("trash_24px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap update_file_22px {
+            get {
+                object obj = ResourceManager.GetObject("update_file_22px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

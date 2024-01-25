@@ -28,14 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
             this.Border = new System.Windows.Forms.Panel();
-            this.button_Delete = new System.Windows.Forms.Button();
-            this.button_Save = new System.Windows.Forms.Button();
             this.GridOrderPreview = new MetroFramework.Controls.MetroGrid();
             this.textBox_Item = new System.Windows.Forms.TextBox();
             this.ITEM_label = new System.Windows.Forms.Label();
@@ -53,7 +51,10 @@
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
             this.panel9 = new System.Windows.Forms.Panel();
+            this.panel10 = new System.Windows.Forms.Panel();
             this.button_Update = new System.Windows.Forms.Button();
+            this.button_Delete = new System.Windows.Forms.Button();
+            this.button_Save = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.GridOrderPreview)).BeginInit();
             this.SuspendLayout();
             // 
@@ -65,92 +66,59 @@
             this.Border.Size = new System.Drawing.Size(2, 29);
             this.Border.TabIndex = 11;
             // 
-            // button_Delete
-            // 
-            this.button_Delete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(231)))), ((int)(((byte)(227)))));
-            this.button_Delete.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.button_Delete.FlatAppearance.BorderSize = 0;
-            this.button_Delete.Font = new System.Drawing.Font("Bahnschrift SemiCondensed", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_Delete.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.button_Delete.Image = global::reme.Properties.Resources.trash_24px;
-            this.button_Delete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button_Delete.Location = new System.Drawing.Point(717, 30);
-            this.button_Delete.Name = "button_Delete";
-            this.button_Delete.Size = new System.Drawing.Size(75, 26);
-            this.button_Delete.TabIndex = 13;
-            this.button_Delete.Text = "     DELETE";
-            this.button_Delete.UseVisualStyleBackColor = false;
-            this.button_Delete.Click += new System.EventHandler(this.button_Delete_Click);
-            // 
-            // button_Save
-            // 
-            this.button_Save.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(253)))), ((int)(((byte)(239)))));
-            this.button_Save.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button_Save.FlatAppearance.BorderSize = 0;
-            this.button_Save.Font = new System.Drawing.Font("Bahnschrift SemiCondensed", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_Save.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.button_Save.Image = global::reme.Properties.Resources.tick_box_24px;
-            this.button_Save.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button_Save.Location = new System.Drawing.Point(626, 30);
-            this.button_Save.Name = "button_Save";
-            this.button_Save.Size = new System.Drawing.Size(75, 26);
-            this.button_Save.TabIndex = 12;
-            this.button_Save.Text = "      SAVE";
-            this.button_Save.UseVisualStyleBackColor = false;
-            this.button_Save.Click += new System.EventHandler(this.button_Save_Click);
-            // 
             // GridOrderPreview
             // 
             this.GridOrderPreview.AllowUserToResizeColumns = false;
             this.GridOrderPreview.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(236)))), ((int)(((byte)(236)))));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(175)))), ((int)(((byte)(223)))), ((int)(((byte)(229)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            this.GridOrderPreview.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(236)))), ((int)(((byte)(236)))));
+            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(175)))), ((int)(((byte)(223)))), ((int)(((byte)(229)))));
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.GridOrderPreview.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle11;
             this.GridOrderPreview.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.GridOrderPreview.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
             this.GridOrderPreview.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.GridOrderPreview.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.GridOrderPreview.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.EnableWithoutHeaderText;
             this.GridOrderPreview.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.GridOrderPreview.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.GridOrderPreview.ColumnHeadersHeight = 35;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.GridOrderPreview.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle12;
+            this.GridOrderPreview.ColumnHeadersHeight = 37;
             this.GridOrderPreview.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(175)))), ((int)(((byte)(223)))), ((int)(((byte)(229)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.GridOrderPreview.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle13.Font = new System.Drawing.Font("Bahnschrift SemiLight SemiConde", 10F);
+            dataGridViewCellStyle13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(175)))), ((int)(((byte)(223)))), ((int)(((byte)(229)))));
+            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.GridOrderPreview.DefaultCellStyle = dataGridViewCellStyle13;
             this.GridOrderPreview.EnableHeadersVisualStyles = false;
             this.GridOrderPreview.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.GridOrderPreview.GridColor = System.Drawing.Color.Silver;
             this.GridOrderPreview.Location = new System.Drawing.Point(19, 142);
             this.GridOrderPreview.Name = "GridOrderPreview";
             this.GridOrderPreview.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.GridOrderPreview.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.GridOrderPreview.RowHeadersDefaultCellStyle = dataGridViewCellStyle14;
             this.GridOrderPreview.RowHeadersVisible = false;
+            this.GridOrderPreview.RowHeadersWidth = 45;
             this.GridOrderPreview.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.GridOrderPreview.RowsDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.GridOrderPreview.RowsDefaultCellStyle = dataGridViewCellStyle15;
             this.GridOrderPreview.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
             this.GridOrderPreview.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.GridOrderPreview.Size = new System.Drawing.Size(773, 240);
@@ -163,10 +131,10 @@
             // 
             this.textBox_Item.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(236)))), ((int)(((byte)(236)))));
             this.textBox_Item.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_Item.Font = new System.Drawing.Font("Artifakt Element", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox_Item.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox_Item.Location = new System.Drawing.Point(95, 63);
             this.textBox_Item.Name = "textBox_Item";
-            this.textBox_Item.Size = new System.Drawing.Size(191, 28);
+            this.textBox_Item.Size = new System.Drawing.Size(191, 24);
             this.textBox_Item.TabIndex = 184;
             // 
             // ITEM_label
@@ -186,9 +154,9 @@
             // 
             // 
             this.metroTextBox3.CustomButton.Image = null;
-            this.metroTextBox3.CustomButton.Location = new System.Drawing.Point(8, 2);
+            this.metroTextBox3.CustomButton.Location = new System.Drawing.Point(12, 2);
             this.metroTextBox3.CustomButton.Name = "";
-            this.metroTextBox3.CustomButton.Size = new System.Drawing.Size(23, 23);
+            this.metroTextBox3.CustomButton.Size = new System.Drawing.Size(19, 19);
             this.metroTextBox3.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.metroTextBox3.CustomButton.TabIndex = 1;
             this.metroTextBox3.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -207,7 +175,7 @@
             this.metroTextBox3.SelectionLength = 0;
             this.metroTextBox3.SelectionStart = 0;
             this.metroTextBox3.ShortcutsEnabled = true;
-            this.metroTextBox3.Size = new System.Drawing.Size(34, 28);
+            this.metroTextBox3.Size = new System.Drawing.Size(34, 24);
             this.metroTextBox3.Style = MetroFramework.MetroColorStyle.Teal;
             this.metroTextBox3.TabIndex = 183;
             this.metroTextBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -222,10 +190,10 @@
             // 
             this.textBox_Price.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(236)))), ((int)(((byte)(236)))));
             this.textBox_Price.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_Price.Font = new System.Drawing.Font("Arial Unicode MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox_Price.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox_Price.Location = new System.Drawing.Point(374, 63);
             this.textBox_Price.Name = "textBox_Price";
-            this.textBox_Price.Size = new System.Drawing.Size(90, 28);
+            this.textBox_Price.Size = new System.Drawing.Size(90, 24);
             this.textBox_Price.TabIndex = 185;
             this.textBox_Price.Text = "    ";
             this.textBox_Price.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -237,9 +205,9 @@
             // 
             // 
             this.metroTextBox1.CustomButton.Image = null;
-            this.metroTextBox1.CustomButton.Location = new System.Drawing.Point(8, 2);
+            this.metroTextBox1.CustomButton.Location = new System.Drawing.Point(12, 2);
             this.metroTextBox1.CustomButton.Name = "";
-            this.metroTextBox1.CustomButton.Size = new System.Drawing.Size(23, 23);
+            this.metroTextBox1.CustomButton.Size = new System.Drawing.Size(19, 19);
             this.metroTextBox1.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.metroTextBox1.CustomButton.TabIndex = 1;
             this.metroTextBox1.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -258,7 +226,7 @@
             this.metroTextBox1.SelectionLength = 0;
             this.metroTextBox1.SelectionStart = 0;
             this.metroTextBox1.ShortcutsEnabled = true;
-            this.metroTextBox1.Size = new System.Drawing.Size(34, 28);
+            this.metroTextBox1.Size = new System.Drawing.Size(34, 24);
             this.metroTextBox1.Style = MetroFramework.MetroColorStyle.Teal;
             this.metroTextBox1.TabIndex = 186;
             this.metroTextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -282,9 +250,9 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
-            this.panel2.Location = new System.Drawing.Point(123, 29);
+            this.panel2.Location = new System.Drawing.Point(130, 29);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(257, 4);
+            this.panel2.Size = new System.Drawing.Size(250, 4);
             this.panel2.TabIndex = 188;
             // 
             // EnterNewItem_label
@@ -294,16 +262,16 @@
             this.EnterNewItem_label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
             this.EnterNewItem_label.Location = new System.Drawing.Point(20, 20);
             this.EnterNewItem_label.Name = "EnterNewItem_label";
-            this.EnterNewItem_label.Size = new System.Drawing.Size(102, 13);
+            this.EnterNewItem_label.Size = new System.Drawing.Size(108, 13);
             this.EnterNewItem_label.TabIndex = 189;
-            this.EnterNewItem_label.Text = "ENTER NEW ITEM";
+            this.EnterNewItem_label.Text = "ENTER MENU ITEM";
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
             this.panel1.Location = new System.Drawing.Point(163, 115);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(257, 4);
+            this.panel1.Size = new System.Drawing.Size(253, 4);
             this.panel1.TabIndex = 190;
             // 
             // panel3
@@ -362,16 +330,24 @@
             this.panel9.Size = new System.Drawing.Size(42, 4);
             this.panel9.TabIndex = 197;
             // 
+            // panel10
+            // 
+            this.panel10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
+            this.panel10.Location = new System.Drawing.Point(617, 27);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(2, 29);
+            this.panel10.TabIndex = 199;
+            // 
             // button_Update
             // 
-            this.button_Update.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(253)))), ((int)(((byte)(239)))));
+            this.button_Update.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(244)))), ((int)(((byte)(222)))));
             this.button_Update.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.button_Update.FlatAppearance.BorderSize = 0;
             this.button_Update.Font = new System.Drawing.Font("Bahnschrift SemiCondensed", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_Update.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.button_Update.Image = global::reme.Properties.Resources.tick_box_24px;
+            this.button_Update.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.button_Update.Image = global::reme.Properties.Resources.edit_property_22px;
             this.button_Update.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button_Update.Location = new System.Drawing.Point(672, 74);
+            this.button_Update.Location = new System.Drawing.Point(627, 30);
             this.button_Update.Name = "button_Update";
             this.button_Update.Size = new System.Drawing.Size(75, 26);
             this.button_Update.TabIndex = 198;
@@ -379,10 +355,45 @@
             this.button_Update.UseVisualStyleBackColor = false;
             this.button_Update.Click += new System.EventHandler(this.button_Update_Click);
             // 
+            // button_Delete
+            // 
+            this.button_Delete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(231)))), ((int)(((byte)(227)))));
+            this.button_Delete.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.button_Delete.FlatAppearance.BorderSize = 0;
+            this.button_Delete.Font = new System.Drawing.Font("Bahnschrift SemiCondensed", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_Delete.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.button_Delete.Image = global::reme.Properties.Resources.trash_24px;
+            this.button_Delete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button_Delete.Location = new System.Drawing.Point(717, 30);
+            this.button_Delete.Name = "button_Delete";
+            this.button_Delete.Size = new System.Drawing.Size(75, 26);
+            this.button_Delete.TabIndex = 13;
+            this.button_Delete.Text = "     DELETE";
+            this.button_Delete.UseVisualStyleBackColor = false;
+            this.button_Delete.Click += new System.EventHandler(this.button_Delete_Click);
+            // 
+            // button_Save
+            // 
+            this.button_Save.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(253)))), ((int)(((byte)(239)))));
+            this.button_Save.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.button_Save.FlatAppearance.BorderSize = 0;
+            this.button_Save.Font = new System.Drawing.Font("Bahnschrift SemiCondensed", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_Save.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.button_Save.Image = global::reme.Properties.Resources.tick_box_24px;
+            this.button_Save.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button_Save.Location = new System.Drawing.Point(535, 30);
+            this.button_Save.Name = "button_Save";
+            this.button_Save.Size = new System.Drawing.Size(75, 26);
+            this.button_Save.TabIndex = 12;
+            this.button_Save.Text = "      SAVE";
+            this.button_Save.UseVisualStyleBackColor = false;
+            this.button_Save.Click += new System.EventHandler(this.button_Save_Click);
+            // 
             // UserControl_Inventory
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.panel10);
             this.Controls.Add(this.button_Update);
             this.Controls.Add(this.panel9);
             this.Controls.Add(this.panel8);
@@ -434,5 +445,6 @@
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.Button button_Update;
+        private System.Windows.Forms.Panel panel10;
     }
 }
