@@ -7,6 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
+using Newtonsoft.Json;
+
 
 namespace reme
 {
@@ -20,7 +23,7 @@ namespace reme
         public Main()
         {
             InitializeComponent();
-        
+         
             Tab_Indicator.Location = new Point(HomeLabel.Left,HomeLabel.Bottom + 5); // Add space below the label
 
             userControl_Inventory1 = new UserControl_Inventory();
@@ -34,6 +37,7 @@ namespace reme
             MainPanel.Controls.Add(userControl_Inventory1);
         }
 
+   
         private void InventoryLabel_Click(object sender, EventArgs e)
         {  
             // Move the tab indicator to the Inventory Label
