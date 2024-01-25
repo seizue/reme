@@ -16,6 +16,17 @@ namespace reme
 {
     public partial class UserControl_Inventory : UserControl
     {
+        public BindingList<DataModel> ItemList
+        {
+            get { return dataList; }
+        }
+
+        public List<int> QuantityList
+        {
+            get { return Enumerable.Range(1, 20).ToList(); }
+        }
+
+
         private BindingList<DataModel> dataList = new BindingList<DataModel>();
 
         public UserControl_Inventory()

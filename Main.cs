@@ -19,11 +19,15 @@ namespace reme
         private Color defaultColor = Color.FromArgb(71, 38, 38); // Default color of the tab indicator
         private Color clickedColor = Color.FromArgb(160, 84, 84); // Color when the label is clicked
 
+        private UserControl_Inventory inventoryControl;
+
 
         public Main()
         {
             InitializeComponent();
-         
+
+            InitializeInventoryControl();
+
             Tab_Indicator.Location = new Point(HomeLabel.Left,HomeLabel.Bottom + 5); // Add space below the label
 
             userControl_Inventory1 = new UserControl_Inventory();
@@ -37,7 +41,19 @@ namespace reme
             MainPanel.Controls.Add(userControl_Inventory1);
         }
 
-   
+        private void InitializeInventoryControl()
+        {
+            // Create an instance of UserControl_Inventory
+            inventoryControl = new UserControl_Inventory();
+
+            // Set the data source for ITEM ComboBox
+            comboBox_Order.DataSource = inventoryControl.ItemList;
+            comboBox_Order.DisplayMember = "ITEM";
+
+            // Set the data source for Quantity ComboBox
+            comboBox_Quantity.DataSource = inventoryControl.QuantityList;
+        }
+
         private void InventoryLabel_Click(object sender, EventArgs e)
         {  
             // Move the tab indicator to the Inventory Label

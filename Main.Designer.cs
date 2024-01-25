@@ -28,14 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle31 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle32 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle33 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle34 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle35 = new System.Windows.Forms.DataGridViewCellStyle();
             this.MainBorder = new System.Windows.Forms.Panel();
             this.MainPanel = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.button_Reset = new System.Windows.Forms.Button();
+            this.button_Print = new System.Windows.Forms.Button();
             this.panel12 = new System.Windows.Forms.Panel();
             this.panel13 = new System.Windows.Forms.Panel();
             this.panel11 = new System.Windows.Forms.Panel();
@@ -44,19 +46,20 @@
             this.QUANTITY = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SUBTOTAL = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PanelReceipt = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
+            this.button_Save = new System.Windows.Forms.Button();
             this.panel9 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.comboBox_Quantity = new System.Windows.Forms.ComboBox();
+            this.comboBox_Order = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.userControl_Inventory1 = new reme.UserControl_Inventory();
             this.label4 = new System.Windows.Forms.Label();
             this.metroTextBox3 = new MetroFramework.Controls.MetroTextBox();
-            this.metroTextBox2 = new MetroFramework.Controls.MetroTextBox();
+            this.textBox_Name = new MetroFramework.Controls.MetroTextBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
@@ -69,9 +72,9 @@
             this.panel10 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
             this.PicLogo = new System.Windows.Forms.PictureBox();
-            this.userControl_Inventory1 = new reme.UserControl_Inventory();
-            this.button3 = new System.Windows.Forms.Button();
-            this.panel5 = new System.Windows.Forms.Panel();
+            this.panel14 = new System.Windows.Forms.Panel();
+            this.panel15 = new System.Windows.Forms.Panel();
+            this.panel16 = new System.Windows.Forms.Panel();
             this.MainPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GridOrderPreview)).BeginInit();
             this.PanelReceipt.SuspendLayout();
@@ -90,9 +93,12 @@
             // 
             // MainPanel
             // 
+            this.MainPanel.Controls.Add(this.panel14);
+            this.MainPanel.Controls.Add(this.panel15);
+            this.MainPanel.Controls.Add(this.panel16);
             this.MainPanel.Controls.Add(this.panel5);
-            this.MainPanel.Controls.Add(this.button3);
-            this.MainPanel.Controls.Add(this.button2);
+            this.MainPanel.Controls.Add(this.button_Reset);
+            this.MainPanel.Controls.Add(this.button_Print);
             this.MainPanel.Controls.Add(this.panel12);
             this.MainPanel.Controls.Add(this.panel13);
             this.MainPanel.Controls.Add(this.panel11);
@@ -104,20 +110,43 @@
             this.MainPanel.Size = new System.Drawing.Size(810, 390);
             this.MainPanel.TabIndex = 1;
             // 
-            // button2
+            // panel5
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(97)))), ((int)(((byte)(0)))));
-            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.Font = new System.Drawing.Font("Bahnschrift", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(239)))), ((int)(((byte)(236)))));
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(700, 318);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(86, 36);
-            this.button2.TabIndex = 14;
-            this.button2.Text = "PRINT";
-            this.button2.UseVisualStyleBackColor = false;
+            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
+            this.panel5.Location = new System.Drawing.Point(591, 323);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(2, 29);
+            this.panel5.TabIndex = 16;
+            // 
+            // button_Reset
+            // 
+            this.button_Reset.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(243)))), ((int)(((byte)(233)))));
+            this.button_Reset.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.button_Reset.FlatAppearance.BorderSize = 0;
+            this.button_Reset.Font = new System.Drawing.Font("Bahnschrift", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_Reset.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.button_Reset.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button_Reset.Location = new System.Drawing.Point(599, 318);
+            this.button_Reset.Name = "button_Reset";
+            this.button_Reset.Size = new System.Drawing.Size(86, 36);
+            this.button_Reset.TabIndex = 15;
+            this.button_Reset.Text = "RESET";
+            this.button_Reset.UseVisualStyleBackColor = false;
+            // 
+            // button_Print
+            // 
+            this.button_Print.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(97)))), ((int)(((byte)(0)))));
+            this.button_Print.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.button_Print.FlatAppearance.BorderSize = 0;
+            this.button_Print.Font = new System.Drawing.Font("Bahnschrift", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_Print.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(239)))), ((int)(((byte)(236)))));
+            this.button_Print.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button_Print.Location = new System.Drawing.Point(700, 318);
+            this.button_Print.Name = "button_Print";
+            this.button_Print.Size = new System.Drawing.Size(86, 36);
+            this.button_Print.TabIndex = 14;
+            this.button_Print.Text = "PRINT";
+            this.button_Print.UseVisualStyleBackColor = false;
             // 
             // panel12
             // 
@@ -140,62 +169,62 @@
             this.panel11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
             this.panel11.Location = new System.Drawing.Point(525, 49);
             this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(267, 4);
+            this.panel11.Size = new System.Drawing.Size(125, 4);
             this.panel11.TabIndex = 2;
             // 
             // GridOrderPreview
             // 
             this.GridOrderPreview.AllowUserToResizeColumns = false;
             this.GridOrderPreview.AllowUserToResizeRows = false;
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(236)))), ((int)(((byte)(236)))));
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.GridOrderPreview.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle31.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(236)))), ((int)(((byte)(236)))));
+            dataGridViewCellStyle31.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.GridOrderPreview.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle31;
             this.GridOrderPreview.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.GridOrderPreview.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
             this.GridOrderPreview.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.GridOrderPreview.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.GridOrderPreview.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.EnableAlwaysIncludeHeaderText;
             this.GridOrderPreview.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(245)))), ((int)(((byte)(243)))));
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.GridOrderPreview.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle32.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle32.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle32.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle32.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
+            dataGridViewCellStyle32.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(245)))), ((int)(((byte)(243)))));
+            dataGridViewCellStyle32.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle32.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.GridOrderPreview.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle32;
             this.GridOrderPreview.ColumnHeadersHeight = 35;
             this.GridOrderPreview.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.GridOrderPreview.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ORDER,
             this.QUANTITY,
             this.SUBTOTAL});
-            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle13.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(175)))), ((int)(((byte)(223)))), ((int)(((byte)(229)))));
-            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.GridOrderPreview.DefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle33.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle33.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle33.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle33.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            dataGridViewCellStyle33.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(175)))), ((int)(((byte)(223)))), ((int)(((byte)(229)))));
+            dataGridViewCellStyle33.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle33.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.GridOrderPreview.DefaultCellStyle = dataGridViewCellStyle33;
             this.GridOrderPreview.EnableHeadersVisualStyles = false;
             this.GridOrderPreview.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.GridOrderPreview.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.GridOrderPreview.Location = new System.Drawing.Point(421, 68);
             this.GridOrderPreview.Name = "GridOrderPreview";
             this.GridOrderPreview.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle14.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.GridOrderPreview.RowHeadersDefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle34.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle34.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle34.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle34.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle34.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle34.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle34.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.GridOrderPreview.RowHeadersDefaultCellStyle = dataGridViewCellStyle34;
             this.GridOrderPreview.RowHeadersVisible = false;
             this.GridOrderPreview.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.GridOrderPreview.RowsDefaultCellStyle = dataGridViewCellStyle15;
+            dataGridViewCellStyle35.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.GridOrderPreview.RowsDefaultCellStyle = dataGridViewCellStyle35;
             this.GridOrderPreview.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
             this.GridOrderPreview.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
             this.GridOrderPreview.Size = new System.Drawing.Size(374, 233);
@@ -222,7 +251,7 @@
             // PanelReceipt
             // 
             this.PanelReceipt.BackColor = System.Drawing.Color.White;
-            this.PanelReceipt.Controls.Add(this.button1);
+            this.PanelReceipt.Controls.Add(this.button_Save);
             this.PanelReceipt.Controls.Add(this.panel9);
             this.PanelReceipt.Controls.Add(this.panel8);
             this.PanelReceipt.Controls.Add(this.panel7);
@@ -237,20 +266,20 @@
             this.PanelReceipt.Size = new System.Drawing.Size(393, 390);
             this.PanelReceipt.TabIndex = 0;
             // 
-            // button1
+            // button_Save
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(114)))), ((int)(((byte)(115)))));
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.Font = new System.Drawing.Font("Bahnschrift", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(240, 269);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(86, 36);
-            this.button1.TabIndex = 13;
-            this.button1.Text = " SAVE";
-            this.button1.UseVisualStyleBackColor = false;
+            this.button_Save.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(114)))), ((int)(((byte)(115)))));
+            this.button_Save.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.button_Save.FlatAppearance.BorderSize = 0;
+            this.button_Save.Font = new System.Drawing.Font("Bahnschrift", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_Save.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.button_Save.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button_Save.Location = new System.Drawing.Point(240, 269);
+            this.button_Save.Name = "button_Save";
+            this.button_Save.Size = new System.Drawing.Size(86, 36);
+            this.button_Save.TabIndex = 13;
+            this.button_Save.Text = " SAVE";
+            this.button_Save.UseVisualStyleBackColor = false;
             // 
             // panel9
             // 
@@ -279,8 +308,8 @@
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
-            this.panel6.Controls.Add(this.comboBox2);
-            this.panel6.Controls.Add(this.comboBox1);
+            this.panel6.Controls.Add(this.comboBox_Quantity);
+            this.panel6.Controls.Add(this.comboBox_Order);
             this.panel6.Controls.Add(this.label5);
             this.panel6.Controls.Add(this.label2);
             this.panel6.Location = new System.Drawing.Point(17, 142);
@@ -288,21 +317,23 @@
             this.panel6.Size = new System.Drawing.Size(315, 89);
             this.panel6.TabIndex = 3;
             // 
-            // comboBox2
+            // comboBox_Quantity
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(209, 41);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(85, 21);
-            this.comboBox2.TabIndex = 7;
+            this.comboBox_Quantity.Font = new System.Drawing.Font("Bahnschrift SemiLight", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox_Quantity.FormattingEnabled = true;
+            this.comboBox_Quantity.Location = new System.Drawing.Point(209, 41);
+            this.comboBox_Quantity.Name = "comboBox_Quantity";
+            this.comboBox_Quantity.Size = new System.Drawing.Size(85, 24);
+            this.comboBox_Quantity.TabIndex = 7;
             // 
-            // comboBox1
+            // comboBox_Order
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(17, 41);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(172, 21);
-            this.comboBox1.TabIndex = 6;
+            this.comboBox_Order.Font = new System.Drawing.Font("Bahnschrift SemiLight", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox_Order.FormattingEnabled = true;
+            this.comboBox_Order.Location = new System.Drawing.Point(17, 41);
+            this.comboBox_Order.Name = "comboBox_Order";
+            this.comboBox_Order.Size = new System.Drawing.Size(172, 24);
+            this.comboBox_Order.TabIndex = 6;
             // 
             // label5
             // 
@@ -330,11 +361,18 @@
             this.panel4.Controls.Add(this.userControl_Inventory1);
             this.panel4.Controls.Add(this.label4);
             this.panel4.Controls.Add(this.metroTextBox3);
-            this.panel4.Controls.Add(this.metroTextBox2);
+            this.panel4.Controls.Add(this.textBox_Name);
             this.panel4.Location = new System.Drawing.Point(17, 68);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(315, 70);
             this.panel4.TabIndex = 2;
+            // 
+            // userControl_Inventory1
+            // 
+            this.userControl_Inventory1.Location = new System.Drawing.Point(-20, 313);
+            this.userControl_Inventory1.Name = "userControl_Inventory1";
+            this.userControl_Inventory1.Size = new System.Drawing.Size(779, 43);
+            this.userControl_Inventory1.TabIndex = 11;
             // 
             // label4
             // 
@@ -385,47 +423,47 @@
             this.metroTextBox3.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.metroTextBox3.WaterMarkFont = new System.Drawing.Font("Bahnschrift", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
-            // metroTextBox2
+            // textBox_Name
             // 
             // 
             // 
             // 
-            this.metroTextBox2.CustomButton.AutoEllipsis = true;
-            this.metroTextBox2.CustomButton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.metroTextBox2.CustomButton.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
-            this.metroTextBox2.CustomButton.FlatAppearance.BorderSize = 2;
-            this.metroTextBox2.CustomButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.metroTextBox2.CustomButton.Image = null;
-            this.metroTextBox2.CustomButton.Location = new System.Drawing.Point(213, 1);
-            this.metroTextBox2.CustomButton.Name = "";
-            this.metroTextBox2.CustomButton.Size = new System.Drawing.Size(25, 25);
-            this.metroTextBox2.CustomButton.Style = MetroFramework.MetroColorStyle.Teal;
-            this.metroTextBox2.CustomButton.TabIndex = 1;
-            this.metroTextBox2.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.metroTextBox2.CustomButton.UseSelectable = true;
-            this.metroTextBox2.DisplayIcon = true;
-            this.metroTextBox2.Lines = new string[0];
-            this.metroTextBox2.Location = new System.Drawing.Point(55, 28);
-            this.metroTextBox2.MaxLength = 32767;
-            this.metroTextBox2.Multiline = true;
-            this.metroTextBox2.Name = "metroTextBox2";
-            this.metroTextBox2.PasswordChar = '\0';
-            this.metroTextBox2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.metroTextBox2.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.metroTextBox2.SelectedText = "";
-            this.metroTextBox2.SelectionLength = 0;
-            this.metroTextBox2.SelectionStart = 0;
-            this.metroTextBox2.ShortcutsEnabled = true;
-            this.metroTextBox2.ShowButton = true;
-            this.metroTextBox2.ShowClearButton = true;
-            this.metroTextBox2.Size = new System.Drawing.Size(239, 27);
-            this.metroTextBox2.Style = MetroFramework.MetroColorStyle.Teal;
-            this.metroTextBox2.TabIndex = 179;
-            this.metroTextBox2.UseCustomBackColor = true;
-            this.metroTextBox2.UseSelectable = true;
-            this.metroTextBox2.UseStyleColors = true;
-            this.metroTextBox2.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.metroTextBox2.WaterMarkFont = new System.Drawing.Font("Bahnschrift Light", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox_Name.CustomButton.AutoEllipsis = true;
+            this.textBox_Name.CustomButton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.textBox_Name.CustomButton.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
+            this.textBox_Name.CustomButton.FlatAppearance.BorderSize = 2;
+            this.textBox_Name.CustomButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.textBox_Name.CustomButton.Image = null;
+            this.textBox_Name.CustomButton.Location = new System.Drawing.Point(213, 1);
+            this.textBox_Name.CustomButton.Name = "";
+            this.textBox_Name.CustomButton.Size = new System.Drawing.Size(25, 25);
+            this.textBox_Name.CustomButton.Style = MetroFramework.MetroColorStyle.Teal;
+            this.textBox_Name.CustomButton.TabIndex = 1;
+            this.textBox_Name.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.textBox_Name.CustomButton.UseSelectable = true;
+            this.textBox_Name.DisplayIcon = true;
+            this.textBox_Name.Lines = new string[0];
+            this.textBox_Name.Location = new System.Drawing.Point(55, 28);
+            this.textBox_Name.MaxLength = 32767;
+            this.textBox_Name.Multiline = true;
+            this.textBox_Name.Name = "textBox_Name";
+            this.textBox_Name.PasswordChar = '\0';
+            this.textBox_Name.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.textBox_Name.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.textBox_Name.SelectedText = "";
+            this.textBox_Name.SelectionLength = 0;
+            this.textBox_Name.SelectionStart = 0;
+            this.textBox_Name.ShortcutsEnabled = true;
+            this.textBox_Name.ShowButton = true;
+            this.textBox_Name.ShowClearButton = true;
+            this.textBox_Name.Size = new System.Drawing.Size(239, 27);
+            this.textBox_Name.Style = MetroFramework.MetroColorStyle.Teal;
+            this.textBox_Name.TabIndex = 179;
+            this.textBox_Name.UseCustomBackColor = true;
+            this.textBox_Name.UseSelectable = true;
+            this.textBox_Name.UseStyleColors = true;
+            this.textBox_Name.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.textBox_Name.WaterMarkFont = new System.Drawing.Font("Bahnschrift Light", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
             // panel3
             // 
@@ -544,35 +582,29 @@
             this.PicLogo.TabIndex = 7;
             this.PicLogo.TabStop = false;
             // 
-            // userControl_Inventory1
+            // panel14
             // 
-            this.userControl_Inventory1.Location = new System.Drawing.Point(-20, 313);
-            this.userControl_Inventory1.Name = "userControl_Inventory1";
-            this.userControl_Inventory1.Size = new System.Drawing.Size(779, 43);
-            this.userControl_Inventory1.TabIndex = 11;
+            this.panel14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(244)))), ((int)(((byte)(222)))));
+            this.panel14.Location = new System.Drawing.Point(751, 49);
+            this.panel14.Name = "panel14";
+            this.panel14.Size = new System.Drawing.Size(42, 4);
+            this.panel14.TabIndex = 198;
             // 
-            // button3
+            // panel15
             // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(243)))), ((int)(((byte)(233)))));
-            this.button3.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.Font = new System.Drawing.Font("Bahnschrift", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(599, 318);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(86, 36);
-            this.button3.TabIndex = 15;
-            this.button3.Text = "RESET";
-            this.button3.UseVisualStyleBackColor = false;
+            this.panel15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(231)))), ((int)(((byte)(227)))));
+            this.panel15.Location = new System.Drawing.Point(704, 49);
+            this.panel15.Name = "panel15";
+            this.panel15.Size = new System.Drawing.Size(42, 4);
+            this.panel15.TabIndex = 197;
             // 
-            // panel5
+            // panel16
             // 
-            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
-            this.panel5.Location = new System.Drawing.Point(591, 323);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(2, 29);
-            this.panel5.TabIndex = 16;
+            this.panel16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(252)))), ((int)(((byte)(231)))));
+            this.panel16.Location = new System.Drawing.Point(658, 49);
+            this.panel16.Name = "panel16";
+            this.panel16.Size = new System.Drawing.Size(42, 4);
+            this.panel16.TabIndex = 196;
             // 
             // Main
             // 
@@ -625,14 +657,14 @@
         private System.Windows.Forms.PictureBox PicLogo;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox comboBox_Order;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox comboBox_Quantity;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Panel Tab_Indicator;
         private MetroFramework.Controls.MetroTextBox metroTextBox3;
-        private MetroFramework.Controls.MetroTextBox metroTextBox2;
+        private MetroFramework.Controls.MetroTextBox textBox_Name;
         private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Panel panel10;
@@ -645,10 +677,13 @@
         private System.Windows.Forms.Panel panel12;
         private System.Windows.Forms.Panel panel13;
         private UserControl_Inventory userControl_Inventory1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button_Save;
+        private System.Windows.Forms.Button button_Print;
+        private System.Windows.Forms.Button button_Reset;
         private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Panel panel14;
+        private System.Windows.Forms.Panel panel15;
+        private System.Windows.Forms.Panel panel16;
     }
 }
 
