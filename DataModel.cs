@@ -6,14 +6,13 @@ using System.Threading.Tasks;
 
 namespace reme
 {
-  
+
     public class DataModel
     {
         public int ID { get; set; }
-        public string ITEM { get; set; }
+        public string ORDER { get; set; }
         public int PRICE { get; set; }
         // Add other properties as needed
-
 
         // Constructor to initialize the ID
         public DataModel()
@@ -21,7 +20,6 @@ namespace reme
             // You can generate the ID as needed, for example:
             ID = GenerateUniqueID();
         }
-     
 
         private static int nextID = 1;
 
@@ -29,7 +27,8 @@ namespace reme
         {
             return nextID++;
         }
-
     }
 
 }
+
+

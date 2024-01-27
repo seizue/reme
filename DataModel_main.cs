@@ -12,6 +12,7 @@ namespace reme
         public int QUANTITY { get; set; }
         public int SUBTOTAL { get; set; }
         public string NAME { get; set; }
+        public int PRICE { get; set; }
     }
 
 }

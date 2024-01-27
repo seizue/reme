@@ -16,23 +16,29 @@ namespace reme
 {
     public partial class UserControl_Inventory : UserControl
     {
-        public BindingList<DataModel> ItemList
-        {
-            get { return dataList; }
-        }
+        public BindingList<DataModel> dataList = new BindingList<DataModel>();
 
+    
         public List<int> QuantityList
         {
             get { return Enumerable.Range(1, 20).ToList(); }
         }
 
+     
+        public List<string> OrderList
+        {
+            get
+            {
+                return dataList.Select(item => item.ORDER).ToList();
+            }
+        }
 
-        private BindingList<DataModel> dataList = new BindingList<DataModel>();
 
         public UserControl_Inventory()
         {
             InitializeComponent();
             InitializeDataGridView();
+           
         }
 
         private void InitializeDataGridView()
@@ -49,40 +55,54 @@ namespace reme
             GridOrderPreview.DataSource = dataList;
         }
 
+        public event EventHandler ItemSaved;
+
         private void button_Save_Click(object sender, EventArgs e)
         {
 
-            // Get data from text boxes
-            string item = textBox_Item.Text;
-            int price;
-
-            if (int.TryParse(textBox_Price.Text, out price))
+            try
             {
-                // Create a new YourDataModel instance with auto-generated ID
-                DataModel newData = new DataModel
+                // Get data from text boxes
+                string item = textBox_Item.Text;
+                int price;
+
+                if (int.TryParse(textBox_Price.Text, out price))
                 {
-                    ITEM = item,
-                    PRICE = price
-                };
+                    // Create a new DataModel instance with auto-generated ID
+                    DataModel newData = new DataModel
+                    {
+                        ORDER = item,
+                        PRICE = price
+                    };
 
-                // Add the new data to the existing list
-                dataList.Add(newData);
+                    // Add the new data to the existing list
+                    dataList.Add(newData);
 
-                // Save the updated list to the JSON file
-                SaveDataToJson();
+                    // Save the updated list to the JSON file
+                    SaveDataToJson();
 
-                // Refresh the DataGridView after adding data
-                GridOrderPreview.DataSource = null;
-                GridOrderPreview.DataSource = dataList;
+                    // Raise the ItemSaved event
+                    OnItemSaved(EventArgs.Empty);
 
-                // Clear the text boxes after adding data
-                textBox_Item.Text = string.Empty;
-                textBox_Price.Text = string.Empty;
+                    // Clear the text boxes after adding data
+                    textBox_Item.Text = string.Empty;
+                    textBox_Price.Text = string.Empty;
+                }
+                else
+                {
+                    MessageBox.Show("Invalid value for Price. Please enter a valid integer.");
+                }
             }
-            else
+            catch (Exception ex)
             {
-                MessageBox.Show("Invalid value for Price. Please enter a valid integer.");
+                MessageBox.Show("Error saving data: " + ex.Message);
             }
+          
+        }
+
+        protected virtual void OnItemSaved(EventArgs e)
+        {
+            ItemSaved?.Invoke(this, e);
         }
 
         private void SaveDataToJson()
@@ -133,7 +153,7 @@ namespace reme
                 int selectedIndex = GridOrderPreview.SelectedRows[0].Index;
 
                 // Populate text boxes with data from the selected row
-                textBox_Item.Text = dataList[selectedIndex].ITEM.ToString();
+                textBox_Item.Text = dataList[selectedIndex].ORDER.ToString();
                 textBox_Price.Text = dataList[selectedIndex].PRICE.ToString();
             }
             else
@@ -163,7 +183,7 @@ namespace reme
             // Add data lines
             foreach (DataModel data in dataList)
             {
-                csvContent.AppendLine($"{data.ID},{data.ITEM},{data.PRICE}");
+                csvContent.AppendLine($"{data.ID},{data.ORDER},{data.PRICE}");
             }
 
             // Append the current date to the filename
