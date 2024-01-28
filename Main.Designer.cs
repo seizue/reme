@@ -357,6 +357,7 @@
             this.comboBox_Quantity.Name = "comboBox_Quantity";
             this.comboBox_Quantity.Size = new System.Drawing.Size(85, 24);
             this.comboBox_Quantity.TabIndex = 7;
+            this.comboBox_Quantity.SelectedIndexChanged += new System.EventHandler(this.comboBox_Quantity_SelectedIndexChanged);
             this.comboBox_Quantity.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox_Quantity_KeyPress);
             // 
             // comboBox_Order

@@ -15,7 +15,7 @@ namespace reme
 {
     public partial class Main : MetroFramework.Forms.MetroForm
     {
-      
+
         private Color defaultColor = Color.FromArgb(71, 38, 38); // Default color of the tab indicator
         private Color clickedColor = Color.FromArgb(160, 84, 84); // Color when the label is clicked
 
@@ -26,6 +26,7 @@ namespace reme
             InitializeComponent();
             LoadJsonData();
             InitializeInventoryControl();
+            CalculateOverallTotal();
 
             // Subscribe to the ItemSaved event of the UserControl
             userControl_Inventory1.ItemSaved += UserControl_ItemSaved;
@@ -113,7 +114,7 @@ namespace reme
 
         private void button_Save_Click(object sender, EventArgs e)
         {
-            { 
+            {
                 try
                 {
                     var dataList = userControl_Inventory1.dataList;
@@ -145,6 +146,8 @@ namespace reme
 
                     // Update the orders.json file
                     UpdateOrdersJsonFile();
+
+                    CalculateOverallTotal();
                 }
                 catch (Exception ex)
                 {
@@ -173,7 +176,7 @@ namespace reme
                 // If the file is empty or doesn't exist, return an empty list
                 return new List<OrderItem>();
 
-             
+
             }
             catch (Exception ex)
             {
@@ -184,7 +187,7 @@ namespace reme
 
         private void UpdateOrdersJsonFile()
         {
-         
+
             {
                 try
                 {
@@ -319,35 +322,101 @@ namespace reme
 
         private void OrderPreview_MouseDown(object sender, MouseEventArgs e)
         {
-        
-                if (e.Button == MouseButtons.Right)
+            if (e.Button == MouseButtons.Right)
+            {
+                // Check if any row is selected
+                DataGridView.HitTestInfo hitTestInfo = OrderPreview.HitTest(e.X, e.Y);
+                if (hitTestInfo.RowIndex >= 0)
                 {
-                    // Check if any row is selected
-                    DataGridView.HitTestInfo hitTestInfo = OrderPreview.HitTest(e.X, e.Y);
-                    if (hitTestInfo.RowIndex >= 0)
+                    // Select the row under the cursor
+                    OrderPreview.Rows[hitTestInfo.RowIndex].Selected = true;
+
+                    // Show context menu for deleting the row
+                    ContextMenuStrip contextMenuStrip = new ContextMenuStrip();
+                    contextMenuStrip.Items.Add("Delete").Click += (s, ev) =>
                     {
-                        // Select the row under the cursor
-                        OrderPreview.Rows[hitTestInfo.RowIndex].Selected = true;
-
-                        // Show context menu for deleting the row
-                        ContextMenuStrip contextMenuStrip = new ContextMenuStrip();
-                        contextMenuStrip.Items.Add("Delete").Click += (s, ev) =>
+                        // Delete the selected row
+                        if (OrderPreview.SelectedRows.Count > 0)
                         {
-                            // Delete the selected row
-                            if (OrderPreview.SelectedRows.Count > 0)
-                            {
-                                OrderPreview.Rows.RemoveAt(OrderPreview.SelectedRows[0].Index);
+                            OrderPreview.Rows.RemoveAt(OrderPreview.SelectedRows[0].Index);
 
-                                // Update the orders.json file after deletion
-                                UpdateOrdersJsonFile();
-                            }
-                        };
+                            // Update the orders.json file after deletion
+                            UpdateOrdersJsonFile();
 
-                        // Display the context menu at the cursor's position
-                        contextMenuStrip.Show(OrderPreview, e.Location);
-                    }
-                }           
+                            // Update the Overall total
+                            CalculateOverallTotal();
+                        }
+                    };
 
+                    // Display the context menu at the cursor's position
+                    contextMenuStrip.Show(OrderPreview, e.Location);
+                }
+
+                CalculateOverallTotal();
+            }
+        }
+
+
+
+
+
+        private void UpdateSubtotal(DataGridViewRow row)
+        {
+            // Retrieve the quantity and price from the row's cells
+            int quantity = Convert.ToInt32(row.Cells["QUANTITY"].Value);
+            int price = Convert.ToInt32(row.Cells["PRICE"].Value); // Assuming you have a PRICE column
+
+            // Calculate the subtotal based on the quantity and price
+            int subtotal = quantity * price;
+
+            // Update the SUBTOTAL cell with the calculated subtotal
+            row.Cells["SUBTOTAL"].Value = subtotal;
+        }
+
+        private void OrderPreview_CellEndEdit(object sender, DataGridViewCellEventArgs e)
+        {
+            // Check if the edited cell is in the QUANTITY column
+            if (e.ColumnIndex == OrderPreview.Columns["QUANTITY"].Index)
+            {
+                DataGridViewRow editedRow = OrderPreview.Rows[e.RowIndex];
+                UpdateSubtotal(editedRow);
+                CalculateOverallTotal();
+            }
+        }
+
+        private void CalculateOverallTotal()
+        {
+            int overallTotal = 0;
+
+            // Iterate through all rows and sum up SUBTOTAL values
+            foreach (DataGridViewRow row in OrderPreview.Rows)
+            {
+                int subtotal = 0;
+                if (row.Cells["SUBTOTAL"].Value != null)
+                {
+                    subtotal = Convert.ToInt32(row.Cells["SUBTOTAL"].Value);
+                    overallTotal += subtotal;
+                }
+            }
+
+            // Update the overall total in the last row
+            if (OrderPreview.Rows.Count > 0)
+            {
+                DataGridViewRow lastRow = OrderPreview.Rows[OrderPreview.Rows.Count - 1];
+                lastRow.Cells["SUBTOTAL"].Value = overallTotal;
+            }
+        }
+
+
+
+        private void comboBox_Quantity_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
+            
         }
     }
+
+      
+    
+
 }
