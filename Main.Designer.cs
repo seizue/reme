@@ -59,7 +59,6 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.userControl_Inventory1 = new reme.UserControl_Inventory();
             this.label4 = new System.Windows.Forms.Label();
             this.metroTextBox3 = new MetroFramework.Controls.MetroTextBox();
             this.textBox_Name = new MetroFramework.Controls.MetroTextBox();
@@ -75,6 +74,7 @@
             this.panel10 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
             this.PicLogo = new System.Windows.Forms.PictureBox();
+            this.userControl_Inventory1 = new reme.UserControl_Inventory();
             this.MainPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.OrderPreview)).BeginInit();
             this.PanelReceipt.SuspendLayout();
@@ -127,7 +127,7 @@
             this.OrderPreview.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
@@ -174,6 +174,8 @@
             this.OrderPreview.UseCustomBackColor = true;
             this.OrderPreview.UseCustomForeColor = true;
             this.OrderPreview.UseStyleColors = true;
+            this.OrderPreview.CellPainting += new System.Windows.Forms.DataGridViewCellPaintingEventHandler(this.OrderPreview_CellPainting);
+            this.OrderPreview.RowPrePaint += new System.Windows.Forms.DataGridViewRowPrePaintEventHandler(this.OrderPreview_RowPrePaint);
             this.OrderPreview.SelectionChanged += new System.EventHandler(this.OrderPreview_SelectionChanged);
             this.OrderPreview.MouseDown += new System.Windows.Forms.MouseEventHandler(this.OrderPreview_MouseDown);
             // 
@@ -357,7 +359,6 @@
             this.comboBox_Quantity.Name = "comboBox_Quantity";
             this.comboBox_Quantity.Size = new System.Drawing.Size(85, 24);
             this.comboBox_Quantity.TabIndex = 7;
-            this.comboBox_Quantity.SelectedIndexChanged += new System.EventHandler(this.comboBox_Quantity_SelectedIndexChanged);
             this.comboBox_Quantity.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox_Quantity_KeyPress);
             // 
             // comboBox_Order
@@ -400,13 +401,6 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(315, 70);
             this.panel4.TabIndex = 2;
-            // 
-            // userControl_Inventory1
-            // 
-            this.userControl_Inventory1.Location = new System.Drawing.Point(-20, 313);
-            this.userControl_Inventory1.Name = "userControl_Inventory1";
-            this.userControl_Inventory1.Size = new System.Drawing.Size(779, 43);
-            this.userControl_Inventory1.TabIndex = 11;
             // 
             // label4
             // 
@@ -615,6 +609,13 @@
             this.PicLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.PicLogo.TabIndex = 7;
             this.PicLogo.TabStop = false;
+            // 
+            // userControl_Inventory1
+            // 
+            this.userControl_Inventory1.Location = new System.Drawing.Point(-20, 313);
+            this.userControl_Inventory1.Name = "userControl_Inventory1";
+            this.userControl_Inventory1.Size = new System.Drawing.Size(779, 43);
+            this.userControl_Inventory1.TabIndex = 11;
             // 
             // Main
             // 

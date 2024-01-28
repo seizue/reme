@@ -49,6 +49,10 @@ namespace reme
 
             // Subscribe to the SelectionChanged event of the DataGridView
             OrderPreview.SelectionChanged += OrderPreview_SelectionChanged;
+
+            OrderPreview.RowPrePaint += OrderPreview_RowPrePaint;
+
+            OrderPreview.CellPainting += OrderPreview_CellPainting;
         }
 
         private void InitializeInventoryControl()
@@ -114,45 +118,44 @@ namespace reme
 
         private void button_Save_Click(object sender, EventArgs e)
         {
+            try
             {
-                try
+                var dataList = userControl_Inventory1.dataList;
+                string selectedOrder = comboBox_Order.SelectedItem?.ToString();
+                int selectedQuantity = Convert.ToInt32(comboBox_Quantity.SelectedItem);
+                int selectedPrice = dataList.FirstOrDefault(item => item.ORDER == selectedOrder)?.PRICE ?? 0;
+                int subtotal = selectedPrice * selectedQuantity;
+
+                bool orderExists = false;
+                foreach (DataGridViewRow row in OrderPreview.Rows)
                 {
-                    var dataList = userControl_Inventory1.dataList;
-                    string selectedOrder = comboBox_Order.SelectedItem?.ToString();
-                    int selectedQuantity = Convert.ToInt32(comboBox_Quantity.SelectedItem);
-                    int subtotal = dataList.FirstOrDefault(item => item.ORDER == selectedOrder)?.PRICE * selectedQuantity ?? 0;
-
-                    bool orderExists = false;
-                    foreach (DataGridViewRow row in OrderPreview.Rows)
+                    if (row.Cells["ORDER"].Value?.ToString() == selectedOrder)
                     {
-                        if (row.Cells["ORDER"].Value?.ToString() == selectedOrder)
-                        {
-                            // Update the existing order
-                            int existingQuantity = Convert.ToInt32(row.Cells["QUANTITY"].Value);
-                            int quantityDifference = selectedQuantity - existingQuantity;
-                            row.Cells["QUANTITY"].Value = selectedQuantity; // Update the QUANTITY
-                            row.Cells["SUBTOTAL"].Value = dataList.FirstOrDefault(item => item.ORDER == selectedOrder)?.PRICE * selectedQuantity; // Update the SUBTOTAL
+                        // Update the existing order
+                        int existingQuantity = Convert.ToInt32(row.Cells["QUANTITY"].Value);
+                        int quantityDifference = selectedQuantity - existingQuantity;
+                        row.Cells["QUANTITY"].Value = selectedQuantity; // Update the QUANTITY
+                        row.Cells["SUBTOTAL"].Value = subtotal; // Update the SUBTOTAL based on new quantity and price
 
-                            orderExists = true;
-                            break;
-                        }
+                        orderExists = true;
+                        break;
                     }
-
-                    if (!orderExists)
-                    {
-                        // Add a new entry if the order doesn't exist
-                        OrderPreview.Rows.Add(selectedOrder, selectedQuantity, subtotal);
-                    }
-
-                    // Update the orders.json file
-                    UpdateOrdersJsonFile();
-
-                    CalculateOverallTotal();
                 }
-                catch (Exception ex)
+
+                if (!orderExists)
                 {
-                    MessageBox.Show("Error saving data: " + ex.Message);
+                    // Add a new entry if the order doesn't exist
+                    OrderPreview.Rows.Add(selectedOrder, selectedQuantity, subtotal);
                 }
+
+                // Update the orders.json file
+                UpdateOrdersJsonFile();
+
+                CalculateOverallTotal();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error saving data: " + ex.Message);
             }
 
         }
@@ -356,30 +359,13 @@ namespace reme
             }
         }
 
-
-
-
-
-        private void UpdateSubtotal(DataGridViewRow row)
-        {
-            // Retrieve the quantity and price from the row's cells
-            int quantity = Convert.ToInt32(row.Cells["QUANTITY"].Value);
-            int price = Convert.ToInt32(row.Cells["PRICE"].Value); // Assuming you have a PRICE column
-
-            // Calculate the subtotal based on the quantity and price
-            int subtotal = quantity * price;
-
-            // Update the SUBTOTAL cell with the calculated subtotal
-            row.Cells["SUBTOTAL"].Value = subtotal;
-        }
-
         private void OrderPreview_CellEndEdit(object sender, DataGridViewCellEventArgs e)
         {
             // Check if the edited cell is in the QUANTITY column
             if (e.ColumnIndex == OrderPreview.Columns["QUANTITY"].Index)
             {
                 DataGridViewRow editedRow = OrderPreview.Rows[e.RowIndex];
-                UpdateSubtotal(editedRow);
+
                 CalculateOverallTotal();
             }
         }
@@ -388,35 +374,74 @@ namespace reme
         {
             int overallTotal = 0;
 
-            // Iterate through all rows and sum up SUBTOTAL values
-            foreach (DataGridViewRow row in OrderPreview.Rows)
+            // Iterate through all rows except the last one (which contains the overall total)
+            for (int i = 0; i < OrderPreview.Rows.Count - 1; i++)
             {
                 int subtotal = 0;
-                if (row.Cells["SUBTOTAL"].Value != null)
+                if (OrderPreview.Rows[i].Cells["SUBTOTAL"].Value != null)
                 {
-                    subtotal = Convert.ToInt32(row.Cells["SUBTOTAL"].Value);
+                    subtotal = Convert.ToInt32(OrderPreview.Rows[i].Cells["SUBTOTAL"].Value);
                     overallTotal += subtotal;
                 }
             }
 
-            // Update the overall total in the last row
-            if (OrderPreview.Rows.Count > 0)
+            // Set the overall total directly to the appropriate cell
+            DataGridViewCell overallTotalCell = OrderPreview.Rows[OrderPreview.Rows.Count - 1].Cells["SUBTOTAL"];
+            overallTotalCell.Value = overallTotal;
+
+            // Set the name of the overall total cell to "TOTAL"
+            DataGridViewCell totalNameCell = OrderPreview.Rows[OrderPreview.Rows.Count - 1].Cells["ORDER"];
+            totalNameCell.Value = "Total Amount";
+
+            // Adjust the height of the last row containing the overall total
+            OrderPreview.Rows[OrderPreview.Rows.Count - 1].Height = 27; // Adjust the height as needed
+        }
+
+        private void OrderPreview_RowPrePaint(object sender, DataGridViewRowPrePaintEventArgs e)
+        {
+            // Check if the current row is the last row
+            if (e.RowIndex == OrderPreview.Rows.Count - 1)
             {
-                DataGridViewRow lastRow = OrderPreview.Rows[OrderPreview.Rows.Count - 1];
-                lastRow.Cells["SUBTOTAL"].Value = overallTotal;
+                // Change the back color of the entire row
+                OrderPreview.Rows[e.RowIndex].DefaultCellStyle.BackColor = Color.FromArgb(193, 160, 160);
+                OrderPreview.Rows[e.RowIndex].DefaultCellStyle.ForeColor = Color.FromArgb(106, 56, 56);
             }
         }
 
-
-
-        private void comboBox_Quantity_SelectedIndexChanged(object sender, EventArgs e)
+        private void OrderPreview_CellPainting(object sender, DataGridViewCellPaintingEventArgs e)
         {
-            
-            
-        }
-    }
+            if (e.RowIndex >= 0 && e.ColumnIndex >= 0)
+            {
+                if (!OrderPreview.Rows[e.RowIndex].IsNewRow && e.RowIndex != OrderPreview.Rows.Count - 1)
+                {
+                    // Exclude the divider border for the right of the last column
+                    if (e.ColumnIndex < OrderPreview.Columns.Count - 1)
+                    {
+                        e.AdvancedBorderStyle.Right = DataGridViewAdvancedCellBorderStyle.Single;
+                    }
+                    else
+                    {
+                        e.AdvancedBorderStyle.Right = DataGridViewAdvancedCellBorderStyle.None;
+                    }
 
-      
-    
+                    // Exclude the divider border for the bottom of the last row
+                    if (e.RowIndex < OrderPreview.Rows.Count - 1)
+                    {
+                        e.AdvancedBorderStyle.Bottom = DataGridViewAdvancedCellBorderStyle.Single;
+                    }
+                    else
+                    {
+                        e.AdvancedBorderStyle.Bottom = DataGridViewAdvancedCellBorderStyle.None;
+                    }
+                }
+                else
+                {
+                    // Exclude the divider border for the header cell
+                    e.AdvancedBorderStyle.Right = DataGridViewAdvancedCellBorderStyle.None;
+                    e.AdvancedBorderStyle.Bottom = DataGridViewAdvancedCellBorderStyle.None;
+                }
+            }
+        }
+    }   
 
 }
