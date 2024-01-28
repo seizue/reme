@@ -16,12 +16,10 @@ namespace reme
     public partial class Main : MetroFramework.Forms.MetroForm
     {
       
-
         private Color defaultColor = Color.FromArgb(71, 38, 38); // Default color of the tab indicator
         private Color clickedColor = Color.FromArgb(160, 84, 84); // Color when the label is clicked
 
         private UserControl_Inventory inventoryControl;
-
 
         public Main()
         {
@@ -89,7 +87,6 @@ namespace reme
             comboBox_Order.ValueMember = "ORDER"; // Set the value member
         }
 
-
         private void HomeLabel_Click(object sender, EventArgs e)
         {
             // Move the tab indicator to the Home Label
@@ -102,8 +99,6 @@ namespace reme
             // Change the color of the labels
             HomeLabel.ForeColor = clickedColor;
             InventoryLabel.ForeColor = defaultColor;
-
-
         }
 
         private void MoveTabIndicator(Control label)
@@ -116,33 +111,47 @@ namespace reme
             Tab_Indicator.BackColor = clickedColor;
         }
 
-
-
         private void button_Save_Click(object sender, EventArgs e)
         {
-            try
-            {
-                var dataList = userControl_Inventory1.dataList;
-                string selectedOrder = comboBox_Order.SelectedItem?.ToString();
-                int selectedQuantity = Convert.ToInt32(comboBox_Quantity.SelectedItem);
-                int subtotal = dataList.FirstOrDefault(item => item.ORDER == selectedOrder)?.PRICE * selectedQuantity ?? 0;
-                OrderItem newOrderItem = new OrderItem
+            { 
+                try
                 {
-                    ORDER = selectedOrder,
-                    QUANTITY = selectedQuantity,
-                    SUBTOTAL = subtotal
-                };
+                    var dataList = userControl_Inventory1.dataList;
+                    string selectedOrder = comboBox_Order.SelectedItem?.ToString();
+                    int selectedQuantity = Convert.ToInt32(comboBox_Quantity.SelectedItem);
+                    int subtotal = dataList.FirstOrDefault(item => item.ORDER == selectedOrder)?.PRICE * selectedQuantity ?? 0;
 
-                List<OrderItem> existingOrders = LoadExistingOrders();
-                existingOrders.Add(newOrderItem);
-                string jsonData = JsonConvert.SerializeObject(existingOrders, Formatting.Indented);
-                File.WriteAllText("orders.json", jsonData);
-                LoadJsonData();
+                    bool orderExists = false;
+                    foreach (DataGridViewRow row in OrderPreview.Rows)
+                    {
+                        if (row.Cells["ORDER"].Value?.ToString() == selectedOrder)
+                        {
+                            // Update the existing order
+                            int existingQuantity = Convert.ToInt32(row.Cells["QUANTITY"].Value);
+                            int quantityDifference = selectedQuantity - existingQuantity;
+                            row.Cells["QUANTITY"].Value = selectedQuantity; // Update the QUANTITY
+                            row.Cells["SUBTOTAL"].Value = dataList.FirstOrDefault(item => item.ORDER == selectedOrder)?.PRICE * selectedQuantity; // Update the SUBTOTAL
+
+                            orderExists = true;
+                            break;
+                        }
+                    }
+
+                    if (!orderExists)
+                    {
+                        // Add a new entry if the order doesn't exist
+                        OrderPreview.Rows.Add(selectedOrder, selectedQuantity, subtotal);
+                    }
+
+                    // Update the orders.json file
+                    UpdateOrdersJsonFile();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error saving data: " + ex.Message);
+                }
             }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error saving data: " + ex.Message);
-            }
+
         }
 
         private List<OrderItem> LoadExistingOrders()
@@ -173,11 +182,45 @@ namespace reme
             }
         }
 
+        private void UpdateOrdersJsonFile()
+        {
+         
+            {
+                try
+                {
+                    // Get data from OrderPreview DataGridView and serialize it to JSON
+                    List<OrderItem> orders = new List<OrderItem>();
+
+                    foreach (DataGridViewRow row in OrderPreview.Rows)
+                    {
+                        if (row.Cells["ORDER"].Value != null && row.Cells["QUANTITY"].Value != null && row.Cells["SUBTOTAL"].Value != null)
+                        {
+                            OrderItem orderItem = new OrderItem
+                            {
+                                ORDER = row.Cells["ORDER"].Value.ToString(),
+                                QUANTITY = Convert.ToInt32(row.Cells["QUANTITY"].Value),
+                                SUBTOTAL = Convert.ToInt32(row.Cells["SUBTOTAL"].Value)
+                            };
+
+                            orders.Add(orderItem);
+                        }
+
+                        // Write JSON data to the file
+                        string jsonData = JsonConvert.SerializeObject(orders, Formatting.Indented);
+                        File.WriteAllText("orders.json", jsonData);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error updating orders.json file: " + ex.Message);
+                }
+            }
+
+        }
 
         // Method to load JSON data into the DataGridView
         private void LoadJsonData()
         {
-
             try
             {
                 if (File.Exists("orders.json"))
@@ -212,12 +255,7 @@ namespace reme
             {
                 MessageBox.Show("Error loading orders from file: " + ex.Message);
             }
-
         }
-
-
-
-
 
         private void comboBox_Quantity_KeyPress(object sender, KeyPressEventArgs e)
         {

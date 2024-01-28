@@ -23,8 +23,7 @@ namespace reme
         {
             get { return Enumerable.Range(1, 20).ToList(); }
         }
-
-     
+    
         public List<string> OrderList
         {
             get
@@ -33,12 +32,10 @@ namespace reme
             }
         }
 
-
         public UserControl_Inventory()
         {
             InitializeComponent();
-            InitializeDataGridView();
-           
+            InitializeDataGridView();         
         }
 
         private void InitializeDataGridView()
@@ -54,6 +51,7 @@ namespace reme
             // Set the DataGridView data source to the binding list
             GridOrderPreview.DataSource = dataList;
         }
+
 
         public event EventHandler ItemSaved;
 
@@ -198,7 +196,6 @@ namespace reme
 
             MessageBox.Show($"Data exported to CSV successfully!\nFile saved at: {fullFilePath}");
         }
-
 
     }
 }
