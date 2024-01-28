@@ -243,7 +243,7 @@ namespace reme
                     }
                     else
                     {
-                        MessageBox.Show("The orders file is empty.");
+                        MessageBox.Show("The Orders is empty.");
                     }
                 }
                 else
@@ -315,6 +315,39 @@ namespace reme
             {
                 MessageBox.Show("Error clearing entries: " + ex.Message);
             }
+        }
+
+        private void OrderPreview_MouseDown(object sender, MouseEventArgs e)
+        {
+        
+                if (e.Button == MouseButtons.Right)
+                {
+                    // Check if any row is selected
+                    DataGridView.HitTestInfo hitTestInfo = OrderPreview.HitTest(e.X, e.Y);
+                    if (hitTestInfo.RowIndex >= 0)
+                    {
+                        // Select the row under the cursor
+                        OrderPreview.Rows[hitTestInfo.RowIndex].Selected = true;
+
+                        // Show context menu for deleting the row
+                        ContextMenuStrip contextMenuStrip = new ContextMenuStrip();
+                        contextMenuStrip.Items.Add("Delete").Click += (s, ev) =>
+                        {
+                            // Delete the selected row
+                            if (OrderPreview.SelectedRows.Count > 0)
+                            {
+                                OrderPreview.Rows.RemoveAt(OrderPreview.SelectedRows[0].Index);
+
+                                // Update the orders.json file after deletion
+                                UpdateOrdersJsonFile();
+                            }
+                        };
+
+                        // Display the context menu at the cursor's position
+                        contextMenuStrip.Show(OrderPreview, e.Location);
+                    }
+                }           
+
         }
     }
 }
