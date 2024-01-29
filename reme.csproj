@@ -158,5 +158,17 @@
   <ItemGroup>
     <None Include="Resources\export_20px.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\handcart_24px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\birdhouse_24px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\four_squares_24px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\increase_profits_24px.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

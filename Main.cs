@@ -17,7 +17,7 @@ namespace reme
     {
 
         private Color defaultColor = Color.FromArgb(71, 38, 38); // Default color of the tab indicator
-        private Color clickedColor = Color.FromArgb(160, 84, 84); // Color when the label is clicked
+        private Color clickedColor = Color.FromArgb(227, 103, 102); // Color when the button is clicked
 
         private UserControl_Inventory inventoryControl;
 
@@ -28,21 +28,21 @@ namespace reme
             InitializeInventoryControl();
             CalculateOverallTotal();
             LoadNameAndPreview();
+            SetCurrentDate();
+
             // Subscribe to the ItemSaved event of the UserControl
             userControl_Inventory1.ItemSaved += UserControl_ItemSaved;
 
             // Subscribe to the SelectionChanged event of the DataGridView
             OrderPreview.SelectionChanged += OrderPreview_SelectionChanged;
 
-            Tab_Indicator.Location = new Point(HomeLabel.Left, HomeLabel.Bottom + 5); // Add space below the label
-
             userControl_Inventory1 = new UserControl_Inventory();
             userControl_Inventory1.Visible = false; // Initially, hide the UserControl
             comboBox_Quantity.KeyPress += comboBox_Quantity_KeyPress;
 
-            // Attach click events to your labels
-            InventoryLabel.Click += InventoryLabel_Click;
-            HomeLabel.Click += HomeLabel_Click;
+            // Attach click events to the buttons
+            button_Inventory.Click += button_Inventory_Click;
+            button_Home.Click += button_Home_Click;
 
             // Add the UserControl to the main panel's controls
             MainPanel.Controls.Add(userControl_Inventory1);
@@ -68,21 +68,6 @@ namespace reme
             comboBox_Quantity.DataSource = inventoryControl.QuantityList;
         }
 
-        private void InventoryLabel_Click(object sender, EventArgs e)
-        {
-            // Move the tab indicator to the Inventory Label
-            MoveTabIndicator(InventoryLabel);
-
-            // Set the location of the UserControl within the main panel
-            userControl_Inventory1.Location = new Point(0, 0); // You may adjust the position
-            userControl_Inventory1.Visible = true;
-            userControl_Inventory1.BringToFront();
-
-            // Change the color of the labels
-            InventoryLabel.ForeColor = clickedColor;
-            HomeLabel.ForeColor = defaultColor;
-        }
-
         private void UserControl_ItemSaved(object sender, EventArgs e)
         {
             // Update the data source for comboBox_Order
@@ -90,30 +75,6 @@ namespace reme
             comboBox_Order.DataSource = inventoryControl.OrderList; // Set the updated data source
             comboBox_Order.DisplayMember = "ORDER"; // Set the display member
             comboBox_Order.ValueMember = "ORDER"; // Set the value member
-        }
-
-        private void HomeLabel_Click(object sender, EventArgs e)
-        {
-            // Move the tab indicator to the Home Label
-            MoveTabIndicator(HomeLabel);
-
-            // Set the location of the UserControl within the main panel
-            userControl_Inventory1.Location = new Point(0, 0); // You may adjust the position
-            userControl_Inventory1.Visible = false;
-
-            // Change the color of the labels
-            HomeLabel.ForeColor = clickedColor;
-            InventoryLabel.ForeColor = defaultColor;
-        }
-
-        private void MoveTabIndicator(Control label)
-        {
-
-            // Move the tab indicator below and with the same width as the clicked label
-            Tab_Indicator.Location = new Point(label.Left, label.Bottom + 5); // Add space below the label
-
-            // Change the color of the tab indicator
-            Tab_Indicator.BackColor = clickedColor;
         }
 
         private void button_Save_Click(object sender, EventArgs e)
@@ -507,7 +468,43 @@ namespace reme
             }
         }
 
+        private void SetCurrentDate()
+        {
+            // Get the current date and format it as per your requirement
+            string currentDate = DateTime.Now.ToString("MM/dd/yyyy");
 
+            // Set the formatted current date to the textBox_Date
+            textBox_Date.Text = currentDate;
+        }
+
+        private void button_Print_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button_Home_Click(object sender, EventArgs e)
+        {
+            // Set the location of the UserControl within the main panel
+            userControl_Inventory1.Location = new Point(0, 0); // You may adjust the position
+            userControl_Inventory1.Visible = false;
+
+            // Change the color of the labels
+            button_Home.ForeColor = clickedColor;
+            button_Inventory.ForeColor = defaultColor;
+        }
+
+        private void button_Inventory_Click(object sender, EventArgs e)
+        {
+
+            // Set the location of the UserControl within the main panel
+            userControl_Inventory1.Location = new Point(0, 0); // You may adjust the position
+            userControl_Inventory1.Visible = true;
+            userControl_Inventory1.BringToFront();
+
+            // Change the color of the labels
+            button_Inventory.ForeColor = clickedColor;
+            button_Home.ForeColor = defaultColor;
+        }
     }
 
 }

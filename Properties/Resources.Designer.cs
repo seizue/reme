@@ -63,6 +63,16 @@ namespace reme.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap birdhouse_24px {
+            get {
+                object obj = ResourceManager.GetObject("birdhouse_24px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Done_22px {
             get {
                 object obj = ResourceManager.GetObject("Done_22px", resourceCulture);
@@ -113,9 +123,39 @@ namespace reme.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap four_squares_24px {
+            get {
+                object obj = ResourceManager.GetObject("four_squares_24px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap four_squares_48px {
             get {
                 object obj = ResourceManager.GetObject("four_squares_48px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap handcart_24px {
+            get {
+                object obj = ResourceManager.GetObject("handcart_24px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap increase_profits_24px {
+            get {
+                object obj = ResourceManager.GetObject("increase_profits_24px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
