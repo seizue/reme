@@ -27,7 +27,7 @@ namespace reme
             LoadJsonData();
             InitializeInventoryControl();
             CalculateOverallTotal();
-
+            LoadNameAndPreview();
             // Subscribe to the ItemSaved event of the UserControl
             userControl_Inventory1.ItemSaved += UserControl_ItemSaved;
 
@@ -118,6 +118,7 @@ namespace reme
 
         private void button_Save_Click(object sender, EventArgs e)
         {
+           
             try
             {
                 var dataList = userControl_Inventory1.dataList;
@@ -125,6 +126,8 @@ namespace reme
                 int selectedQuantity = Convert.ToInt32(comboBox_Quantity.SelectedItem);
                 int selectedPrice = dataList.FirstOrDefault(item => item.ORDER == selectedOrder)?.PRICE ?? 0;
                 int subtotal = selectedPrice * selectedQuantity;
+                string name = textBox_Name.Text.Trim();
+                SaveNameToJson(name); 
 
                 bool orderExists = false;
                 foreach (DataGridViewRow row in OrderPreview.Rows)
@@ -147,7 +150,7 @@ namespace reme
                     // Add a new entry if the order doesn't exist
                     OrderPreview.Rows.Add(selectedOrder, selectedQuantity, subtotal);
                 }
-
+          
                 // Update the orders.json file
                 UpdateOrdersJsonFile();
 
@@ -244,7 +247,7 @@ namespace reme
                         // Populate the DataGridView with the deserialized data
                         foreach (var order in orders)
                         {
-                            OrderPreview.Rows.Add(order.ORDER, order.QUANTITY, order.SUBTOTAL, order.NAME, order.PRICE);
+                            OrderPreview.Rows.Add(order.ORDER, order.QUANTITY, order.SUBTOTAL, order.PRICE);
                         }
                     }
                     else
@@ -442,6 +445,69 @@ namespace reme
                 }
             }
         }
-    }   
+
+        private void SaveNameToJson(string name)
+        {
+            try
+            {
+                // Serialize the name to JSON
+                string jsonData = JsonConvert.SerializeObject(name, Formatting.Indented);
+
+                // Write JSON data to the file
+                File.WriteAllText("name.json", jsonData);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error saving name to name.json: " + ex.Message);
+            }
+        }
+
+        private string LoadNameFromJson()
+        {
+            try
+            {
+                if (File.Exists("name.json"))
+                {
+                    string jsonData = File.ReadAllText("name.json");
+
+                    if (!string.IsNullOrWhiteSpace(jsonData))
+                    {
+                        // Deserialize JSON data
+                        return JsonConvert.DeserializeObject<string>(jsonData);
+                    }
+                    else
+                    {
+                        MessageBox.Show("No data found in name.json.");
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("The name file does not exist.");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error loading name from name.json: " + ex.Message);
+            }
+
+            return null;
+        }
+
+        private void LoadNameAndPreview()
+        {
+            string loadedName = LoadNameFromJson();
+            if (!string.IsNullOrEmpty(loadedName))
+            {
+                textBox_PreviewName.Text = loadedName;
+            }
+            else
+            {
+                // Handle the case when no name is loaded
+                textBox_PreviewName.Text = "No name loaded";
+            }
+        }
+
+
+    }
 
 }
