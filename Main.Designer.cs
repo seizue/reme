@@ -44,24 +44,24 @@
             this.PicLogo = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.PanelReceipt = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.textBox_Name = new MetroFramework.Controls.MetroTextBox();
-            this.metroTextBox3 = new MetroFramework.Controls.MetroTextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.comboBox_Order = new System.Windows.Forms.ComboBox();
-            this.comboBox_Quantity = new System.Windows.Forms.ComboBox();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.panel8 = new System.Windows.Forms.Panel();
-            this.panel9 = new System.Windows.Forms.Panel();
-            this.button_Save = new System.Windows.Forms.Button();
-            this.panel19 = new System.Windows.Forms.Panel();
             this.panel20 = new System.Windows.Forms.Panel();
+            this.panel19 = new System.Windows.Forms.Panel();
+            this.button_Save = new System.Windows.Forms.Button();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.comboBox_Quantity = new System.Windows.Forms.ComboBox();
+            this.comboBox_Order = new System.Windows.Forms.ComboBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
+            this.metroTextBox3 = new MetroFramework.Controls.MetroTextBox();
+            this.textBox_Name = new MetroFramework.Controls.MetroTextBox();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
             this.panel11 = new System.Windows.Forms.Panel();
             this.panel13 = new System.Windows.Forms.Panel();
             this.panel12 = new System.Windows.Forms.Panel();
@@ -72,21 +72,24 @@
             this.panel15 = new System.Windows.Forms.Panel();
             this.panel14 = new System.Windows.Forms.Panel();
             this.OrderPreview = new MetroFramework.Controls.MetroGrid();
-            this.SUBTOTAL = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.QUANTITY = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ORDER = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.QUANTITY = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SUBTOTAL = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel17 = new System.Windows.Forms.Panel();
             this.panel18 = new System.Windows.Forms.Panel();
             this.textBox_Item = new System.Windows.Forms.TextBox();
             this.MainPanel = new System.Windows.Forms.Panel();
-            this.textBox_Price = new System.Windows.Forms.TextBox();
-            this.panel21 = new System.Windows.Forms.Panel();
             this.metroTextBox1 = new MetroFramework.Controls.MetroTextBox();
+            this.panel21 = new System.Windows.Forms.Panel();
+            this.textBox_Price = new System.Windows.Forms.TextBox();
+            this.panel22 = new System.Windows.Forms.Panel();
+            this.panel23 = new System.Windows.Forms.Panel();
+            this.panel24 = new System.Windows.Forms.Panel();
             this.userControl_Inventory1 = new reme.UserControl_Inventory();
             ((System.ComponentModel.ISupportInitialize)(this.PicLogo)).BeginInit();
             this.PanelReceipt.SuspendLayout();
-            this.panel4.SuspendLayout();
             this.panel6.SuspendLayout();
+            this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.OrderPreview)).BeginInit();
             this.MainPanel.SuspendLayout();
             this.SuspendLayout();
@@ -209,32 +212,112 @@
             this.PanelReceipt.Size = new System.Drawing.Size(393, 390);
             this.PanelReceipt.TabIndex = 0;
             // 
-            // label3
+            // panel20
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
-            this.label3.Location = new System.Drawing.Point(14, 33);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(54, 13);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "ENTRIES";
+            this.panel20.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(231)))), ((int)(((byte)(227)))));
+            this.panel20.Location = new System.Drawing.Point(371, 320);
+            this.panel20.Name = "panel20";
+            this.panel20.Size = new System.Drawing.Size(4, 25);
+            this.panel20.TabIndex = 15;
             // 
-            // panel2
+            // panel19
             // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
-            this.panel2.Location = new System.Drawing.Point(73, 42);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(257, 4);
-            this.panel2.TabIndex = 1;
+            this.panel19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(231)))), ((int)(((byte)(227)))));
+            this.panel19.Location = new System.Drawing.Point(371, 296);
+            this.panel19.Name = "panel19";
+            this.panel19.Size = new System.Drawing.Size(4, 21);
+            this.panel19.TabIndex = 14;
             // 
-            // panel3
+            // button_Save
             // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
-            this.panel3.Location = new System.Drawing.Point(17, 237);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(315, 4);
-            this.panel3.TabIndex = 2;
+            this.button_Save.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(114)))), ((int)(((byte)(115)))));
+            this.button_Save.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.button_Save.FlatAppearance.BorderSize = 0;
+            this.button_Save.Font = new System.Drawing.Font("Bahnschrift", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_Save.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.button_Save.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button_Save.Location = new System.Drawing.Point(239, 259);
+            this.button_Save.Name = "button_Save";
+            this.button_Save.Size = new System.Drawing.Size(86, 36);
+            this.button_Save.TabIndex = 13;
+            this.button_Save.Text = " SAVE";
+            this.button_Save.UseVisualStyleBackColor = false;
+            this.button_Save.Click += new System.EventHandler(this.button_Save_Click);
+            // 
+            // panel9
+            // 
+            this.panel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
+            this.panel9.Location = new System.Drawing.Point(330, 262);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(2, 29);
+            this.panel9.TabIndex = 7;
+            // 
+            // panel8
+            // 
+            this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
+            this.panel8.Location = new System.Drawing.Point(232, 262);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(2, 29);
+            this.panel8.TabIndex = 6;
+            // 
+            // panel7
+            // 
+            this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
+            this.panel7.Location = new System.Drawing.Point(371, 33);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(4, 260);
+            this.panel7.TabIndex = 4;
+            // 
+            // panel6
+            // 
+            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
+            this.panel6.Controls.Add(this.comboBox_Quantity);
+            this.panel6.Controls.Add(this.comboBox_Order);
+            this.panel6.Controls.Add(this.label5);
+            this.panel6.Controls.Add(this.label2);
+            this.panel6.Location = new System.Drawing.Point(16, 135);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(315, 89);
+            this.panel6.TabIndex = 3;
+            // 
+            // comboBox_Quantity
+            // 
+            this.comboBox_Quantity.Font = new System.Drawing.Font("Bahnschrift SemiLight", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox_Quantity.FormattingEnabled = true;
+            this.comboBox_Quantity.Location = new System.Drawing.Point(209, 41);
+            this.comboBox_Quantity.Name = "comboBox_Quantity";
+            this.comboBox_Quantity.Size = new System.Drawing.Size(85, 24);
+            this.comboBox_Quantity.TabIndex = 7;
+            this.comboBox_Quantity.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox_Quantity_KeyPress);
+            // 
+            // comboBox_Order
+            // 
+            this.comboBox_Order.Font = new System.Drawing.Font("Bahnschrift SemiLight", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox_Order.FormattingEnabled = true;
+            this.comboBox_Order.Location = new System.Drawing.Point(17, 41);
+            this.comboBox_Order.Name = "comboBox_Order";
+            this.comboBox_Order.Size = new System.Drawing.Size(172, 24);
+            this.comboBox_Order.TabIndex = 6;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
+            this.label5.Location = new System.Drawing.Point(206, 23);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(62, 13);
+            this.label5.TabIndex = 4;
+            this.label5.Text = "QUANTITY";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
+            this.label2.Location = new System.Drawing.Point(14, 23);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(46, 13);
+            this.label2.TabIndex = 3;
+            this.label2.Text = "ORDER";
             // 
             // panel4
             // 
@@ -247,6 +330,55 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(315, 70);
             this.panel4.TabIndex = 2;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
+            this.label4.Location = new System.Drawing.Point(17, 11);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(38, 13);
+            this.label4.TabIndex = 3;
+            this.label4.Text = "NAME";
+            // 
+            // metroTextBox3
+            // 
+            this.metroTextBox3.BackColor = System.Drawing.Color.Gainsboro;
+            // 
+            // 
+            // 
+            this.metroTextBox3.CustomButton.Image = null;
+            this.metroTextBox3.CustomButton.Location = new System.Drawing.Point(8, 1);
+            this.metroTextBox3.CustomButton.Name = "";
+            this.metroTextBox3.CustomButton.Size = new System.Drawing.Size(25, 25);
+            this.metroTextBox3.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.metroTextBox3.CustomButton.TabIndex = 1;
+            this.metroTextBox3.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.metroTextBox3.CustomButton.UseSelectable = true;
+            this.metroTextBox3.CustomButton.Visible = false;
+            this.metroTextBox3.Enabled = false;
+            this.metroTextBox3.ForeColor = System.Drawing.Color.CadetBlue;
+            this.metroTextBox3.Lines = new string[0];
+            this.metroTextBox3.Location = new System.Drawing.Point(23, 28);
+            this.metroTextBox3.MaxLength = 32767;
+            this.metroTextBox3.Multiline = true;
+            this.metroTextBox3.Name = "metroTextBox3";
+            this.metroTextBox3.PasswordChar = '\0';
+            this.metroTextBox3.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.metroTextBox3.SelectedText = "";
+            this.metroTextBox3.SelectionLength = 0;
+            this.metroTextBox3.SelectionStart = 0;
+            this.metroTextBox3.ShortcutsEnabled = true;
+            this.metroTextBox3.Size = new System.Drawing.Size(34, 27);
+            this.metroTextBox3.Style = MetroFramework.MetroColorStyle.Teal;
+            this.metroTextBox3.TabIndex = 180;
+            this.metroTextBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.metroTextBox3.UseCustomBackColor = true;
+            this.metroTextBox3.UseCustomForeColor = true;
+            this.metroTextBox3.UseSelectable = true;
+            this.metroTextBox3.UseStyleColors = true;
+            this.metroTextBox3.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.metroTextBox3.WaterMarkFont = new System.Drawing.Font("Bahnschrift", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
             // textBox_Name
             // 
@@ -290,161 +422,32 @@
             this.textBox_Name.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.textBox_Name.WaterMarkFont = new System.Drawing.Font("Bahnschrift Light", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
-            // metroTextBox3
+            // panel3
             // 
-            this.metroTextBox3.BackColor = System.Drawing.Color.Gainsboro;
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
+            this.panel3.Location = new System.Drawing.Point(17, 237);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(315, 4);
+            this.panel3.TabIndex = 2;
             // 
+            // panel2
             // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
+            this.panel2.Location = new System.Drawing.Point(73, 42);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(257, 4);
+            this.panel2.TabIndex = 1;
             // 
-            this.metroTextBox3.CustomButton.Image = null;
-            this.metroTextBox3.CustomButton.Location = new System.Drawing.Point(8, 1);
-            this.metroTextBox3.CustomButton.Name = "";
-            this.metroTextBox3.CustomButton.Size = new System.Drawing.Size(25, 25);
-            this.metroTextBox3.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.metroTextBox3.CustomButton.TabIndex = 1;
-            this.metroTextBox3.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.metroTextBox3.CustomButton.UseSelectable = true;
-            this.metroTextBox3.CustomButton.Visible = false;
-            this.metroTextBox3.Enabled = false;
-            this.metroTextBox3.ForeColor = System.Drawing.Color.CadetBlue;
-            this.metroTextBox3.Lines = new string[0];
-            this.metroTextBox3.Location = new System.Drawing.Point(23, 28);
-            this.metroTextBox3.MaxLength = 32767;
-            this.metroTextBox3.Multiline = true;
-            this.metroTextBox3.Name = "metroTextBox3";
-            this.metroTextBox3.PasswordChar = '\0';
-            this.metroTextBox3.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.metroTextBox3.SelectedText = "";
-            this.metroTextBox3.SelectionLength = 0;
-            this.metroTextBox3.SelectionStart = 0;
-            this.metroTextBox3.ShortcutsEnabled = true;
-            this.metroTextBox3.Size = new System.Drawing.Size(34, 27);
-            this.metroTextBox3.Style = MetroFramework.MetroColorStyle.Teal;
-            this.metroTextBox3.TabIndex = 180;
-            this.metroTextBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.metroTextBox3.UseCustomBackColor = true;
-            this.metroTextBox3.UseCustomForeColor = true;
-            this.metroTextBox3.UseSelectable = true;
-            this.metroTextBox3.UseStyleColors = true;
-            this.metroTextBox3.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.metroTextBox3.WaterMarkFont = new System.Drawing.Font("Bahnschrift", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            // label3
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
-            this.label4.Location = new System.Drawing.Point(17, 11);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(38, 13);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "NAME";
-            // 
-            // panel6
-            // 
-            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
-            this.panel6.Controls.Add(this.comboBox_Quantity);
-            this.panel6.Controls.Add(this.comboBox_Order);
-            this.panel6.Controls.Add(this.label5);
-            this.panel6.Controls.Add(this.label2);
-            this.panel6.Location = new System.Drawing.Point(16, 135);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(315, 89);
-            this.panel6.TabIndex = 3;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
-            this.label2.Location = new System.Drawing.Point(14, 23);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(46, 13);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "ORDER";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
-            this.label5.Location = new System.Drawing.Point(206, 23);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(62, 13);
-            this.label5.TabIndex = 4;
-            this.label5.Text = "QUANTITY";
-            // 
-            // comboBox_Order
-            // 
-            this.comboBox_Order.Font = new System.Drawing.Font("Bahnschrift SemiLight", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox_Order.FormattingEnabled = true;
-            this.comboBox_Order.Location = new System.Drawing.Point(17, 41);
-            this.comboBox_Order.Name = "comboBox_Order";
-            this.comboBox_Order.Size = new System.Drawing.Size(172, 24);
-            this.comboBox_Order.TabIndex = 6;
-            // 
-            // comboBox_Quantity
-            // 
-            this.comboBox_Quantity.Font = new System.Drawing.Font("Bahnschrift SemiLight", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox_Quantity.FormattingEnabled = true;
-            this.comboBox_Quantity.Location = new System.Drawing.Point(209, 41);
-            this.comboBox_Quantity.Name = "comboBox_Quantity";
-            this.comboBox_Quantity.Size = new System.Drawing.Size(85, 24);
-            this.comboBox_Quantity.TabIndex = 7;
-            this.comboBox_Quantity.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox_Quantity_KeyPress);
-            // 
-            // panel7
-            // 
-            this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
-            this.panel7.Location = new System.Drawing.Point(371, 33);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(4, 260);
-            this.panel7.TabIndex = 4;
-            // 
-            // panel8
-            // 
-            this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
-            this.panel8.Location = new System.Drawing.Point(232, 262);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(2, 29);
-            this.panel8.TabIndex = 6;
-            // 
-            // panel9
-            // 
-            this.panel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
-            this.panel9.Location = new System.Drawing.Point(330, 262);
-            this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(2, 29);
-            this.panel9.TabIndex = 7;
-            // 
-            // button_Save
-            // 
-            this.button_Save.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(114)))), ((int)(((byte)(115)))));
-            this.button_Save.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button_Save.FlatAppearance.BorderSize = 0;
-            this.button_Save.Font = new System.Drawing.Font("Bahnschrift", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_Save.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.button_Save.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button_Save.Location = new System.Drawing.Point(239, 259);
-            this.button_Save.Name = "button_Save";
-            this.button_Save.Size = new System.Drawing.Size(86, 36);
-            this.button_Save.TabIndex = 13;
-            this.button_Save.Text = " SAVE";
-            this.button_Save.UseVisualStyleBackColor = false;
-            this.button_Save.Click += new System.EventHandler(this.button_Save_Click);
-            // 
-            // panel19
-            // 
-            this.panel19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(231)))), ((int)(((byte)(227)))));
-            this.panel19.Location = new System.Drawing.Point(371, 296);
-            this.panel19.Name = "panel19";
-            this.panel19.Size = new System.Drawing.Size(4, 21);
-            this.panel19.TabIndex = 14;
-            // 
-            // panel20
-            // 
-            this.panel20.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(231)))), ((int)(((byte)(227)))));
-            this.panel20.Location = new System.Drawing.Point(371, 320);
-            this.panel20.Name = "panel20";
-            this.panel20.Size = new System.Drawing.Size(4, 25);
-            this.panel20.TabIndex = 15;
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
+            this.label3.Location = new System.Drawing.Point(14, 33);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(54, 13);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "ENTRIES";
             // 
             // panel11
             // 
@@ -573,7 +576,7 @@
             this.OrderPreview.EnableHeadersVisualStyles = false;
             this.OrderPreview.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.OrderPreview.GridColor = System.Drawing.Color.Silver;
-            this.OrderPreview.Location = new System.Drawing.Point(416, 98);
+            this.OrderPreview.Location = new System.Drawing.Point(414, 88);
             this.OrderPreview.Name = "OrderPreview";
             this.OrderPreview.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
@@ -592,7 +595,7 @@
             this.OrderPreview.RowsDefaultCellStyle = dataGridViewCellStyle5;
             this.OrderPreview.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
             this.OrderPreview.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.OrderPreview.Size = new System.Drawing.Size(374, 233);
+            this.OrderPreview.Size = new System.Drawing.Size(374, 239);
             this.OrderPreview.TabIndex = 199;
             this.OrderPreview.UseCustomBackColor = true;
             this.OrderPreview.UseCustomForeColor = true;
@@ -602,20 +605,20 @@
             this.OrderPreview.SelectionChanged += new System.EventHandler(this.OrderPreview_SelectionChanged);
             this.OrderPreview.MouseDown += new System.Windows.Forms.MouseEventHandler(this.OrderPreview_MouseDown);
             // 
-            // SUBTOTAL
+            // ORDER
             // 
-            this.SUBTOTAL.HeaderText = "SUBTOTAL";
-            this.SUBTOTAL.Name = "SUBTOTAL";
+            this.ORDER.HeaderText = "ORDER";
+            this.ORDER.Name = "ORDER";
             // 
             // QUANTITY
             // 
             this.QUANTITY.HeaderText = "QUANTITY";
             this.QUANTITY.Name = "QUANTITY";
             // 
-            // ORDER
+            // SUBTOTAL
             // 
-            this.ORDER.HeaderText = "ORDER";
-            this.ORDER.Name = "ORDER";
+            this.SUBTOTAL.HeaderText = "SUBTOTAL";
+            this.SUBTOTAL.Name = "SUBTOTAL";
             // 
             // panel17
             // 
@@ -628,7 +631,7 @@
             // panel18
             // 
             this.panel18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
-            this.panel18.Location = new System.Drawing.Point(790, 66);
+            this.panel18.Location = new System.Drawing.Point(788, 66);
             this.panel18.Name = "panel18";
             this.panel18.Size = new System.Drawing.Size(5, 265);
             this.panel18.TabIndex = 201;
@@ -638,13 +641,16 @@
             this.textBox_Item.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(236)))), ((int)(((byte)(236)))));
             this.textBox_Item.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox_Item.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox_Item.Location = new System.Drawing.Point(449, 66);
+            this.textBox_Item.Location = new System.Drawing.Point(447, 66);
             this.textBox_Item.Name = "textBox_Item";
-            this.textBox_Item.Size = new System.Drawing.Size(234, 24);
+            this.textBox_Item.Size = new System.Drawing.Size(240, 24);
             this.textBox_Item.TabIndex = 202;
             // 
             // MainPanel
             // 
+            this.MainPanel.Controls.Add(this.panel24);
+            this.MainPanel.Controls.Add(this.panel23);
+            this.MainPanel.Controls.Add(this.panel22);
             this.MainPanel.Controls.Add(this.metroTextBox1);
             this.MainPanel.Controls.Add(this.panel21);
             this.MainPanel.Controls.Add(this.textBox_Price);
@@ -668,26 +674,6 @@
             this.MainPanel.Size = new System.Drawing.Size(810, 390);
             this.MainPanel.TabIndex = 1;
             // 
-            // textBox_Price
-            // 
-            this.textBox_Price.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(236)))), ((int)(((byte)(236)))));
-            this.textBox_Price.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_Price.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox_Price.Location = new System.Drawing.Point(688, 66);
-            this.textBox_Price.Name = "textBox_Price";
-            this.textBox_Price.Size = new System.Drawing.Size(102, 24);
-            this.textBox_Price.TabIndex = 203;
-            this.textBox_Price.Text = "    ";
-            this.textBox_Price.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // panel21
-            // 
-            this.panel21.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
-            this.panel21.Location = new System.Drawing.Point(416, 90);
-            this.panel21.Name = "panel21";
-            this.panel21.Size = new System.Drawing.Size(379, 8);
-            this.panel21.TabIndex = 200;
-            // 
             // metroTextBox1
             // 
             this.metroTextBox1.BackColor = System.Drawing.Color.Gainsboro;
@@ -695,7 +681,7 @@
             // 
             // 
             this.metroTextBox1.CustomButton.Image = null;
-            this.metroTextBox1.CustomButton.Location = new System.Drawing.Point(12, 2);
+            this.metroTextBox1.CustomButton.Location = new System.Drawing.Point(10, 2);
             this.metroTextBox1.CustomButton.Name = "";
             this.metroTextBox1.CustomButton.Size = new System.Drawing.Size(19, 19);
             this.metroTextBox1.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
@@ -716,7 +702,7 @@
             this.metroTextBox1.SelectionLength = 0;
             this.metroTextBox1.SelectionStart = 0;
             this.metroTextBox1.ShortcutsEnabled = true;
-            this.metroTextBox1.Size = new System.Drawing.Size(34, 24);
+            this.metroTextBox1.Size = new System.Drawing.Size(32, 24);
             this.metroTextBox1.Style = MetroFramework.MetroColorStyle.Brown;
             this.metroTextBox1.TabIndex = 204;
             this.metroTextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -726,6 +712,50 @@
             this.metroTextBox1.UseStyleColors = true;
             this.metroTextBox1.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.metroTextBox1.WaterMarkFont = new System.Drawing.Font("Bahnschrift", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            // 
+            // panel21
+            // 
+            this.panel21.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
+            this.panel21.Location = new System.Drawing.Point(416, 90);
+            this.panel21.Name = "panel21";
+            this.panel21.Size = new System.Drawing.Size(377, 8);
+            this.panel21.TabIndex = 200;
+            // 
+            // textBox_Price
+            // 
+            this.textBox_Price.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(236)))), ((int)(((byte)(236)))));
+            this.textBox_Price.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox_Price.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox_Price.Location = new System.Drawing.Point(699, 66);
+            this.textBox_Price.Name = "textBox_Price";
+            this.textBox_Price.Size = new System.Drawing.Size(91, 24);
+            this.textBox_Price.TabIndex = 203;
+            this.textBox_Price.Text = "    ";
+            this.textBox_Price.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // panel22
+            // 
+            this.panel22.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
+            this.panel22.Location = new System.Drawing.Point(411, 62);
+            this.panel22.Name = "panel22";
+            this.panel22.Size = new System.Drawing.Size(382, 4);
+            this.panel22.TabIndex = 205;
+            // 
+            // panel23
+            // 
+            this.panel23.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
+            this.panel23.Location = new System.Drawing.Point(411, 327);
+            this.panel23.Name = "panel23";
+            this.panel23.Size = new System.Drawing.Size(382, 4);
+            this.panel23.TabIndex = 206;
+            // 
+            // panel24
+            // 
+            this.panel24.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
+            this.panel24.Location = new System.Drawing.Point(687, 62);
+            this.panel24.Name = "panel24";
+            this.panel24.Size = new System.Drawing.Size(12, 29);
+            this.panel24.TabIndex = 207;
             // 
             // userControl_Inventory1
             // 
@@ -756,10 +786,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.PicLogo)).EndInit();
             this.PanelReceipt.ResumeLayout(false);
             this.PanelReceipt.PerformLayout();
-            this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.OrderPreview)).EndInit();
             this.MainPanel.ResumeLayout(false);
             this.MainPanel.PerformLayout();
@@ -820,6 +850,9 @@
         private System.Windows.Forms.TextBox textBox_Price;
         private System.Windows.Forms.Panel panel21;
         private MetroFramework.Controls.MetroTextBox metroTextBox1;
+        private System.Windows.Forms.Panel panel22;
+        private System.Windows.Forms.Panel panel23;
+        private System.Windows.Forms.Panel panel24;
     }
 }
 
