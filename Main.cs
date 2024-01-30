@@ -481,7 +481,8 @@ namespace reme
 
         private void button_Print_Click(object sender, EventArgs e)
         {
-
+            Receipt newForm = new Receipt ();
+            newForm.Show();
         }
 
         private void button_Home_Click(object sender, EventArgs e)
