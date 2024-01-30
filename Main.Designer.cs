@@ -78,18 +78,20 @@
             this.textBox_PreviewName = new System.Windows.Forms.TextBox();
             this.MainPanel = new System.Windows.Forms.Panel();
             this.panel25 = new System.Windows.Forms.Panel();
+            this.panel28 = new System.Windows.Forms.Panel();
+            this.panel29 = new System.Windows.Forms.Panel();
             this.textBox_Date = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.panel23 = new System.Windows.Forms.Panel();
             this.panel22 = new System.Windows.Forms.Panel();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.panel21 = new System.Windows.Forms.Panel();
             this.button_Inventory = new System.Windows.Forms.Button();
             this.button_Home = new System.Windows.Forms.Button();
             this.button_Dashboard = new System.Windows.Forms.Button();
             this.panel27 = new System.Windows.Forms.Panel();
-            this.panel28 = new System.Windows.Forms.Panel();
-            this.panel29 = new System.Windows.Forms.Panel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.panel24 = new System.Windows.Forms.Panel();
+            this.panel30 = new System.Windows.Forms.Panel();
             this.userControl_Inventory1 = new reme.UserControl_Inventory();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PicLogo)).BeginInit();
@@ -98,8 +100,8 @@
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.OrderPreview)).BeginInit();
             this.MainPanel.SuspendLayout();
-            this.panel22.SuspendLayout();
             this.panel28.SuspendLayout();
+            this.panel22.SuspendLayout();
             this.SuspendLayout();
             // 
             // MainBorder
@@ -558,7 +560,7 @@
             this.OrderPreview.EnableHeadersVisualStyles = false;
             this.OrderPreview.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.OrderPreview.GridColor = System.Drawing.Color.Silver;
-            this.OrderPreview.Location = new System.Drawing.Point(416, 116);
+            this.OrderPreview.Location = new System.Drawing.Point(416, 114);
             this.OrderPreview.Name = "OrderPreview";
             this.OrderPreview.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
@@ -577,7 +579,7 @@
             this.OrderPreview.RowsDefaultCellStyle = dataGridViewCellStyle5;
             this.OrderPreview.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
             this.OrderPreview.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.OrderPreview.Size = new System.Drawing.Size(374, 220);
+            this.OrderPreview.Size = new System.Drawing.Size(374, 214);
             this.OrderPreview.TabIndex = 199;
             this.OrderPreview.UseCustomBackColor = true;
             this.OrderPreview.UseCustomForeColor = true;
@@ -607,7 +609,7 @@
             this.panel17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
             this.panel17.Location = new System.Drawing.Point(411, 71);
             this.panel17.Name = "panel17";
-            this.panel17.Size = new System.Drawing.Size(5, 265);
+            this.panel17.Size = new System.Drawing.Size(5, 260);
             this.panel17.TabIndex = 200;
             // 
             // panel18
@@ -615,7 +617,7 @@
             this.panel18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
             this.panel18.Location = new System.Drawing.Point(788, 71);
             this.panel18.Name = "panel18";
-            this.panel18.Size = new System.Drawing.Size(5, 265);
+            this.panel18.Size = new System.Drawing.Size(5, 260);
             this.panel18.TabIndex = 201;
             // 
             // textBox_PreviewName
@@ -624,7 +626,7 @@
             this.textBox_PreviewName.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox_PreviewName.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox_PreviewName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.textBox_PreviewName.Location = new System.Drawing.Point(9, 6);
+            this.textBox_PreviewName.Location = new System.Drawing.Point(14, 6);
             this.textBox_PreviewName.Margin = new System.Windows.Forms.Padding(10, 3, 3, 3);
             this.textBox_PreviewName.Name = "textBox_PreviewName";
             this.textBox_PreviewName.ReadOnly = true;
@@ -633,6 +635,8 @@
             // 
             // MainPanel
             // 
+            this.MainPanel.Controls.Add(this.panel30);
+            this.MainPanel.Controls.Add(this.panel24);
             this.MainPanel.Controls.Add(this.panel25);
             this.MainPanel.Controls.Add(this.panel28);
             this.MainPanel.Controls.Add(this.textBox2);
@@ -661,10 +665,29 @@
             // panel25
             // 
             this.panel25.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
-            this.panel25.Location = new System.Drawing.Point(439, 61);
+            this.panel25.Location = new System.Drawing.Point(439, 65);
             this.panel25.Name = "panel25";
-            this.panel25.Size = new System.Drawing.Size(325, 8);
+            this.panel25.Size = new System.Drawing.Size(325, 4);
             this.panel25.TabIndex = 208;
+            // 
+            // panel28
+            // 
+            this.panel28.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.panel28.Controls.Add(this.panel29);
+            this.panel28.Controls.Add(this.textBox_PreviewName);
+            this.panel28.Controls.Add(this.textBox_Date);
+            this.panel28.Location = new System.Drawing.Point(439, 69);
+            this.panel28.Name = "panel28";
+            this.panel28.Size = new System.Drawing.Size(325, 29);
+            this.panel28.TabIndex = 209;
+            // 
+            // panel29
+            // 
+            this.panel29.BackColor = System.Drawing.Color.DarkGray;
+            this.panel29.Location = new System.Drawing.Point(224, 0);
+            this.panel29.Name = "panel29";
+            this.panel29.Size = new System.Drawing.Size(1, 29);
+            this.panel29.TabIndex = 204;
             // 
             // textBox_Date
             // 
@@ -672,9 +695,9 @@
             this.textBox_Date.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox_Date.Font = new System.Drawing.Font("Tahoma", 9.75F);
             this.textBox_Date.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
-            this.textBox_Date.Location = new System.Drawing.Point(224, 6);
+            this.textBox_Date.Location = new System.Drawing.Point(230, 6);
             this.textBox_Date.Name = "textBox_Date";
-            this.textBox_Date.Size = new System.Drawing.Size(96, 16);
+            this.textBox_Date.Size = new System.Drawing.Size(90, 16);
             this.textBox_Date.TabIndex = 203;
             this.textBox_Date.Text = "    ";
             this.textBox_Date.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -685,7 +708,7 @@
             this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox2.Font = new System.Drawing.Font("Tahoma", 9.75F);
             this.textBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
-            this.textBox2.Location = new System.Drawing.Point(764, 76);
+            this.textBox2.Location = new System.Drawing.Point(764, 74);
             this.textBox2.Multiline = true;
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(24, 27);
@@ -696,26 +719,40 @@
             // panel23
             // 
             this.panel23.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
-            this.panel23.Location = new System.Drawing.Point(410, 329);
+            this.panel23.Location = new System.Drawing.Point(410, 328);
             this.panel23.Name = "panel23";
-            this.panel23.Size = new System.Drawing.Size(383, 7);
+            this.panel23.Size = new System.Drawing.Size(383, 4);
             this.panel23.TabIndex = 206;
             // 
             // panel22
             // 
             this.panel22.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
             this.panel22.Controls.Add(this.textBox1);
-            this.panel22.Location = new System.Drawing.Point(411, 71);
+            this.panel22.Location = new System.Drawing.Point(411, 70);
             this.panel22.Name = "panel22";
             this.panel22.Size = new System.Drawing.Size(382, 31);
             this.panel22.TabIndex = 205;
             // 
+            // textBox1
+            // 
+            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(160)))), ((int)(((byte)(160)))));
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox1.Font = new System.Drawing.Font("Tahoma", 9.75F);
+            this.textBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
+            this.textBox1.Location = new System.Drawing.Point(4, 5);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(24, 27);
+            this.textBox1.TabIndex = 210;
+            this.textBox1.Text = "    ";
+            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // panel21
             // 
             this.panel21.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
-            this.panel21.Location = new System.Drawing.Point(416, 100);
+            this.panel21.Location = new System.Drawing.Point(416, 109);
             this.panel21.Name = "panel21";
-            this.panel21.Size = new System.Drawing.Size(377, 8);
+            this.panel21.Size = new System.Drawing.Size(377, 5);
             this.panel21.TabIndex = 200;
             // 
             // button_Inventory
@@ -788,38 +825,21 @@
             this.panel27.Size = new System.Drawing.Size(2, 25);
             this.panel27.TabIndex = 204;
             // 
-            // panel28
+            // panel24
             // 
-            this.panel28.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.panel28.Controls.Add(this.panel29);
-            this.panel28.Controls.Add(this.textBox_PreviewName);
-            this.panel28.Controls.Add(this.textBox_Date);
-            this.panel28.Location = new System.Drawing.Point(439, 69);
-            this.panel28.Name = "panel28";
-            this.panel28.Size = new System.Drawing.Size(325, 29);
-            this.panel28.TabIndex = 209;
+            this.panel24.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
+            this.panel24.Location = new System.Drawing.Point(765, 101);
+            this.panel24.Name = "panel24";
+            this.panel24.Size = new System.Drawing.Size(23, 5);
+            this.panel24.TabIndex = 210;
             // 
-            // panel29
+            // panel30
             // 
-            this.panel29.BackColor = System.Drawing.Color.Silver;
-            this.panel29.Location = new System.Drawing.Point(219, 0);
-            this.panel29.Name = "panel29";
-            this.panel29.Size = new System.Drawing.Size(2, 29);
-            this.panel29.TabIndex = 204;
-            // 
-            // textBox1
-            // 
-            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(160)))), ((int)(((byte)(160)))));
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Font = new System.Drawing.Font("Tahoma", 9.75F);
-            this.textBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
-            this.textBox1.Location = new System.Drawing.Point(4, 5);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(24, 27);
-            this.textBox1.TabIndex = 210;
-            this.textBox1.Text = "    ";
-            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.panel30.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
+            this.panel30.Location = new System.Drawing.Point(416, 99);
+            this.panel30.Name = "panel30";
+            this.panel30.Size = new System.Drawing.Size(23, 5);
+            this.panel30.TabIndex = 211;
             // 
             // userControl_Inventory1
             // 
@@ -859,10 +879,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.OrderPreview)).EndInit();
             this.MainPanel.ResumeLayout(false);
             this.MainPanel.PerformLayout();
-            this.panel22.ResumeLayout(false);
-            this.panel22.PerformLayout();
             this.panel28.ResumeLayout(false);
             this.panel28.PerformLayout();
+            this.panel22.ResumeLayout(false);
+            this.panel22.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -928,6 +948,8 @@
         private System.Windows.Forms.Panel panel28;
         private System.Windows.Forms.Panel panel29;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Panel panel24;
+        private System.Windows.Forms.Panel panel30;
     }
 }
 
