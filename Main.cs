@@ -43,6 +43,7 @@ namespace reme
             // Attach click events to the buttons
             button_Inventory.Click += button_Inventory_Click;
             button_Home.Click += button_Home_Click;
+            button_Dashboard.Click += button_Dashboard_Click;
 
             // Add the UserControl to the main panel's controls
             MainPanel.Controls.Add(userControl_Inventory1);
@@ -492,6 +493,7 @@ namespace reme
             // Change the color of the labels
             button_Home.ForeColor = clickedColor;
             button_Inventory.ForeColor = defaultColor;
+            button_Dashboard.ForeColor = defaultColor;
         }
 
         private void button_Inventory_Click(object sender, EventArgs e)
@@ -505,9 +507,18 @@ namespace reme
             // Change the color of the labels
             button_Inventory.ForeColor = clickedColor;
             button_Home.ForeColor = defaultColor;
+            button_Dashboard.ForeColor = defaultColor;
         }
 
+        private void button_Dashboard_Click(object sender, EventArgs e)
+        {
+            
 
+            // Change the color of the labels
+            button_Dashboard.ForeColor = clickedColor;
+            button_Home.ForeColor = defaultColor;
+            button_Inventory.ForeColor = defaultColor;
+        }
     }
 
 }
