@@ -53,6 +53,7 @@ namespace reme
             OrderPreview.RowPrePaint += OrderPreview_RowPrePaint;
 
             OrderPreview.CellPainting += OrderPreview_CellPainting;
+
         }
 
         private void InitializeInventoryControl()
@@ -505,6 +506,8 @@ namespace reme
             button_Inventory.ForeColor = clickedColor;
             button_Home.ForeColor = defaultColor;
         }
+
+
     }
 
 }
