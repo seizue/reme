@@ -38,14 +38,15 @@
             this.button_Chart = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.GridInv = new MetroFramework.Controls.MetroGrid();
-            this.INV_ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.INV_DATE = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SERVICE = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ORDER = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TOTAL = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.button_Export = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.INV_ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DATE = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NAME = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ORDER = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.QUANTITY = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TOTAL = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GridInv)).BeginInit();
             this.SuspendLayout();
@@ -130,13 +131,14 @@
             this.GridInv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.GridInv.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.INV_ID,
-            this.INV_DATE,
-            this.SERVICE,
+            this.DATE,
+            this.NAME,
             this.ORDER,
+            this.QUANTITY,
             this.TOTAL});
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Bahnschrift SemiLight SemiConde", 10F);
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Bahnschrift SemiLight SemiConde", 9.25F);
             dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(175)))), ((int)(((byte)(223)))), ((int)(((byte)(229)))));
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
@@ -169,31 +171,6 @@
             this.GridInv.UseCustomBackColor = true;
             this.GridInv.UseCustomForeColor = true;
             this.GridInv.UseStyleColors = true;
-            // 
-            // INV_ID
-            // 
-            this.INV_ID.HeaderText = "INV ID";
-            this.INV_ID.Name = "INV_ID";
-            // 
-            // INV_DATE
-            // 
-            this.INV_DATE.HeaderText = "INV DATE";
-            this.INV_DATE.Name = "INV_DATE";
-            // 
-            // SERVICE
-            // 
-            this.SERVICE.HeaderText = "SERVICE";
-            this.SERVICE.Name = "SERVICE";
-            // 
-            // ORDER
-            // 
-            this.ORDER.HeaderText = "ORDER";
-            this.ORDER.Name = "ORDER";
-            // 
-            // TOTAL
-            // 
-            this.TOTAL.HeaderText = "TOTAL";
-            this.TOTAL.Name = "TOTAL";
             // 
             // button_Export
             // 
@@ -229,6 +206,36 @@
             this.panel3.Size = new System.Drawing.Size(2, 25);
             this.panel3.TabIndex = 209;
             // 
+            // INV_ID
+            // 
+            this.INV_ID.HeaderText = "INV ID";
+            this.INV_ID.Name = "INV_ID";
+            // 
+            // DATE
+            // 
+            this.DATE.HeaderText = "DATE";
+            this.DATE.Name = "DATE";
+            // 
+            // NAME
+            // 
+            this.NAME.HeaderText = "NAME";
+            this.NAME.Name = "NAME";
+            // 
+            // ORDER
+            // 
+            this.ORDER.HeaderText = "ORDER";
+            this.ORDER.Name = "ORDER";
+            // 
+            // QUANTITY
+            // 
+            this.QUANTITY.HeaderText = "QUANTITY";
+            this.QUANTITY.Name = "QUANTITY";
+            // 
+            // TOTAL
+            // 
+            this.TOTAL.HeaderText = "TOTAL";
+            this.TOTAL.Name = "TOTAL";
+            // 
             // UserControl_DashBoard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -254,13 +261,14 @@
         private System.Windows.Forms.Button button_Chart;
         private System.Windows.Forms.Panel panel1;
         private MetroFramework.Controls.MetroGrid GridInv;
-        private System.Windows.Forms.DataGridViewTextBoxColumn INV_ID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn INV_DATE;
-        private System.Windows.Forms.DataGridViewTextBoxColumn SERVICE;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ORDER;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TOTAL;
         private System.Windows.Forms.Button button_Export;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn INV_ID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DATE;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NAME;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ORDER;
+        private System.Windows.Forms.DataGridViewTextBoxColumn QUANTITY;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TOTAL;
     }
 }

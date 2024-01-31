@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
+using System.IO;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,11 +12,30 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Windows.Forms.VisualStyles;
 
+
 namespace reme
 {
     public partial class Receipt : MetroFramework.Forms.MetroForm
     {
 
+        // Define a class to represent an entry in the receipt
+        public class ReceiptEntry
+        {
+
+            public int ID { get; set; } 
+            public string DATE { get; set; }
+            public string ReceiptName { get; set; }
+            public List<Item> Items { get; set; }
+            public int TotalAmount { get; set; }
+        }
+
+        // Define a class to represent an item in the receipt
+        public class Item
+        {
+            public string Order { get; set; }
+            public int Quantity { get; set; }
+            public int Price { get; set; }
+        }
 
         // Ensure that textBox_ReceiptName is accessible from outside the form
         public TextBox TextBox_ReceiptName
@@ -23,10 +44,13 @@ namespace reme
             set { textBox_ReceiptName = value; }
         }
 
+        // List to store receipt entries
+        private List<ReceiptEntry> receiptEntries = new List<ReceiptEntry>();
         public Receipt()
         {
             InitializeComponent();
-            SetCurrentDate();         
+            SetCurrentDate();
+            
         }
 
         private void SetCurrentDate()
@@ -49,6 +73,37 @@ namespace reme
             {
                 printDocument.Print();
             }
+
+            // Create a new receipt entry
+            var receiptEntry = new ReceiptEntry
+            {
+                DATE = textBox_ReceiptDate.Text,
+                ReceiptName = textBox_ReceiptName.Text,
+                Items = new List<Item>(),
+                TotalAmount = int.Parse(textBox_PrintTotalAmount.Text)
+            };
+
+            // Add items to the receipt entry
+            foreach (DataGridViewRow row in GridPrintReceipt.Rows)
+            {
+                if (row.Cells["ORDER"].Value != null && row.Cells["QUANTITY"].Value != null && row.Cells["PRICE"].Value != null)
+                {
+                    var item = new Item
+                    {
+                        Order = row.Cells["ORDER"].Value.ToString(),
+                        Quantity = int.Parse(row.Cells["QUANTITY"].Value.ToString()),
+                        Price = int.Parse(row.Cells["PRICE"].Value.ToString())
+                    };
+
+                    receiptEntry.Items.Add(item);
+                }
+            }
+
+            // Add the receipt entry to the list
+            receiptEntries.Add(receiptEntry);
+
+            // Save the receipt entries to a JSON file
+            SaveReceiptEntriesToJson();
         }
 
         private void PrintDocument_PrintPage(object sender, PrintPageEventArgs e)
@@ -87,8 +142,16 @@ namespace reme
 
         }
 
-     
+        private void SaveReceiptEntriesToJson()
+        {
+            string jsonFilePath = "inventory.json";
 
+            // Serialize the receipt entries to JSON format
+            string jsonData = JsonConvert.SerializeObject(receiptEntries, Formatting.Indented);
+
+            // Write the JSON data to the file
+            File.WriteAllText(jsonFilePath, jsonData);
+        }
 
     }
 }
