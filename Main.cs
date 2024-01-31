@@ -499,7 +499,8 @@ namespace reme
             // Set the location of the UserControl within the main panel
             userControl_Inventory1.Location = new Point(0, 0); // You may adjust the position
             userControl_Inventory1.Visible = false;
-
+            userControl_DashBoard1.Visible = false;
+          
             // Change the color of the labels
             button_Home.ForeColor = clickedColor;
             button_Inventory.ForeColor = defaultColor;
@@ -522,7 +523,12 @@ namespace reme
 
         private void button_Dashboard_Click(object sender, EventArgs e)
         {
-            
+            // Set the location of the UserControl within the main panel
+            userControl_DashBoard1.Location = new Point(0, 0); // You may adjust the position
+            userControl_DashBoard1.Visible = true;
+            userControl_DashBoard1.BringToFront();
+            userControl_Inventory1.Visible = false;
+
             // Change the color of the labels
             button_Dashboard.ForeColor = clickedColor;
             button_Home.ForeColor = defaultColor;

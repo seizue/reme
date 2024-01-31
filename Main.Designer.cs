@@ -77,6 +77,8 @@
             this.panel18 = new System.Windows.Forms.Panel();
             this.textBox_PreviewName = new System.Windows.Forms.TextBox();
             this.MainPanel = new System.Windows.Forms.Panel();
+            this.panel30 = new System.Windows.Forms.Panel();
+            this.panel24 = new System.Windows.Forms.Panel();
             this.panel25 = new System.Windows.Forms.Panel();
             this.panel28 = new System.Windows.Forms.Panel();
             this.panel29 = new System.Windows.Forms.Panel();
@@ -90,8 +92,7 @@
             this.button_Home = new System.Windows.Forms.Button();
             this.button_Dashboard = new System.Windows.Forms.Button();
             this.panel27 = new System.Windows.Forms.Panel();
-            this.panel24 = new System.Windows.Forms.Panel();
-            this.panel30 = new System.Windows.Forms.Panel();
+            this.userControl_DashBoard1 = new reme.UserControl_DashBoard();
             this.userControl_Inventory1 = new reme.UserControl_Inventory();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PicLogo)).BeginInit();
@@ -635,6 +636,7 @@
             // 
             // MainPanel
             // 
+            this.MainPanel.Controls.Add(this.userControl_DashBoard1);
             this.MainPanel.Controls.Add(this.panel30);
             this.MainPanel.Controls.Add(this.panel24);
             this.MainPanel.Controls.Add(this.panel25);
@@ -661,6 +663,22 @@
             this.MainPanel.Name = "MainPanel";
             this.MainPanel.Size = new System.Drawing.Size(810, 390);
             this.MainPanel.TabIndex = 1;
+            // 
+            // panel30
+            // 
+            this.panel30.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
+            this.panel30.Location = new System.Drawing.Point(416, 95);
+            this.panel30.Name = "panel30";
+            this.panel30.Size = new System.Drawing.Size(23, 5);
+            this.panel30.TabIndex = 211;
+            // 
+            // panel24
+            // 
+            this.panel24.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
+            this.panel24.Location = new System.Drawing.Point(765, 96);
+            this.panel24.Name = "panel24";
+            this.panel24.Size = new System.Drawing.Size(23, 5);
+            this.panel24.TabIndex = 210;
             // 
             // panel25
             // 
@@ -826,21 +844,13 @@
             this.panel27.Size = new System.Drawing.Size(2, 25);
             this.panel27.TabIndex = 204;
             // 
-            // panel24
+            // userControl_DashBoard1
             // 
-            this.panel24.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
-            this.panel24.Location = new System.Drawing.Point(765, 96);
-            this.panel24.Name = "panel24";
-            this.panel24.Size = new System.Drawing.Size(23, 5);
-            this.panel24.TabIndex = 210;
-            // 
-            // panel30
-            // 
-            this.panel30.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
-            this.panel30.Location = new System.Drawing.Point(416, 95);
-            this.panel30.Name = "panel30";
-            this.panel30.Size = new System.Drawing.Size(23, 5);
-            this.panel30.TabIndex = 211;
+            this.userControl_DashBoard1.Location = new System.Drawing.Point(0, 3);
+            this.userControl_DashBoard1.Name = "userControl_DashBoard1";
+            this.userControl_DashBoard1.Size = new System.Drawing.Size(814, 387);
+            this.userControl_DashBoard1.TabIndex = 213;
+            this.userControl_DashBoard1.Visible = false;
             // 
             // userControl_Inventory1
             // 
@@ -951,6 +961,7 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Panel panel24;
         private System.Windows.Forms.Panel panel30;
+        private UserControl_DashBoard userControl_DashBoard1;
     }
 }
 
