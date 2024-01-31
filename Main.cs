@@ -29,6 +29,7 @@ namespace reme
             CalculateOverallTotal();
             LoadNameAndPreview();
             SetCurrentDate();
+          
 
             // Subscribe to the ItemSaved event of the UserControl
             userControl_Inventory1.ItemSaved += UserControl_ItemSaved;
@@ -114,9 +115,9 @@ namespace reme
                     OrderPreview.Rows.Add(selectedOrder, selectedQuantity, subtotal);
                 }
           
-                // Update the orders.json file
-                UpdateOrdersJsonFile();
-
+            
+                UpdateOrdersJsonFile();           
+                LoadNameAndPreview();
                 CalculateOverallTotal();
             }
             catch (Exception ex)
