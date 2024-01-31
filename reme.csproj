@@ -89,6 +89,12 @@
     <Compile Include="Receipt.Designer.cs">
       <DependentUpon>Receipt.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControl_DashBoard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl_DashBoard.Designer.cs">
+      <DependentUpon>UserControl_DashBoard.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControl_Inventory.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -110,6 +116,9 @@
     </Compile>
     <EmbeddedResource Include="Receipt.resx">
       <DependentUpon>Receipt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl_DashBoard.resx">
+      <DependentUpon>UserControl_DashBoard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControl_Inventory.resx">
       <DependentUpon>UserControl_Inventory.cs</DependentUpon>
