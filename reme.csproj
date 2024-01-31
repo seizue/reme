@@ -74,6 +74,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DataModel.cs" />
+    <Compile Include="DataModel_inv.cs" />
     <Compile Include="DataModel_main.cs" />
     <Compile Include="Main.cs">
       <SubType>Form</SubType>
