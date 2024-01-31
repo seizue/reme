@@ -64,7 +64,7 @@ namespace reme
 
             // Set the data source for ORDER ComboBox
             comboBox_Order.DataSource = inventoryControl.OrderList;
-            comboBox_Order.DisplayMember = "ORDER"; // Assuming "ORDER" is the property name representing the display value
+            comboBox_Order.DisplayMember = "ORDER";
 
             // Set the data source for Quantity ComboBox
             comboBox_Quantity.DataSource = inventoryControl.QuantityList;
@@ -123,7 +123,6 @@ namespace reme
             {
                 MessageBox.Show("Error saving data: " + ex.Message);
             }
-
         }
 
         private List<OrderItem> LoadExistingOrders()
@@ -144,8 +143,6 @@ namespace reme
 
                 // If the file is empty or doesn't exist, return an empty list
                 return new List<OrderItem>();
-
-
             }
             catch (Exception ex)
             {
@@ -156,7 +153,6 @@ namespace reme
 
         private void UpdateOrdersJsonFile()
         {
-
             {
                 try
                 {
@@ -361,6 +357,7 @@ namespace reme
 
             // Adjust the height of the last row containing the overall total
             OrderPreview.Rows[OrderPreview.Rows.Count - 1].Height = 27; // Adjust the height as needed
+
         }
 
         private void OrderPreview_RowPrePaint(object sender, DataGridViewRowPrePaintEventArgs e)
@@ -481,9 +478,21 @@ namespace reme
 
         private void button_Print_Click(object sender, EventArgs e)
         {
-            Receipt newForm = new Receipt ();
-            newForm.Show();
+            // Instantiate the Receipt form
+            Receipt receiptForm = new Receipt();
+
+            // Pass data from OrderPreview to GridPrintReceipt
+            receiptForm.ReceiveDataFromMain(OrderPreview.Rows);
+
+            // Pass the name from Main form to Receipt form
+            receiptForm.TextBox_ReceiptName.Text = textBox_PreviewName.Text;
+
+            // Show the Receipt form
+            receiptForm.Show();
+
+         
         }
+
 
         private void button_Home_Click(object sender, EventArgs e)
         {
@@ -514,7 +523,6 @@ namespace reme
         private void button_Dashboard_Click(object sender, EventArgs e)
         {
             
-
             // Change the color of the labels
             button_Dashboard.ForeColor = clickedColor;
             button_Home.ForeColor = defaultColor;
