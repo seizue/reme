@@ -144,13 +144,46 @@ namespace reme
 
         private void SaveReceiptEntriesToJson()
         {
-            string jsonFilePath = "inventory.json";
+            {
+                string jsonFilePath = "inventory.json";
 
-            // Serialize the receipt entries to JSON format
-            string jsonData = JsonConvert.SerializeObject(receiptEntries, Formatting.Indented);
+                // Create a list to store the formatted receipt entries
+                List<object> formattedReceiptEntries = new List<object>();
 
-            // Write the JSON data to the file
-            File.WriteAllText(jsonFilePath, jsonData);
+                // Format each receipt entry
+                foreach (var receiptEntry in receiptEntries)
+                {
+                    // Concatenate the order items into a single string separated by commas
+                    string orders = string.Join(", ", receiptEntry.Items.Select(item => item.Order));
+
+                    // Create a formatted entry object
+                    var formattedEntry = new
+                    {
+                        DATE = receiptEntry.DATE,
+                        ReceiptName = receiptEntry.ReceiptName,
+                        Items = new[]
+                        {
+                new
+                {
+                    Order = orders,
+                    Quantity = receiptEntry.Items.Sum(item => item.Quantity) // Sum up quantities
+                }
+            },
+                        TotalAmount = receiptEntry.TotalAmount
+                    };
+
+                    // Add the formatted entry to the list
+                    formattedReceiptEntries.Add(formattedEntry);
+                }
+
+                // Serialize the formatted receipt entries to JSON format
+                string jsonData = JsonConvert.SerializeObject(formattedReceiptEntries, Formatting.Indented);
+
+                // Write the JSON data to the file
+                File.WriteAllText(jsonFilePath, jsonData);
+            }
+
+
         }
 
     }

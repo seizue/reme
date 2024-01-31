@@ -51,7 +51,7 @@ namespace reme
                 foreach (var item in entry.Items)
                 {
                     // Add a row to the GridInv DataGridView
-                    GridInv.Rows.Add("INV_0" + nextID++, entry.DATE, entry.ReceiptName, item.Order, item.Quantity, entry.TotalAmount);
+                    GridInv.Rows.Add("INV_0" + nextID++, entry.DATE, entry.ReceiptName, item.Order, entry.TotalAmount);
                 }
             }
         }
