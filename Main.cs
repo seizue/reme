@@ -29,8 +29,8 @@ namespace reme
             CalculateOverallTotal();
             LoadNameAndPreview();
             SetCurrentDate();
-          
 
+           
             // Subscribe to the ItemSaved event of the UserControl
             userControl_Inventory1.ItemSaved += UserControl_ItemSaved;
 
@@ -56,6 +56,7 @@ namespace reme
 
             OrderPreview.CellPainting += OrderPreview_CellPainting;
 
+          
         }
 
         private void InitializeInventoryControl()
@@ -212,7 +213,7 @@ namespace reme
                     }
                     else
                     {
-                        MessageBox.Show("The Orders is empty.");
+                      
                     }
                 }
                 else
@@ -534,6 +535,20 @@ namespace reme
             button_Dashboard.ForeColor = clickedColor;
             button_Home.ForeColor = defaultColor;
             button_Inventory.ForeColor = defaultColor;
+        }
+
+        private void Main_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            // Clear all rows from the DataGridView
+            OrderPreview.Rows.Clear();
+
+            // Clear the text boxes and ComboBoxes
+            textBox_Name.Text = "";
+            comboBox_Order.SelectedIndex = -1;
+            comboBox_Quantity.SelectedIndex = -1;
+
+            // Clear the data in the JSON file
+            File.WriteAllText("orders.json", "");
         }
     }
 

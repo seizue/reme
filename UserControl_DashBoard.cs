@@ -36,7 +36,7 @@ namespace reme
                     PopulateGrid();
                     UpdateNextID();
                 }
-            }
+              }
         }
 
         private void UpdateNextID()
