@@ -38,7 +38,8 @@ namespace reme
             OrderPreview.SelectionChanged += OrderPreview_SelectionChanged;
 
             userControl_Inventory1 = new UserControl_Inventory();
-            userControl_Inventory1.Visible = false; // Initially, hide the UserControl
+            userControl_Inventory1.Visible = false; 
+
             comboBox_Quantity.KeyPress += comboBox_Quantity_KeyPress;
 
             // Attach click events to the buttons
@@ -55,7 +56,6 @@ namespace reme
             OrderPreview.RowPrePaint += OrderPreview_RowPrePaint;
 
             OrderPreview.CellPainting += OrderPreview_CellPainting;
-
           
         }
 
@@ -114,8 +114,7 @@ namespace reme
                 {
                     // Add a new entry if the order doesn't exist
                     OrderPreview.Rows.Add(selectedOrder, selectedQuantity, subtotal);
-                }
-          
+                }          
             
                 UpdateOrdersJsonFile();           
                 LoadNameAndPreview();
@@ -487,11 +486,8 @@ namespace reme
             receiptForm.TextBox_ReceiptName.Text = textBox_PreviewName.Text;
 
             // Show the Receipt form
-            receiptForm.Show();
-
-         
+            receiptForm.Show();       
         }
-
 
         private void button_Home_Click(object sender, EventArgs e)
         {
@@ -527,6 +523,7 @@ namespace reme
             userControl_DashBoard1.Visible = true;
             userControl_DashBoard1.BringToFront();
             userControl_Inventory1.Visible = false;
+          
 
             // Change the color of the labels
             button_Dashboard.ForeColor = clickedColor;

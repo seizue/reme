@@ -29,6 +29,7 @@ namespace reme
             public int TotalAmount { get; set; }
         }
 
+
         // Define a class to represent an item in the receipt
         public class Item
         {
@@ -36,6 +37,7 @@ namespace reme
             public int Quantity { get; set; }
             public int Price { get; set; }
         }
+
 
         // Ensure that textBox_ReceiptName is accessible from outside the form
         public TextBox TextBox_ReceiptName

@@ -60,13 +60,11 @@ namespace reme
 
             try
             {
-                // Get data from text boxes
                 string item = textBox_Item.Text;
                 int price;
 
                 if (int.TryParse(textBox_Price.Text, out price))
                 {
-                    // Create a new DataModel instance with auto-generated ID
                     DataModel newData = new DataModel
                     {
                         ORDER = item,

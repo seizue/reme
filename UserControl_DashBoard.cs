@@ -15,13 +15,21 @@ namespace reme
 {
     public partial class UserControl_DashBoard : UserControl
     {
+        private Color defaultColor = Color.FromArgb(71, 38, 38); // Default color of the tab indicator
+        private Color clickedColor = Color.FromArgb(227, 103, 102); // Color when the button is clicked
+
         private int nextID = 1;
         private List<ReceiptEntry> receiptEntries = new List<ReceiptEntry>();
         private string jsonFilePath = "inventory.json";
+
         public UserControl_DashBoard()
         {
             InitializeComponent();
             LoadDataFromJson();
+
+            // Attach click events to the buttons
+            button_Chart.Click += button_Chart_Click;
+            button_DB.Click += button_DB_Click;
         }
 
         private void LoadDataFromJson()
@@ -143,7 +151,33 @@ namespace reme
             {
                 MessageBox.Show($"Error exporting data to CSV: {ex.Message}");
             }
+        }
 
+        private void button_Chart_Click(object sender, EventArgs e)
+        {
+            // Set the location of the UserControl within the main panel
+            userControl_Chart1.Location = new Point(0, 0); // You may adjust the position
+            userControl_Chart1.Visible = true;
+            userControl_Chart1.BringToFront();
+
+            GridInv.Visible = false;
+
+            // Change the color of the labels
+            button_Chart.ForeColor = clickedColor;
+            button_DB.ForeColor = defaultColor;
+           
+        }
+
+        private void button_DB_Click(object sender, EventArgs e)
+        {
+            GridInv.Visible = true;
+
+            GridInv.BringToFront();
+            userControl_Chart1.Visible = false;
+
+            // Change the color of the labels
+            button_DB.ForeColor = clickedColor;
+            button_Chart.ForeColor = defaultColor;
         }
     }
 }
