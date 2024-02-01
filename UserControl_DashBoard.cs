@@ -1,5 +1,6 @@
 ﻿using Newtonsoft.Json;
 using System;
+using System.IO;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,8 @@ namespace reme
     public partial class UserControl_DashBoard : UserControl
     {
         private int nextID = 1;
+        private List<ReceiptEntry> receiptEntries = new List<ReceiptEntry>();
+        private string jsonFilePath = "inventory.json";
         public UserControl_DashBoard()
         {
             InitializeComponent();
@@ -23,38 +26,70 @@ namespace reme
 
         private void LoadDataFromJson()
         {
-            string jsonFilePath = "inventory.json";
-
-            if (System.IO.File.Exists(jsonFilePath))
+            if (File.Exists(jsonFilePath))
             {
-                string jsonData = System.IO.File.ReadAllText(jsonFilePath);
+                string jsonData = File.ReadAllText(jsonFilePath);
 
-                // Deserialize the JSON data into a list of ReceiptEntry objects
-                List<ReceiptEntry> receiptEntries = JsonConvert.DeserializeObject<List<ReceiptEntry>>(jsonData);
-
-                // Populate the GridInv DataGridView with the deserialized data
-                PopulateGrid(receiptEntries);
-            }
-            else
-            {
-                MessageBox.Show("Inventory file not found.");
-            }
-        }
-
-        public void PopulateGrid(List<ReceiptEntry> receiptEntries)
-        {
-            GridInv.Rows.Clear();
-            nextID = 1; // Reset the ID counter
-
-            foreach (var entry in receiptEntries)
-            {
-                foreach (var item in entry.Items)
+                if (!string.IsNullOrWhiteSpace(jsonData))
                 {
-                    // Add a row to the GridInv DataGridView
-                    GridInv.Rows.Add("INV_0" + nextID++, entry.DATE, entry.ReceiptName, item.Order, entry.TotalAmount);
+                    receiptEntries = JsonConvert.DeserializeObject<List<ReceiptEntry>>(jsonData);
+                    PopulateGrid();
+                    UpdateNextID();
                 }
             }
         }
+
+        private void UpdateNextID()
+        {
+            if (receiptEntries.Count > 0)
+            {
+                nextID = receiptEntries.Max(entry => entry.ID) + 1;
+            }
+        }
+
+
+        private void PopulateGrid()
+        {
+            if (GridInv != null)
+            {
+                GridInv.Rows.Clear();
+
+                foreach (var entry in receiptEntries)
+                {
+                    foreach (var item in entry.Items)
+                    {
+                        string id = "0" + nextID++;
+                        GridInv.Rows.Add(id, entry.DATE, entry.ReceiptName, item.Order, entry.TotalAmount);
+                    }
+                }
+            }
+
+            else
+            {
+                MessageBox.Show("GridInv is null.");
+            }
+        }
+
+        private void SaveDataToJson()
+        {
+            try
+            {
+                string jsonData = JsonConvert.SerializeObject(receiptEntries, Formatting.Indented);
+                File.WriteAllText(jsonFilePath, jsonData);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error saving data to JSON: {ex.Message}");
+            }
+        }
+
+        private void AddEntryToReceiptEntries(ReceiptEntry entry)
+        {
+            entry.ID = nextID++; // Assign the current value of nextID and then increment
+            receiptEntries.Add(entry);
+            SaveDataToJson();
+        }
+
 
     }
 }

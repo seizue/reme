@@ -41,7 +41,7 @@
             this.button_Export = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.INV_ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DATE = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NAME = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ORDER = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -129,7 +129,7 @@
             this.GridInv.ColumnHeadersHeight = 37;
             this.GridInv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.GridInv.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.INV_ID,
+            this.ID,
             this.DATE,
             this.NAME,
             this.ORDER,
@@ -204,10 +204,10 @@
             this.panel3.Size = new System.Drawing.Size(2, 25);
             this.panel3.TabIndex = 209;
             // 
-            // INV_ID
+            // ID
             // 
-            this.INV_ID.HeaderText = "INV ID";
-            this.INV_ID.Name = "INV_ID";
+            this.ID.HeaderText = "ID";
+            this.ID.Name = "ID";
             // 
             // DATE
             // 
@@ -257,7 +257,7 @@
         private System.Windows.Forms.Button button_Export;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn INV_ID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn DATE;
         private System.Windows.Forms.DataGridViewTextBoxColumn NAME;
         private System.Windows.Forms.DataGridViewTextBoxColumn ORDER;

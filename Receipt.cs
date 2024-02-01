@@ -21,7 +21,7 @@ namespace reme
         // Define a class to represent an entry in the receipt
         public class ReceiptEntry
         {
-
+            [JsonProperty("ID")] // Specify the property name in JSON
             public int ID { get; set; } 
             public string DATE { get; set; }
             public string ReceiptName { get; set; }
@@ -44,13 +44,16 @@ namespace reme
             set { textBox_ReceiptName = value; }
         }
 
+
         // List to store receipt entries
         private List<ReceiptEntry> receiptEntries = new List<ReceiptEntry>();
+        private string jsonFilePath = "inventory.json";
+
         public Receipt()
         {
             InitializeComponent();
             SetCurrentDate();
-            
+            LoadReceiptEntriesFromJson();
         }
 
         private void SetCurrentDate()
@@ -99,6 +102,9 @@ namespace reme
                 }
             }
 
+            // Generate ID for the new entry
+            receiptEntry.ID = GenerateNextID();
+
             // Add the receipt entry to the list
             receiptEntries.Add(receiptEntry);
 
@@ -144,46 +150,73 @@ namespace reme
 
         private void SaveReceiptEntriesToJson()
         {
+            string jsonFilePath = "inventory.json";
+
+            // Create a list to store the formatted receipt entries
+            List<object> formattedReceiptEntries = new List<object>();
+
+            // Format each receipt entry
+            foreach (var receiptEntry in receiptEntries)
             {
-                string jsonFilePath = "inventory.json";
+                // Concatenate the order items into a single string separated by commas
+                string orders = string.Join(", ", receiptEntry.Items.Select(item => item.Order));
 
-                // Create a list to store the formatted receipt entries
-                List<object> formattedReceiptEntries = new List<object>();
-
-                // Format each receipt entry
-                foreach (var receiptEntry in receiptEntries)
+                // Create a formatted entry object
+                var formattedEntry = new
                 {
-                    // Concatenate the order items into a single string separated by commas
-                    string orders = string.Join(", ", receiptEntry.Items.Select(item => item.Order));
-
-                    // Create a formatted entry object
-                    var formattedEntry = new
+                    ID = receiptEntry.ID, // Include the ID property
+                    DATE = receiptEntry.DATE,
+                    ReceiptName = receiptEntry.ReceiptName,
+                    Items = new[]
                     {
-                        DATE = receiptEntry.DATE,
-                        ReceiptName = receiptEntry.ReceiptName,
-                        Items = new[]
-                        {
-                new
-                {
-                    Order = orders,
-                    Quantity = receiptEntry.Items.Sum(item => item.Quantity) // Sum up quantities
-                }
-            },
-                        TotalAmount = receiptEntry.TotalAmount
-                    };
+                    new
+                    {
+                        Order = orders,
+                        Quantity = receiptEntry.Items.Sum(item => item.Quantity) // Sum up quantities
+                    }
+                },
+                    TotalAmount = receiptEntry.TotalAmount
+                };
 
-                    // Add the formatted entry to the list
-                    formattedReceiptEntries.Add(formattedEntry);
-                }
-
-                // Serialize the formatted receipt entries to JSON format
-                string jsonData = JsonConvert.SerializeObject(formattedReceiptEntries, Formatting.Indented);
-
-                // Write the JSON data to the file
-                File.WriteAllText(jsonFilePath, jsonData);
+                // Add the formatted entry to the list
+                formattedReceiptEntries.Add(formattedEntry);
             }
 
+            // Serialize the formatted receipt entries to JSON format
+            string jsonData = JsonConvert.SerializeObject(formattedReceiptEntries, Formatting.Indented);
 
+            // Write the JSON data to the file
+            File.WriteAllText(jsonFilePath, jsonData);
+
+        }
+
+        private int GenerateNextID()
+        {
+            // Generate the next ID by finding the maximum ID and incrementing it
+            if (receiptEntries.Count > 0)
+            {
+                return receiptEntries.Max(entry => entry.ID) + 1;
+            }
+            else
+            {
+                return 1; // Start from 1 if no entries exist
+            }
+        }
+
+        private void LoadReceiptEntriesFromJson()
+        {
+            try
+            {
+                if (File.Exists(jsonFilePath))
+                {
+                    string jsonData = File.ReadAllText(jsonFilePath);
+                    receiptEntries = JsonConvert.DeserializeObject<List<ReceiptEntry>>(jsonData) ?? new List<ReceiptEntry>();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error loading receipt entries from JSON: {ex.Message}");
+            }
         }
 
     }
