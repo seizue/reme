@@ -278,6 +278,7 @@ namespace reme
 
                 // Clear the data in the JSON file
                 File.WriteAllText("orders.json", "");
+                File.WriteAllText("name.json", "");
 
                 MessageBox.Show("Entries cleared successfully!");
             }
@@ -439,7 +440,7 @@ namespace reme
                     }
                     else
                     {
-                        MessageBox.Show("No data found in name.json.");
+                        
                     }
                 }
                 else
@@ -461,12 +462,8 @@ namespace reme
             if (!string.IsNullOrEmpty(loadedName))
             {
                 textBox_PreviewName.Text = loadedName;
-            }
-            else
-            {
-                // Handle the case when no name is loaded
-                textBox_PreviewName.Text = "No name loaded";
-            }
+            }    
+           
         }
 
         private void SetCurrentDate()
@@ -544,11 +541,13 @@ namespace reme
 
             // Clear the text boxes and ComboBoxes
             textBox_Name.Text = "";
+            textBox_PreviewName.Text = "";
             comboBox_Order.SelectedIndex = -1;
             comboBox_Quantity.SelectedIndex = -1;
 
             // Clear the data in the JSON file
             File.WriteAllText("orders.json", "");
+            File.WriteAllText("name.json", "");
         }
     }
 
