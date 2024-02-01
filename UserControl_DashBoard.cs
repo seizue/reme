@@ -36,7 +36,7 @@ namespace reme
                     PopulateGrid();
                     UpdateNextID();
                 }
-              }
+            }
         }
 
         private void UpdateNextID()
@@ -90,6 +90,60 @@ namespace reme
             SaveDataToJson();
         }
 
+        private void button_ExportInv_Click(object sender, EventArgs e)
+        {
 
+            using (FolderBrowserDialog folderBrowser = new FolderBrowserDialog())
+            {
+                if (folderBrowser.ShowDialog() == DialogResult.OK)
+                {
+                    ExportDataToCSV(folderBrowser.SelectedPath);
+                }
+            }
+
+        }
+        private void ExportDataToCSV(string filePath)
+        {
+            StringBuilder csvContent = new StringBuilder();
+
+            // Add header line
+            csvContent.AppendLine("ID,DATE,RECEIPT_NAME,ORDER,TOTAL_AMOUNT");
+
+            // Iterate over each ReceiptEntry and append its data to the CSV content
+            foreach (var entry in receiptEntries)
+            {
+                // Concatenate order items with spacing ","
+                string orders = string.Join(", ", entry.Items.Select(item => item.Order));
+
+                // Enclose the orders with double quotes
+                orders = $"\"{orders}\"";
+
+                // Format the line for the entry
+                string line = $"{entry.ID},{entry.DATE},{entry.ReceiptName},{orders},{entry.TotalAmount}";
+
+                // Append the formatted line to the CSV content
+                csvContent.AppendLine(line);
+            }
+
+            // Append the current date to the filename
+            string currentDate = DateTime.Now.ToString("yyyyMMdd");
+            string filename = $"INVENTORY_DB_{currentDate}.csv";
+
+            // Combine the custom filepath and generated filename
+            string fullFilePath = Path.Combine(filePath, filename);
+
+            try
+            {
+                // Write the CSV content to the specified file
+                File.WriteAllText(fullFilePath, csvContent.ToString());
+
+                MessageBox.Show($"Data exported to CSV successfully!\nFile saved at: {fullFilePath}");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error exporting data to CSV: {ex.Message}");
+            }
+
+        }
     }
 }

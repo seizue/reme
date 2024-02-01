@@ -38,14 +38,14 @@
             this.button_Chart = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.GridInv = new MetroFramework.Controls.MetroGrid();
-            this.button_Export = new System.Windows.Forms.Button();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DATE = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NAME = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ORDER = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TOTAL = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.button_ExportInv = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GridInv)).BeginInit();
             this.SuspendLayout();
@@ -170,40 +170,6 @@
             this.GridInv.UseCustomForeColor = true;
             this.GridInv.UseStyleColors = true;
             // 
-            // button_Export
-            // 
-            this.button_Export.BackColor = System.Drawing.Color.White;
-            this.button_Export.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.button_Export.FlatAppearance.BorderSize = 0;
-            this.button_Export.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_Export.Font = new System.Drawing.Font("Bahnschrift SemiCondensed", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_Export.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.button_Export.Image = global::reme.Properties.Resources.export_20px;
-            this.button_Export.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button_Export.Location = new System.Drawing.Point(691, 12);
-            this.button_Export.Name = "button_Export";
-            this.button_Export.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.button_Export.Size = new System.Drawing.Size(84, 22);
-            this.button_Export.TabIndex = 208;
-            this.button_Export.Text = "       EXPORT";
-            this.button_Export.UseVisualStyleBackColor = false;
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
-            this.panel2.Location = new System.Drawing.Point(683, 12);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(2, 25);
-            this.panel2.TabIndex = 207;
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
-            this.panel3.Location = new System.Drawing.Point(781, 12);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(2, 25);
-            this.panel3.TabIndex = 209;
-            // 
             // ID
             // 
             this.ID.HeaderText = "ID";
@@ -229,12 +195,47 @@
             this.TOTAL.HeaderText = "TOTAL";
             this.TOTAL.Name = "TOTAL";
             // 
+            // button_ExportInv
+            // 
+            this.button_ExportInv.BackColor = System.Drawing.Color.White;
+            this.button_ExportInv.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.button_ExportInv.FlatAppearance.BorderSize = 0;
+            this.button_ExportInv.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_ExportInv.Font = new System.Drawing.Font("Bahnschrift SemiCondensed", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_ExportInv.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.button_ExportInv.Image = global::reme.Properties.Resources.export_20px;
+            this.button_ExportInv.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button_ExportInv.Location = new System.Drawing.Point(691, 12);
+            this.button_ExportInv.Name = "button_ExportInv";
+            this.button_ExportInv.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.button_ExportInv.Size = new System.Drawing.Size(84, 22);
+            this.button_ExportInv.TabIndex = 208;
+            this.button_ExportInv.Text = "       EXPORT";
+            this.button_ExportInv.UseVisualStyleBackColor = false;
+            this.button_ExportInv.Click += new System.EventHandler(this.button_ExportInv_Click);
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
+            this.panel2.Location = new System.Drawing.Point(683, 12);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(2, 25);
+            this.panel2.TabIndex = 207;
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
+            this.panel3.Location = new System.Drawing.Point(781, 12);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(2, 25);
+            this.panel3.TabIndex = 209;
+            // 
             // UserControl_DashBoard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.panel3);
-            this.Controls.Add(this.button_Export);
+            this.Controls.Add(this.button_ExportInv);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.button_Chart);
@@ -254,7 +255,7 @@
         private System.Windows.Forms.Button button_Chart;
         private System.Windows.Forms.Panel panel1;
         private MetroFramework.Controls.MetroGrid GridInv;
-        private System.Windows.Forms.Button button_Export;
+        private System.Windows.Forms.Button button_ExportInv;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
