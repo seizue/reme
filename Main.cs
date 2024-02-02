@@ -29,8 +29,8 @@ namespace reme
             CalculateOverallTotal();
             LoadNameAndPreview();
             SetCurrentDate();
+            CheckFiles();
 
-           
             // Subscribe to the ItemSaved event of the UserControl
             userControl_Inventory1.ItemSaved += UserControl_ItemSaved;
 
@@ -545,6 +545,31 @@ namespace reme
             // Clear the data in the JSON file
             File.WriteAllText("orders.json", "");
             File.WriteAllText("name.json", "");
+        }
+
+        private void CheckFiles()
+        {
+            string[] filesToCheck = { "data.json", "name.json", "orders.json", "inventory.json" };
+
+            bool allFilesExist = true;
+
+            foreach (string file in filesToCheck)
+            {
+                if (!File.Exists(file))
+                {
+                    allFilesExist = false;
+                    break;
+                }
+            }
+
+            if (allFilesExist)
+            {
+                panel_Status.BackColor = Color.MediumAquamarine;
+            }
+            else
+            {
+                panel_Status.BackColor = Color.DimGray;
+            }
         }
     }
 

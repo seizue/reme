@@ -37,7 +37,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel26 = new System.Windows.Forms.Panel();
             this.Border = new System.Windows.Forms.Panel();
-            this.panel10 = new System.Windows.Forms.Panel();
+            this.panel_Status = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
             this.PicLogo = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -54,7 +54,6 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.userControl_Inventory1 = new reme.UserControl_Inventory();
             this.label4 = new System.Windows.Forms.Label();
             this.metroTextBox3 = new MetroFramework.Controls.MetroTextBox();
             this.textBox_Name = new MetroFramework.Controls.MetroTextBox();
@@ -78,7 +77,6 @@
             this.panel18 = new System.Windows.Forms.Panel();
             this.textBox_PreviewName = new System.Windows.Forms.TextBox();
             this.MainPanel = new System.Windows.Forms.Panel();
-            this.userControl_DashBoard1 = new reme.UserControl_DashBoard();
             this.panel30 = new System.Windows.Forms.Panel();
             this.panel24 = new System.Windows.Forms.Panel();
             this.panel25 = new System.Windows.Forms.Panel();
@@ -94,6 +92,8 @@
             this.button_Home = new System.Windows.Forms.Button();
             this.button_Dashboard = new System.Windows.Forms.Button();
             this.panel27 = new System.Windows.Forms.Panel();
+            this.userControl_DashBoard1 = new reme.UserControl_DashBoard();
+            this.userControl_Inventory1 = new reme.UserControl_Inventory();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PicLogo)).BeginInit();
             this.PanelReceipt.SuspendLayout();
@@ -138,13 +138,13 @@
             this.Border.Size = new System.Drawing.Size(2, 25);
             this.Border.TabIndex = 2;
             // 
-            // panel10
+            // panel_Status
             // 
-            this.panel10.BackColor = System.Drawing.Color.MediumAquamarine;
-            this.panel10.Location = new System.Drawing.Point(20, 512);
-            this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(11, 11);
-            this.panel10.TabIndex = 9;
+            this.panel_Status.BackColor = System.Drawing.Color.MediumAquamarine;
+            this.panel_Status.Location = new System.Drawing.Point(20, 512);
+            this.panel_Status.Name = "panel_Status";
+            this.panel_Status.Size = new System.Drawing.Size(11, 11);
+            this.panel_Status.TabIndex = 9;
             // 
             // label6
             // 
@@ -314,13 +314,6 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(315, 75);
             this.panel4.TabIndex = 2;
-            // 
-            // userControl_Inventory1
-            // 
-            this.userControl_Inventory1.Location = new System.Drawing.Point(-20, 313);
-            this.userControl_Inventory1.Name = "userControl_Inventory1";
-            this.userControl_Inventory1.Size = new System.Drawing.Size(779, 43);
-            this.userControl_Inventory1.TabIndex = 11;
             // 
             // label4
             // 
@@ -672,14 +665,6 @@
             this.MainPanel.Size = new System.Drawing.Size(810, 390);
             this.MainPanel.TabIndex = 1;
             // 
-            // userControl_DashBoard1
-            // 
-            this.userControl_DashBoard1.Location = new System.Drawing.Point(2, 1);
-            this.userControl_DashBoard1.Name = "userControl_DashBoard1";
-            this.userControl_DashBoard1.Size = new System.Drawing.Size(814, 392);
-            this.userControl_DashBoard1.TabIndex = 213;
-            this.userControl_DashBoard1.Visible = false;
-            // 
             // panel30
             // 
             this.panel30.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
@@ -860,6 +845,21 @@
             this.panel27.Size = new System.Drawing.Size(2, 25);
             this.panel27.TabIndex = 204;
             // 
+            // userControl_DashBoard1
+            // 
+            this.userControl_DashBoard1.Location = new System.Drawing.Point(2, 1);
+            this.userControl_DashBoard1.Name = "userControl_DashBoard1";
+            this.userControl_DashBoard1.Size = new System.Drawing.Size(814, 392);
+            this.userControl_DashBoard1.TabIndex = 213;
+            this.userControl_DashBoard1.Visible = false;
+            // 
+            // userControl_Inventory1
+            // 
+            this.userControl_Inventory1.Location = new System.Drawing.Point(-20, 313);
+            this.userControl_Inventory1.Name = "userControl_Inventory1";
+            this.userControl_Inventory1.Size = new System.Drawing.Size(779, 43);
+            this.userControl_Inventory1.TabIndex = 11;
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -869,7 +869,7 @@
             this.Controls.Add(this.button_Dashboard);
             this.Controls.Add(this.button_Home);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.panel10);
+            this.Controls.Add(this.panel_Status);
             this.Controls.Add(this.PicLogo);
             this.Controls.Add(this.Border);
             this.Controls.Add(this.panel1);
@@ -907,7 +907,7 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel Border;
         private System.Windows.Forms.PictureBox PicLogo;
-        private System.Windows.Forms.Panel panel10;
+        private System.Windows.Forms.Panel panel_Status;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel PanelReceipt;
