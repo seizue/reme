@@ -307,7 +307,7 @@ namespace reme
     {
         new LineSeries
         {
-            Title = "Most Ordered Items",
+            Title = "Ordered Items: ",
             Values = new ChartValues<int>(values)
         }
     };
