@@ -31,10 +31,10 @@ namespace reme
             SetCurrentDate();
             CheckFiles();
 
-            // Subscribe to the ItemSaved event of the UserControl
-            userControl_Inventory1.ItemSaved += UserControl_ItemSaved;
-
-            // Subscribe to the SelectionChanged event of the DataGridView
+            // Subscribe to events in the user control
+            userControl_Inventory1.DataSaved += UserControl_Inventory_DataSaved;
+        
+           // Subscribe to the SelectionChanged event of the DataGridView
             OrderPreview.SelectionChanged += OrderPreview_SelectionChanged;
 
             userControl_Inventory1 = new UserControl_Inventory();
@@ -56,7 +56,6 @@ namespace reme
             OrderPreview.RowPrePaint += OrderPreview_RowPrePaint;
 
             OrderPreview.CellPainting += OrderPreview_CellPainting;
-          
         }
 
         private void InitializeInventoryControl()
@@ -70,15 +69,23 @@ namespace reme
 
             // Set the data source for Quantity ComboBox
             comboBox_Quantity.DataSource = inventoryControl.QuantityList;
+
         }
 
-        private void UserControl_ItemSaved(object sender, EventArgs e)
+        private void UserControl_Inventory_DataSaved(object sender, EventArgs e)
         {
-            // Update the data source for comboBox_Order
-            comboBox_Order.DataSource = null; // Clear the existing data source
-            comboBox_Order.DataSource = inventoryControl.OrderList; // Set the updated data source
-            comboBox_Order.DisplayMember = "ORDER"; // Set the display member
-            comboBox_Order.ValueMember = "ORDER"; // Set the value member
+            // Handle the event raised by the user control
+            // Update the main form as needed
+            RefreshData(); // Example method to refresh data in the main form
+        }
+
+        private void RefreshData()
+        {
+            // Add logic to refresh or update data in the main form
+            // For example, you might reload data from a file or database
+       
+        
+            InitializeInventoryControl();
         }
 
         private void button_Save_Click(object sender, EventArgs e)
@@ -500,6 +507,7 @@ namespace reme
             button_Home.ForeColor = clickedColor;
             button_Inventory.ForeColor = defaultColor;
             button_Dashboard.ForeColor = defaultColor;
+         
         }
 
         private void button_Inventory_Click(object sender, EventArgs e)
@@ -570,6 +578,16 @@ namespace reme
             {
                 panel_Status.BackColor = Color.DimGray;
             }
+        }
+
+        private void button_Refresh_Click(object sender, EventArgs e)
+        {        
+            InitializeInventoryControl();
+            LoadJsonData();
+            CalculateOverallTotal();
+            LoadNameAndPreview();
+            CheckFiles();
+
         }
     }
 

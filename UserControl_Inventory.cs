@@ -18,7 +18,11 @@ namespace reme
     {
         public BindingList<DataModel> dataList = new BindingList<DataModel>();
 
-    
+ 
+
+        public event EventHandler DataSaved;
+
+
         public List<int> QuantityList
         {
             get { return Enumerable.Range(1, 20).ToList(); }
@@ -53,8 +57,7 @@ namespace reme
         }
 
 
-        public event EventHandler ItemSaved;
-
+    
         private void button_Save_Click(object sender, EventArgs e)
         {
 
@@ -77,9 +80,7 @@ namespace reme
                     // Save the updated list to the JSON file
                     SaveDataToJson();
 
-                    // Raise the ItemSaved event
-                    OnItemSaved(EventArgs.Empty);
-
+             
                     // Clear the text boxes after adding data
                     textBox_Item.Text = string.Empty;
                     textBox_Price.Text = string.Empty;
@@ -96,9 +97,9 @@ namespace reme
           
         }
 
-        protected virtual void OnItemSaved(EventArgs e)
+        protected virtual void OnDataSaved(EventArgs e)
         {
-            ItemSaved?.Invoke(this, e);
+            DataSaved?.Invoke(this, e);
         }
 
         private void SaveDataToJson()
@@ -114,6 +115,9 @@ namespace reme
 
             // Save the JSON data to a file
             File.WriteAllText("data.json", jsonData);
+
+     
+            OnDataSaved(EventArgs.Empty);
         }
 
         private void button_Delete_Click(object sender, EventArgs e)
@@ -194,7 +198,5 @@ namespace reme
 
             MessageBox.Show($"Data exported to CSV successfully!\nFile saved at: {fullFilePath}");
         }
-
-
     }
 }
