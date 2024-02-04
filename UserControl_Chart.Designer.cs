@@ -32,6 +32,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.cartesianChart2 = new LiveCharts.WinForms.CartesianChart();
             this.cartesianChart3 = new LiveCharts.WinForms.CartesianChart();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel26 = new System.Windows.Forms.Panel();
@@ -41,7 +42,6 @@
             this.panel8 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.cartesianChart2 = new LiveCharts.WinForms.CartesianChart();
             this.cartesianChart4 = new LiveCharts.WinForms.CartesianChart();
             this.label4 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
@@ -89,6 +89,16 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(290, 153);
             this.panel2.TabIndex = 233;
+            // 
+            // cartesianChart2
+            // 
+            this.cartesianChart2.BackColor = System.Drawing.Color.White;
+            this.cartesianChart2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.cartesianChart2.Location = new System.Drawing.Point(0, 0);
+            this.cartesianChart2.Name = "cartesianChart2";
+            this.cartesianChart2.Size = new System.Drawing.Size(290, 153);
+            this.cartesianChart2.TabIndex = 232;
+            this.cartesianChart2.Text = "cartesianChart2";
             // 
             // cartesianChart3
             // 
@@ -170,16 +180,6 @@
             this.label3.Size = new System.Drawing.Size(72, 11);
             this.label3.TabIndex = 239;
             this.label3.Text = "YEARLY SALES";
-            // 
-            // cartesianChart2
-            // 
-            this.cartesianChart2.BackColor = System.Drawing.Color.White;
-            this.cartesianChart2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.cartesianChart2.Location = new System.Drawing.Point(0, 0);
-            this.cartesianChart2.Name = "cartesianChart2";
-            this.cartesianChart2.Size = new System.Drawing.Size(290, 153);
-            this.cartesianChart2.TabIndex = 232;
-            this.cartesianChart2.Text = "cartesianChart2";
             // 
             // cartesianChart4
             // 
