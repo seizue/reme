@@ -15,7 +15,7 @@ namespace reme
 {
     public partial class UserControl_DashBoard : UserControl
     {
-        private Color defaultColor = Color.FromArgb(71, 38, 38); // Default color of the tab indicator
+        private Color defaultColor = Color.FromArgb(71, 38, 38); // Default color of the button fore color
         private Color clickedColor = Color.FromArgb(227, 103, 102); // Color when the button is clicked
 
         private int nextID = 1;
@@ -30,6 +30,10 @@ namespace reme
             // Attach click events to the buttons
             button_Chart.Click += button_Chart_Click;
             button_DB.Click += button_DB_Click;
+
+            button_ExportInv.Visible = false;
+            panel_style1.Visible = false;
+            panel_Style2.Visible = false;
         }
 
         private void LoadDataFromJson()
@@ -159,8 +163,10 @@ namespace reme
             userControl_Chart1.Location = new Point(0, 0); // You may adjust the position
             userControl_Chart1.Visible = true;
             userControl_Chart1.BringToFront();
-
+            button_ExportInv.Visible = false;
             GridInv.Visible = false;
+            panel_style1.Visible = false;
+            panel_Style2.Visible = false;
 
             // Change the color of the labels
             button_Chart.ForeColor = clickedColor;
@@ -171,6 +177,9 @@ namespace reme
         private void button_DB_Click(object sender, EventArgs e)
         {
             GridInv.Visible = true;
+            button_ExportInv.Visible = true;
+            panel_style1.Visible = true;
+            panel_Style2.Visible = true;
 
             GridInv.BringToFront();
             userControl_Chart1.Visible = false;

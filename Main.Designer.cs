@@ -28,18 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.MainBorder = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel26 = new System.Windows.Forms.Panel();
             this.Border = new System.Windows.Forms.Panel();
             this.panel_Status = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
-            this.PicLogo = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.PanelReceipt = new System.Windows.Forms.Panel();
             this.panel20 = new System.Windows.Forms.Panel();
@@ -54,6 +53,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.userControl_Inventory1 = new reme.UserControl_Inventory();
             this.label4 = new System.Windows.Forms.Label();
             this.metroTextBox3 = new MetroFramework.Controls.MetroTextBox();
             this.textBox_Name = new MetroFramework.Controls.MetroTextBox();
@@ -77,6 +77,7 @@
             this.panel18 = new System.Windows.Forms.Panel();
             this.textBox_PreviewName = new System.Windows.Forms.TextBox();
             this.MainPanel = new System.Windows.Forms.Panel();
+            this.userControl_DashBoard1 = new reme.UserControl_DashBoard();
             this.panel30 = new System.Windows.Forms.Panel();
             this.panel24 = new System.Windows.Forms.Panel();
             this.panel25 = new System.Windows.Forms.Panel();
@@ -88,17 +89,15 @@
             this.panel22 = new System.Windows.Forms.Panel();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.panel21 = new System.Windows.Forms.Panel();
-            this.button_Inventory = new System.Windows.Forms.Button();
-            this.button_Home = new System.Windows.Forms.Button();
-            this.button_Dashboard = new System.Windows.Forms.Button();
             this.panel27 = new System.Windows.Forms.Panel();
-            this.button_Refresh = new System.Windows.Forms.Button();
-            this.userControl_DashBoard1 = new reme.UserControl_DashBoard();
-            this.userControl_Inventory1 = new reme.UserControl_Inventory();
             this.panel10 = new System.Windows.Forms.Panel();
             this.panel31 = new System.Windows.Forms.Panel();
+            this.PicLogo = new System.Windows.Forms.PictureBox();
+            this.button_Refresh = new System.Windows.Forms.Button();
+            this.button_Dashboard = new System.Windows.Forms.Button();
+            this.button_Home = new System.Windows.Forms.Button();
+            this.button_Inventory = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PicLogo)).BeginInit();
             this.PanelReceipt.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -106,6 +105,7 @@
             this.MainPanel.SuspendLayout();
             this.panel28.SuspendLayout();
             this.panel22.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PicLogo)).BeginInit();
             this.SuspendLayout();
             // 
             // MainBorder
@@ -158,16 +158,6 @@
             this.label6.Size = new System.Drawing.Size(41, 12);
             this.label6.TabIndex = 10;
             this.label6.Text = "STATUS";
-            // 
-            // PicLogo
-            // 
-            this.PicLogo.Image = global::reme.Properties.Resources.four_squares_48px;
-            this.PicLogo.Location = new System.Drawing.Point(794, 23);
-            this.PicLogo.Name = "PicLogo";
-            this.PicLogo.Size = new System.Drawing.Size(42, 18);
-            this.PicLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.PicLogo.TabIndex = 7;
-            this.PicLogo.TabStop = false;
             // 
             // label1
             // 
@@ -317,6 +307,13 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(315, 75);
             this.panel4.TabIndex = 2;
+            // 
+            // userControl_Inventory1
+            // 
+            this.userControl_Inventory1.Location = new System.Drawing.Point(-20, 313);
+            this.userControl_Inventory1.Name = "userControl_Inventory1";
+            this.userControl_Inventory1.Size = new System.Drawing.Size(779, 43);
+            this.userControl_Inventory1.TabIndex = 11;
             // 
             // label4
             // 
@@ -529,59 +526,59 @@
             // 
             this.OrderPreview.AllowUserToResizeColumns = false;
             this.OrderPreview.AllowUserToResizeRows = false;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(236)))), ((int)(((byte)(236)))));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(175)))), ((int)(((byte)(223)))), ((int)(((byte)(229)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.OrderPreview.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(236)))), ((int)(((byte)(236)))));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(175)))), ((int)(((byte)(223)))), ((int)(((byte)(229)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.OrderPreview.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.OrderPreview.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.OrderPreview.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
             this.OrderPreview.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.OrderPreview.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.OrderPreview.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.EnableWithoutHeaderText;
             this.OrderPreview.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.OrderPreview.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.OrderPreview.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.OrderPreview.ColumnHeadersHeight = 37;
             this.OrderPreview.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.OrderPreview.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ORDER,
             this.QUANTITY,
             this.SUBTOTAL});
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Bahnschrift SemiLight SemiConde", 10F);
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(175)))), ((int)(((byte)(223)))), ((int)(((byte)(229)))));
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.OrderPreview.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Bahnschrift SemiLight SemiConde", 10F);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(175)))), ((int)(((byte)(223)))), ((int)(((byte)(229)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.OrderPreview.DefaultCellStyle = dataGridViewCellStyle3;
             this.OrderPreview.EnableHeadersVisualStyles = false;
             this.OrderPreview.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.OrderPreview.GridColor = System.Drawing.Color.Silver;
             this.OrderPreview.Location = new System.Drawing.Point(416, 109);
             this.OrderPreview.Name = "OrderPreview";
             this.OrderPreview.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.OrderPreview.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.OrderPreview.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.OrderPreview.RowHeadersVisible = false;
             this.OrderPreview.RowHeadersWidth = 45;
             this.OrderPreview.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.OrderPreview.RowsDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.OrderPreview.RowsDefaultCellStyle = dataGridViewCellStyle5;
             this.OrderPreview.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
             this.OrderPreview.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.OrderPreview.Size = new System.Drawing.Size(374, 214);
@@ -667,6 +664,14 @@
             this.MainPanel.Name = "MainPanel";
             this.MainPanel.Size = new System.Drawing.Size(810, 390);
             this.MainPanel.TabIndex = 1;
+            // 
+            // userControl_DashBoard1
+            // 
+            this.userControl_DashBoard1.Location = new System.Drawing.Point(2, 1);
+            this.userControl_DashBoard1.Name = "userControl_DashBoard1";
+            this.userControl_DashBoard1.Size = new System.Drawing.Size(814, 392);
+            this.userControl_DashBoard1.TabIndex = 213;
+            this.userControl_DashBoard1.Visible = false;
             // 
             // panel30
             // 
@@ -777,69 +782,6 @@
             this.panel21.Size = new System.Drawing.Size(377, 5);
             this.panel21.TabIndex = 200;
             // 
-            // button_Inventory
-            // 
-            this.button_Inventory.BackColor = System.Drawing.Color.White;
-            this.button_Inventory.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button_Inventory.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.button_Inventory.FlatAppearance.BorderSize = 0;
-            this.button_Inventory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_Inventory.Font = new System.Drawing.Font("Bahnschrift SemiCondensed", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_Inventory.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.button_Inventory.Image = global::reme.Properties.Resources.handcart_24px;
-            this.button_Inventory.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button_Inventory.Location = new System.Drawing.Point(130, 80);
-            this.button_Inventory.Name = "button_Inventory";
-            this.button_Inventory.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.button_Inventory.Size = new System.Drawing.Size(102, 22);
-            this.button_Inventory.TabIndex = 201;
-            this.button_Inventory.Text = "INVENTORY";
-            this.button_Inventory.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button_Inventory.UseVisualStyleBackColor = false;
-            this.button_Inventory.Click += new System.EventHandler(this.button_Inventory_Click);
-            // 
-            // button_Home
-            // 
-            this.button_Home.BackColor = System.Drawing.Color.White;
-            this.button_Home.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button_Home.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.button_Home.FlatAppearance.BorderSize = 0;
-            this.button_Home.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_Home.Font = new System.Drawing.Font("Bahnschrift SemiCondensed", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_Home.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(103)))), ((int)(((byte)(102)))));
-            this.button_Home.Image = global::reme.Properties.Resources.four_squares_24px;
-            this.button_Home.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button_Home.Location = new System.Drawing.Point(29, 80);
-            this.button_Home.Name = "button_Home";
-            this.button_Home.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.button_Home.Size = new System.Drawing.Size(75, 22);
-            this.button_Home.TabIndex = 202;
-            this.button_Home.Text = "HOME";
-            this.button_Home.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button_Home.UseVisualStyleBackColor = false;
-            this.button_Home.Click += new System.EventHandler(this.button_Home_Click);
-            // 
-            // button_Dashboard
-            // 
-            this.button_Dashboard.BackColor = System.Drawing.Color.White;
-            this.button_Dashboard.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button_Dashboard.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.button_Dashboard.FlatAppearance.BorderSize = 0;
-            this.button_Dashboard.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_Dashboard.Font = new System.Drawing.Font("Bahnschrift SemiCondensed", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_Dashboard.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.button_Dashboard.Image = global::reme.Properties.Resources.increase_profits_24px;
-            this.button_Dashboard.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button_Dashboard.Location = new System.Drawing.Point(258, 80);
-            this.button_Dashboard.Name = "button_Dashboard";
-            this.button_Dashboard.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.button_Dashboard.Size = new System.Drawing.Size(109, 22);
-            this.button_Dashboard.TabIndex = 203;
-            this.button_Dashboard.Text = "DASHBOARD";
-            this.button_Dashboard.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button_Dashboard.UseVisualStyleBackColor = false;
-            this.button_Dashboard.Click += new System.EventHandler(this.button_Dashboard_Click);
-            // 
             // panel27
             // 
             this.panel27.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
@@ -847,6 +789,32 @@
             this.panel27.Name = "panel27";
             this.panel27.Size = new System.Drawing.Size(2, 25);
             this.panel27.TabIndex = 204;
+            // 
+            // panel10
+            // 
+            this.panel10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
+            this.panel10.Location = new System.Drawing.Point(703, 77);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(2, 25);
+            this.panel10.TabIndex = 206;
+            // 
+            // panel31
+            // 
+            this.panel31.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
+            this.panel31.Location = new System.Drawing.Point(804, 77);
+            this.panel31.Name = "panel31";
+            this.panel31.Size = new System.Drawing.Size(2, 25);
+            this.panel31.TabIndex = 207;
+            // 
+            // PicLogo
+            // 
+            this.PicLogo.Image = global::reme.Properties.Resources.four_squares_48px;
+            this.PicLogo.Location = new System.Drawing.Point(788, 36);
+            this.PicLogo.Name = "PicLogo";
+            this.PicLogo.Size = new System.Drawing.Size(42, 18);
+            this.PicLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PicLogo.TabIndex = 7;
+            this.PicLogo.TabStop = false;
             // 
             // button_Refresh
             // 
@@ -869,36 +837,68 @@
             this.button_Refresh.UseVisualStyleBackColor = false;
             this.button_Refresh.Click += new System.EventHandler(this.button_Refresh_Click);
             // 
-            // userControl_DashBoard1
+            // button_Dashboard
             // 
-            this.userControl_DashBoard1.Location = new System.Drawing.Point(2, 1);
-            this.userControl_DashBoard1.Name = "userControl_DashBoard1";
-            this.userControl_DashBoard1.Size = new System.Drawing.Size(814, 392);
-            this.userControl_DashBoard1.TabIndex = 213;
-            this.userControl_DashBoard1.Visible = false;
+            this.button_Dashboard.BackColor = System.Drawing.Color.White;
+            this.button_Dashboard.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button_Dashboard.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.button_Dashboard.FlatAppearance.BorderSize = 0;
+            this.button_Dashboard.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_Dashboard.Font = new System.Drawing.Font("Bahnschrift SemiCondensed", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_Dashboard.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.button_Dashboard.Image = global::reme.Properties.Resources.combo_chart_24px;
+            this.button_Dashboard.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button_Dashboard.Location = new System.Drawing.Point(258, 80);
+            this.button_Dashboard.Name = "button_Dashboard";
+            this.button_Dashboard.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.button_Dashboard.Size = new System.Drawing.Size(109, 22);
+            this.button_Dashboard.TabIndex = 203;
+            this.button_Dashboard.Text = "DASHBOARD";
+            this.button_Dashboard.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button_Dashboard.UseVisualStyleBackColor = false;
+            this.button_Dashboard.Click += new System.EventHandler(this.button_Dashboard_Click);
             // 
-            // userControl_Inventory1
+            // button_Home
             // 
-            this.userControl_Inventory1.Location = new System.Drawing.Point(-20, 313);
-            this.userControl_Inventory1.Name = "userControl_Inventory1";
-            this.userControl_Inventory1.Size = new System.Drawing.Size(779, 43);
-            this.userControl_Inventory1.TabIndex = 11;
+            this.button_Home.BackColor = System.Drawing.Color.White;
+            this.button_Home.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button_Home.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.button_Home.FlatAppearance.BorderSize = 0;
+            this.button_Home.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_Home.Font = new System.Drawing.Font("Bahnschrift SemiCondensed", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_Home.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(103)))), ((int)(((byte)(102)))));
+            this.button_Home.Image = global::reme.Properties.Resources.four_squares_24px;
+            this.button_Home.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button_Home.Location = new System.Drawing.Point(29, 80);
+            this.button_Home.Name = "button_Home";
+            this.button_Home.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.button_Home.Size = new System.Drawing.Size(75, 22);
+            this.button_Home.TabIndex = 202;
+            this.button_Home.Text = "HOME";
+            this.button_Home.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button_Home.UseVisualStyleBackColor = false;
+            this.button_Home.Click += new System.EventHandler(this.button_Home_Click);
             // 
-            // panel10
+            // button_Inventory
             // 
-            this.panel10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
-            this.panel10.Location = new System.Drawing.Point(703, 77);
-            this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(2, 25);
-            this.panel10.TabIndex = 206;
-            // 
-            // panel31
-            // 
-            this.panel31.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
-            this.panel31.Location = new System.Drawing.Point(804, 77);
-            this.panel31.Name = "panel31";
-            this.panel31.Size = new System.Drawing.Size(2, 25);
-            this.panel31.TabIndex = 207;
+            this.button_Inventory.BackColor = System.Drawing.Color.White;
+            this.button_Inventory.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button_Inventory.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.button_Inventory.FlatAppearance.BorderSize = 0;
+            this.button_Inventory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_Inventory.Font = new System.Drawing.Font("Bahnschrift SemiCondensed", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_Inventory.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.button_Inventory.Image = global::reme.Properties.Resources.handcart_24px;
+            this.button_Inventory.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button_Inventory.Location = new System.Drawing.Point(130, 80);
+            this.button_Inventory.Name = "button_Inventory";
+            this.button_Inventory.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.button_Inventory.Size = new System.Drawing.Size(102, 22);
+            this.button_Inventory.TabIndex = 201;
+            this.button_Inventory.Text = "INVENTORY";
+            this.button_Inventory.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button_Inventory.UseVisualStyleBackColor = false;
+            this.button_Inventory.Click += new System.EventHandler(this.button_Inventory_Click);
             // 
             // Main
             // 
@@ -925,7 +925,6 @@
             this.Text = "Rem\'s Tasty Threats";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Main_FormClosing);
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.PicLogo)).EndInit();
             this.PanelReceipt.ResumeLayout(false);
             this.PanelReceipt.PerformLayout();
             this.panel6.ResumeLayout(false);
@@ -939,6 +938,7 @@
             this.panel28.PerformLayout();
             this.panel22.ResumeLayout(false);
             this.panel22.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PicLogo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -73,9 +73,29 @@ namespace reme.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap combo_chart_24px {
+            get {
+                object obj = ResourceManager.GetObject("combo_chart_24px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap data_backup_24px {
             get {
                 object obj = ResourceManager.GetObject("data_backup_24px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap database_24px {
+            get {
+                object obj = ResourceManager.GetObject("database_24px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -153,6 +173,16 @@ namespace reme.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap graph_24px {
+            get {
+                object obj = ResourceManager.GetObject("graph_24px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap handcart_24px {
             get {
                 object obj = ResourceManager.GetObject("handcart_24px", resourceCulture);
@@ -166,6 +196,16 @@ namespace reme.Properties {
         internal static System.Drawing.Bitmap increase_profits_24px {
             get {
                 object obj = ResourceManager.GetObject("increase_profits_24px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap increase_profits_24px1 {
+            get {
+                object obj = ResourceManager.GetObject("increase_profits_24px1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
