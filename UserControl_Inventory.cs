@@ -17,8 +17,6 @@ namespace reme
     {
         public BindingList<DataModel> dataList = new BindingList<DataModel>();
 
- 
-
         public event EventHandler DataSaved;
 
 

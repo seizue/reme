@@ -20,6 +20,7 @@ namespace reme
         private Color clickedColor = Color.FromArgb(227, 103, 102); // Color when the button is clicked
 
         private UserControl_Inventory inventoryControl;
+        private UserControl_DashBoard dashBoardControl;
 
         public Main()
         {
@@ -38,7 +39,7 @@ namespace reme
             OrderPreview.SelectionChanged += OrderPreview_SelectionChanged;
 
             userControl_Inventory1 = new UserControl_Inventory();
-            userControl_Inventory1.Visible = false; 
+            userControl_Inventory1.Visible = false;
 
             comboBox_Quantity.KeyPress += comboBox_Quantity_KeyPress;
 
@@ -587,7 +588,10 @@ namespace reme
             CalculateOverallTotal();
             LoadNameAndPreview();
             CheckFiles();
+            userControl_DashBoard1.RefreshData();
 
+            // Show a message box indicating successful refreshing
+            MessageBox.Show("Data refreshed successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 

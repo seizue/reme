@@ -188,5 +188,10 @@ namespace reme
             button_DB.ForeColor = clickedColor;
             button_Chart.ForeColor = defaultColor;
         }
+
+        public void RefreshData()
+        {
+            LoadDataFromJson();
+        }
     }
 }
