@@ -73,6 +73,26 @@ namespace reme.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap color_palette_24px {
+            get {
+                object obj = ResourceManager.GetObject("color_palette_24px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap color_palette_24px1 {
+            get {
+                object obj = ResourceManager.GetObject("color_palette_24px1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap combo_chart_24px {
             get {
                 object obj = ResourceManager.GetObject("combo_chart_24px", resourceCulture);
@@ -206,6 +226,36 @@ namespace reme.Properties {
         internal static System.Drawing.Bitmap increase_profits_24px1 {
             get {
                 object obj = ResourceManager.GetObject("increase_profits_24px1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap moon_24px {
+            get {
+                object obj = ResourceManager.GetObject("moon_24px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap order_history_24px {
+            get {
+                object obj = ResourceManager.GetObject("order_history_24px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap sun_24px {
+            get {
+                object obj = ResourceManager.GetObject("sun_24px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

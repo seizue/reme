@@ -9,7 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
 using Newtonsoft.Json;
-
+using MetroFramework;
+using MetroFramework.Forms;
 
 namespace reme
 {
@@ -31,6 +32,8 @@ namespace reme
             LoadNameAndPreview();
             SetCurrentDate();
             CheckFiles();
+
+            this.StyleManager = metroStyleManager_Main;
 
             // Subscribe to events in the user control
             userControl_Inventory1.DataSaved += UserControl_Inventory_DataSaved;
@@ -57,6 +60,8 @@ namespace reme
             OrderPreview.RowPrePaint += OrderPreview_RowPrePaint;
 
             OrderPreview.CellPainting += OrderPreview_CellPainting;
+
+
         }
 
         private void InitializeInventoryControl()
@@ -487,6 +492,8 @@ namespace reme
             // Instantiate the Receipt form
             Receipt receiptForm = new Receipt();
 
+            receiptForm.StyleManager = this.StyleManager;
+
             // Pass data from OrderPreview to GridPrintReceipt
             receiptForm.ReceiveDataFromMain(OrderPreview.Rows);
 
@@ -592,6 +599,35 @@ namespace reme
 
             // Show a message box indicating successful refreshing
             MessageBox.Show("Data refreshed successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void button_Settings_Click(object sender, EventArgs e)
+        {
+            // Instantiate the Receipt form
+            Settings settingsForm = new Settings();
+
+            // Show the Receipt form
+            settingsForm.Show();
+        }
+
+        private void button_LightTheme_Click(object sender, EventArgs e)
+        {
+            metroStyleManager_Main.Theme = MetroFramework.MetroThemeStyle.Light;
+        }
+
+        private void button_DarkTheme_Click(object sender, EventArgs e)
+        {
+            metroStyleManager_Main.Theme = MetroFramework.MetroThemeStyle.Dark;
+        }
+
+        private void button_SaveTheme_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void metroComboBox_Style_SelectedIndexChanged(object sender, EventArgs e)
+        {
+           
         }
     }
 

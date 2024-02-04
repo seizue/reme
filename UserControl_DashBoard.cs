@@ -9,6 +9,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MetroFramework;
+using MetroFramework.Forms;
 using static reme.Receipt;
 
 namespace reme
@@ -29,7 +31,7 @@ namespace reme
 
             // Attach click events to the buttons
             button_Chart.Click += button_Chart_Click;
-            button_DB.Click += button_DB_Click;
+            button_History.Click += button_DB_Click;
 
             button_ExportInv.Visible = false;
             panel_style1.Visible = false;
@@ -170,7 +172,7 @@ namespace reme
 
             // Change the color of the labels
             button_Chart.ForeColor = clickedColor;
-            button_DB.ForeColor = defaultColor;
+            button_History.ForeColor = defaultColor;
            
         }
 
@@ -185,7 +187,7 @@ namespace reme
             userControl_Chart1.Visible = false;
 
             // Change the color of the labels
-            button_DB.ForeColor = clickedColor;
+            button_History.ForeColor = clickedColor;
             button_Chart.ForeColor = defaultColor;
         }
 

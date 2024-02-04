@@ -14,6 +14,8 @@ using LiveCharts.WinForms;
 using static reme.Receipt;
 using LiveCharts.Wpf;
 using System.Globalization;
+using MetroFramework;
+using MetroFramework.Forms;
 
 namespace reme
 {
