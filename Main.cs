@@ -32,9 +32,6 @@ namespace reme
             LoadNameAndPreview();
             SetCurrentDate();
             CheckFiles();
-            SetCustomColorsForLightTheme();
-
-            this.StyleManager = metroStyleManager_Main;
 
             // Subscribe to events in the user control
             userControl_Inventory1.DataSaved += UserControl_Inventory_DataSaved;
@@ -610,95 +607,7 @@ namespace reme
             // Show the Receipt form
             settingsForm.Show();
         }
-
-        private void button_LightTheme_Click(object sender, EventArgs e)
-        {
-            metroStyleManager_Main.Theme = MetroFramework.MetroThemeStyle.Light;
-            SetCustomColorsForLightTheme();
-        }
-
-        private void button_DarkTheme_Click(object sender, EventArgs e)
-        {
-            metroStyleManager_Main.Theme = MetroFramework.MetroThemeStyle.Dark;
-            SetCustomColorsForDarkTheme();
-        }
-
-        private void button_SaveTheme_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void SetCustomColorsForLightTheme()
-        {
-            // Customize the DataGridView colors for the light theme
-
-            button_Save.FlatStyle = FlatStyle.Standard;
-            button_Reset.FlatStyle = FlatStyle.Standard;
-            button_Print.FlatStyle = FlatStyle.Standard;
-
-            button_Home.ForeColor = Color.FromArgb(64, 0, 0);
-            button_Inventory.ForeColor = Color.FromArgb(64, 0, 0);
-            button_Dashboard.ForeColor = Color.FromArgb(64, 0, 0);
-            button_Refresh.ForeColor = Color.FromArgb(64, 0, 0);
-            button_Theme.ForeColor = Color.FromArgb(64, 0, 0);
-
-            OrderPreview.DefaultCellStyle.BackColor = Color.FromArgb(255, 255, 255);
-            OrderPreview.DefaultCellStyle.ForeColor = Color.FromArgb(0, 64, 0);
-            OrderPreview.DefaultCellStyle.SelectionBackColor = Color.FromArgb(175, 223, 229);
-            OrderPreview.DefaultCellStyle.ForeColor = Color.FromArgb(0, 64, 64);
-
-            OrderPreview.BackgroundColor = Color.FromArgb(255, 255, 255);
-
-            OrderPreview.RowHeadersDefaultCellStyle.BackColor = Color.FromArgb(214, 192, 192);
-
-            OrderPreview.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(242, 236, 236);
-            OrderPreview.AlternatingRowsDefaultCellStyle.ForeColor = Color.FromArgb(128, 64, 64);
-            OrderPreview.AlternatingRowsDefaultCellStyle.SelectionBackColor = Color.FromArgb(175, 223, 229);
-            OrderPreview.AlternatingRowsDefaultCellStyle.SelectionForeColor = Color.FromArgb(0, 64, 64);
-
-            OrderPreview.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(214, 192, 192);
-            OrderPreview.ColumnHeadersDefaultCellStyle.ForeColor = Color.FromArgb(106, 56, 56);
-            OrderPreview.ColumnHeadersDefaultCellStyle.SelectionBackColor = Color.FromArgb(214, 192, 192);
-            OrderPreview.ColumnHeadersDefaultCellStyle.SelectionForeColor = Color.FromArgb(64, 0, 0);
-
-          
-
-          
-        }
-
-
-        private void SetCustomColorsForDarkTheme()
-        {
-            PanelReceipt.BackColor = Color.FromArgb(17, 17, 17);
-            panel_Name.BackColor = Color.FromArgb(42, 42, 42);
-            panel_OrderQuantity.BackColor = Color.FromArgb(42, 42, 42);
-            panel_StyleN.BackColor = Color.FromArgb(42, 42, 42);
-            panel_StyleOQ.BackColor = Color.FromArgb(42, 42, 42);
-
-            label_Discription1.ForeColor = Color.WhiteSmoke;
-            label_Discription2.ForeColor =Color.WhiteSmoke;
-
-            label_Name.ForeColor = Color.Gainsboro;
-            label_Order.ForeColor = Color.Gainsboro;
-            label_Quantity.ForeColor = Color.Gainsboro;
-
-            panel_sepa1.BackColor = Color.FromArgb(42, 42, 42);
-            panel_sepa2.BackColor = Color.FromArgb(42, 42, 42);
-            panel_sepa3.BackColor = Color.FromArgb(42, 42, 42);
-            panel_sepa4.BackColor = Color.FromArgb(42, 42, 42);
-            panel_sepa5.BackColor = Color.FromArgb(42, 42, 42);
-            panel_sepa6.BackColor = Color.FromArgb(42, 42, 42);
-
-            button_Save.FlatStyle = FlatStyle.Flat;
-            button_Reset.FlatStyle = FlatStyle.Flat;
-            button_Print.FlatStyle = FlatStyle.Flat;
-
-            button_Home.ForeColor = Color.FromArgb(255, 239, 236);
-            button_Inventory.ForeColor = Color.FromArgb(255, 239, 236);
-            button_Dashboard.ForeColor = Color.FromArgb(255, 239, 236);
-            button_Refresh.ForeColor = Color.FromArgb(255, 239, 236);
-            button_Theme.ForeColor = Color.FromArgb(255, 239, 236);
-        }
+        
     }
 
 }
