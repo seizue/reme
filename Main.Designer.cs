@@ -90,8 +90,6 @@
             this.panel27 = new System.Windows.Forms.Panel();
             this.panel31 = new System.Windows.Forms.Panel();
             this.panel10 = new System.Windows.Forms.Panel();
-            this.panel32 = new System.Windows.Forms.Panel();
-            this.button_Theme = new System.Windows.Forms.Button();
             this.PicLogo = new System.Windows.Forms.PictureBox();
             this.button_Refresh = new System.Windows.Forms.Button();
             this.button_Dashboard = new System.Windows.Forms.Button();
@@ -781,7 +779,7 @@
             // panel31
             // 
             this.panel31.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
-            this.panel31.Location = new System.Drawing.Point(701, 71);
+            this.panel31.Location = new System.Drawing.Point(811, 71);
             this.panel31.Name = "panel31";
             this.panel31.Size = new System.Drawing.Size(2, 25);
             this.panel31.TabIndex = 207;
@@ -789,39 +787,10 @@
             // panel10
             // 
             this.panel10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
-            this.panel10.Location = new System.Drawing.Point(600, 71);
+            this.panel10.Location = new System.Drawing.Point(710, 71);
             this.panel10.Name = "panel10";
             this.panel10.Size = new System.Drawing.Size(2, 25);
             this.panel10.TabIndex = 206;
-            // 
-            // panel32
-            // 
-            this.panel32.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
-            this.panel32.Location = new System.Drawing.Point(826, 71);
-            this.panel32.Name = "panel32";
-            this.panel32.Size = new System.Drawing.Size(2, 25);
-            this.panel32.TabIndex = 209;
-            // 
-            // button_Theme
-            // 
-            this.button_Theme.BackColor = System.Drawing.Color.Transparent;
-            this.button_Theme.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button_Theme.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.button_Theme.FlatAppearance.BorderSize = 0;
-            this.button_Theme.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_Theme.Font = new System.Drawing.Font("Bahnschrift SemiCondensed", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_Theme.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.button_Theme.Image = global::reme.Properties.Resources.color_palette_24px1;
-            this.button_Theme.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button_Theme.Location = new System.Drawing.Point(711, 72);
-            this.button_Theme.Name = "button_Theme";
-            this.button_Theme.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.button_Theme.Size = new System.Drawing.Size(111, 25);
-            this.button_Theme.TabIndex = 208;
-            this.button_Theme.Text = "THEME STYLE";
-            this.button_Theme.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button_Theme.UseVisualStyleBackColor = false;
-            this.button_Theme.Click += new System.EventHandler(this.button_Settings_Click);
             // 
             // PicLogo
             // 
@@ -844,7 +813,7 @@
             this.button_Refresh.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.button_Refresh.Image = global::reme.Properties.Resources.data_backup_24px;
             this.button_Refresh.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button_Refresh.Location = new System.Drawing.Point(608, 72);
+            this.button_Refresh.Location = new System.Drawing.Point(718, 72);
             this.button_Refresh.Name = "button_Refresh";
             this.button_Refresh.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.button_Refresh.Size = new System.Drawing.Size(88, 25);
@@ -919,9 +888,9 @@
             // 
             // userControl_DashBoard1
             // 
-            this.userControl_DashBoard1.Location = new System.Drawing.Point(2, 1);
+            this.userControl_DashBoard1.Location = new System.Drawing.Point(-1, 0);
             this.userControl_DashBoard1.Name = "userControl_DashBoard1";
-            this.userControl_DashBoard1.Size = new System.Drawing.Size(814, 35);
+            this.userControl_DashBoard1.Size = new System.Drawing.Size(814, 398);
             this.userControl_DashBoard1.TabIndex = 213;
             this.userControl_DashBoard1.Visible = false;
             // 
@@ -937,8 +906,6 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(850, 535);
-            this.Controls.Add(this.panel32);
-            this.Controls.Add(this.button_Theme);
             this.Controls.Add(this.panel31);
             this.Controls.Add(this.panel10);
             this.Controls.Add(this.PicLogo);
@@ -1042,9 +1009,7 @@
         private System.Windows.Forms.Panel panel30;
         private UserControl_DashBoard userControl_DashBoard1;
         private System.Windows.Forms.Panel panel31;
-        private System.Windows.Forms.Button button_Theme;
         private System.Windows.Forms.Panel panel10;
-        private System.Windows.Forms.Panel panel32;
         private System.Windows.Forms.Button button_Refresh;
     }
 }
