@@ -53,6 +53,12 @@
             this.label_Quantity = new System.Windows.Forms.Label();
             this.label_Order = new System.Windows.Forms.Label();
             this.panel_Name = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.textBox_PhoneNo = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.textBox_Address = new System.Windows.Forms.TextBox();
+            this.textBox_Name = new System.Windows.Forms.TextBox();
+            this.userControl_Inventory1 = new reme.UserControl_Inventory();
             this.label_Name = new System.Windows.Forms.Label();
             this.panel_StyleOQ = new System.Windows.Forms.Panel();
             this.panel_StyleN = new System.Windows.Forms.Panel();
@@ -74,6 +80,11 @@
             this.panel18 = new System.Windows.Forms.Panel();
             this.textBox_PreviewName = new System.Windows.Forms.TextBox();
             this.MainPanel = new System.Windows.Forms.Panel();
+            this.userControl_DashBoard1 = new reme.UserControl_DashBoard();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.textBox_PreviewAddress = new System.Windows.Forms.TextBox();
+            this.textBox_PreviewPhoneNo = new System.Windows.Forms.TextBox();
             this.panel30 = new System.Windows.Forms.Panel();
             this.panel24 = new System.Windows.Forms.Panel();
             this.panel25 = new System.Windows.Forms.Panel();
@@ -93,27 +104,16 @@
             this.button_Dashboard = new System.Windows.Forms.Button();
             this.button_Home = new System.Windows.Forms.Button();
             this.button_Inventory = new System.Windows.Forms.Button();
-            this.textBox_Name = new System.Windows.Forms.TextBox();
-            this.textBox_Address = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.textBox_PhoneNo = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.textBox_PreviewAddress = new System.Windows.Forms.TextBox();
-            this.textBox_PreviewPhoneNo = new System.Windows.Forms.TextBox();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.userControl_Inventory1 = new reme.UserControl_Inventory();
-            this.userControl_DashBoard1 = new reme.UserControl_DashBoard();
             this.panel1.SuspendLayout();
             this.PanelReceipt.SuspendLayout();
             this.panel_OrderQuantity.SuspendLayout();
             this.panel_Name.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.OrderPreview)).BeginInit();
             this.MainPanel.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.panel28.SuspendLayout();
             this.panel22.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PicLogo)).BeginInit();
-            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // MainBorder
@@ -320,6 +320,63 @@
             this.panel_Name.Name = "panel_Name";
             this.panel_Name.Size = new System.Drawing.Size(331, 232);
             this.panel_Name.TabIndex = 2;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
+            this.label2.Location = new System.Drawing.Point(14, 157);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(64, 13);
+            this.label2.TabIndex = 193;
+            this.label2.Text = "PHONE NO";
+            // 
+            // textBox_PhoneNo
+            // 
+            this.textBox_PhoneNo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(236)))), ((int)(((byte)(236)))));
+            this.textBox_PhoneNo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox_PhoneNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox_PhoneNo.Location = new System.Drawing.Point(17, 181);
+            this.textBox_PhoneNo.Name = "textBox_PhoneNo";
+            this.textBox_PhoneNo.Size = new System.Drawing.Size(297, 24);
+            this.textBox_PhoneNo.TabIndex = 192;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
+            this.label1.Location = new System.Drawing.Point(18, 87);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(59, 13);
+            this.label1.TabIndex = 190;
+            this.label1.Text = "ADDRESS";
+            // 
+            // textBox_Address
+            // 
+            this.textBox_Address.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(236)))), ((int)(((byte)(236)))));
+            this.textBox_Address.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox_Address.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox_Address.Location = new System.Drawing.Point(17, 111);
+            this.textBox_Address.Name = "textBox_Address";
+            this.textBox_Address.Size = new System.Drawing.Size(297, 24);
+            this.textBox_Address.TabIndex = 189;
+            // 
+            // textBox_Name
+            // 
+            this.textBox_Name.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(236)))), ((int)(((byte)(236)))));
+            this.textBox_Name.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox_Name.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox_Name.Location = new System.Drawing.Point(17, 45);
+            this.textBox_Name.Name = "textBox_Name";
+            this.textBox_Name.Size = new System.Drawing.Size(297, 24);
+            this.textBox_Name.TabIndex = 186;
+            // 
+            // userControl_Inventory1
+            // 
+            this.userControl_Inventory1.Location = new System.Drawing.Point(-20, 313);
+            this.userControl_Inventory1.Name = "userControl_Inventory1";
+            this.userControl_Inventory1.Size = new System.Drawing.Size(779, 43);
+            this.userControl_Inventory1.TabIndex = 11;
             // 
             // label_Name
             // 
@@ -591,6 +648,59 @@
             this.MainPanel.Size = new System.Drawing.Size(810, 495);
             this.MainPanel.TabIndex = 1;
             // 
+            // userControl_DashBoard1
+            // 
+            this.userControl_DashBoard1.Location = new System.Drawing.Point(-2, 470);
+            this.userControl_DashBoard1.Name = "userControl_DashBoard1";
+            this.userControl_DashBoard1.Size = new System.Drawing.Size(814, 25);
+            this.userControl_DashBoard1.TabIndex = 215;
+            this.userControl_DashBoard1.Visible = false;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.panel2.Controls.Add(this.panel3);
+            this.panel2.Controls.Add(this.textBox_PreviewAddress);
+            this.panel2.Controls.Add(this.textBox_PreviewPhoneNo);
+            this.panel2.Location = new System.Drawing.Point(416, 109);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(372, 29);
+            this.panel2.TabIndex = 214;
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.DarkGray;
+            this.panel3.Location = new System.Drawing.Point(197, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(1, 29);
+            this.panel3.TabIndex = 205;
+            // 
+            // textBox_PreviewAddress
+            // 
+            this.textBox_PreviewAddress.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.textBox_PreviewAddress.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox_PreviewAddress.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox_PreviewAddress.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.textBox_PreviewAddress.Location = new System.Drawing.Point(13, 6);
+            this.textBox_PreviewAddress.Margin = new System.Windows.Forms.Padding(10, 3, 3, 3);
+            this.textBox_PreviewAddress.Name = "textBox_PreviewAddress";
+            this.textBox_PreviewAddress.ReadOnly = true;
+            this.textBox_PreviewAddress.Size = new System.Drawing.Size(181, 16);
+            this.textBox_PreviewAddress.TabIndex = 202;
+            // 
+            // textBox_PreviewPhoneNo
+            // 
+            this.textBox_PreviewPhoneNo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.textBox_PreviewPhoneNo.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox_PreviewPhoneNo.Font = new System.Drawing.Font("Tahoma", 9.75F);
+            this.textBox_PreviewPhoneNo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
+            this.textBox_PreviewPhoneNo.Location = new System.Drawing.Point(205, 6);
+            this.textBox_PreviewPhoneNo.Name = "textBox_PreviewPhoneNo";
+            this.textBox_PreviewPhoneNo.Size = new System.Drawing.Size(162, 16);
+            this.textBox_PreviewPhoneNo.TabIndex = 203;
+            this.textBox_PreviewPhoneNo.Text = "    ";
+            this.textBox_PreviewPhoneNo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // panel30
             // 
             this.panel30.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
@@ -818,116 +928,6 @@
             this.button_Inventory.UseVisualStyleBackColor = false;
             this.button_Inventory.Click += new System.EventHandler(this.button_Inventory_Click);
             // 
-            // textBox_Name
-            // 
-            this.textBox_Name.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(236)))), ((int)(((byte)(236)))));
-            this.textBox_Name.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_Name.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox_Name.Location = new System.Drawing.Point(17, 45);
-            this.textBox_Name.Name = "textBox_Name";
-            this.textBox_Name.Size = new System.Drawing.Size(297, 24);
-            this.textBox_Name.TabIndex = 186;
-            // 
-            // textBox_Address
-            // 
-            this.textBox_Address.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(236)))), ((int)(((byte)(236)))));
-            this.textBox_Address.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_Address.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox_Address.Location = new System.Drawing.Point(17, 111);
-            this.textBox_Address.Name = "textBox_Address";
-            this.textBox_Address.Size = new System.Drawing.Size(297, 24);
-            this.textBox_Address.TabIndex = 189;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
-            this.label1.Location = new System.Drawing.Point(18, 87);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(59, 13);
-            this.label1.TabIndex = 190;
-            this.label1.Text = "ADDRESS";
-            // 
-            // textBox_PhoneNo
-            // 
-            this.textBox_PhoneNo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(236)))), ((int)(((byte)(236)))));
-            this.textBox_PhoneNo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_PhoneNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox_PhoneNo.Location = new System.Drawing.Point(17, 181);
-            this.textBox_PhoneNo.Name = "textBox_PhoneNo";
-            this.textBox_PhoneNo.Size = new System.Drawing.Size(297, 24);
-            this.textBox_PhoneNo.TabIndex = 192;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
-            this.label2.Location = new System.Drawing.Point(14, 157);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(64, 13);
-            this.label2.TabIndex = 193;
-            this.label2.Text = "PHONE NO";
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.panel2.Controls.Add(this.panel3);
-            this.panel2.Controls.Add(this.textBox_PreviewAddress);
-            this.panel2.Controls.Add(this.textBox_PreviewPhoneNo);
-            this.panel2.Location = new System.Drawing.Point(416, 109);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(372, 29);
-            this.panel2.TabIndex = 214;
-            // 
-            // textBox_PreviewAddress
-            // 
-            this.textBox_PreviewAddress.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.textBox_PreviewAddress.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox_PreviewAddress.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox_PreviewAddress.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.textBox_PreviewAddress.Location = new System.Drawing.Point(13, 6);
-            this.textBox_PreviewAddress.Margin = new System.Windows.Forms.Padding(10, 3, 3, 3);
-            this.textBox_PreviewAddress.Name = "textBox_PreviewAddress";
-            this.textBox_PreviewAddress.ReadOnly = true;
-            this.textBox_PreviewAddress.Size = new System.Drawing.Size(181, 16);
-            this.textBox_PreviewAddress.TabIndex = 202;
-            // 
-            // textBox_PreviewPhoneNo
-            // 
-            this.textBox_PreviewPhoneNo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.textBox_PreviewPhoneNo.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox_PreviewPhoneNo.Font = new System.Drawing.Font("Tahoma", 9.75F);
-            this.textBox_PreviewPhoneNo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
-            this.textBox_PreviewPhoneNo.Location = new System.Drawing.Point(205, 6);
-            this.textBox_PreviewPhoneNo.Name = "textBox_PreviewPhoneNo";
-            this.textBox_PreviewPhoneNo.Size = new System.Drawing.Size(162, 16);
-            this.textBox_PreviewPhoneNo.TabIndex = 203;
-            this.textBox_PreviewPhoneNo.Text = "    ";
-            this.textBox_PreviewPhoneNo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.DarkGray;
-            this.panel3.Location = new System.Drawing.Point(197, 0);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1, 29);
-            this.panel3.TabIndex = 205;
-            // 
-            // userControl_Inventory1
-            // 
-            this.userControl_Inventory1.Location = new System.Drawing.Point(-20, 313);
-            this.userControl_Inventory1.Name = "userControl_Inventory1";
-            this.userControl_Inventory1.Size = new System.Drawing.Size(779, 43);
-            this.userControl_Inventory1.TabIndex = 11;
-            // 
-            // userControl_DashBoard1
-            // 
-            this.userControl_DashBoard1.Location = new System.Drawing.Point(-2, 0);
-            this.userControl_DashBoard1.Name = "userControl_DashBoard1";
-            this.userControl_DashBoard1.Size = new System.Drawing.Size(814, 495);
-            this.userControl_DashBoard1.TabIndex = 215;
-            this.userControl_DashBoard1.Visible = false;
-            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -962,13 +962,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.OrderPreview)).EndInit();
             this.MainPanel.ResumeLayout(false);
             this.MainPanel.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.panel28.ResumeLayout(false);
             this.panel28.PerformLayout();
             this.panel22.ResumeLayout(false);
             this.panel22.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PicLogo)).EndInit();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 

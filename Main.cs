@@ -11,6 +11,7 @@ using System.IO;
 using Newtonsoft.Json;
 using MetroFramework;
 using MetroFramework.Forms;
+using System.Net;
 
 namespace reme
 {
@@ -103,8 +104,11 @@ namespace reme
                 int selectedPrice = dataList.FirstOrDefault(item => item.ORDER == selectedOrder)?.PRICE ?? 0;
                 int subtotal = selectedPrice * selectedQuantity;
                 string name = textBox_Name.Text.Trim();
-                SaveNameToJson(name); 
+                string address = textBox_Address.Text.Trim();
+                string phoneNo = textBox_PhoneNo.Text.Trim();
 
+                SaveNameToJson(name);
+                SaveAddressAndPhoneToJson(address, phoneNo);
                 bool orderExists = false;
                 foreach (DataGridViewRow row in OrderPreview.Rows)
                 {
@@ -130,6 +134,7 @@ namespace reme
                 UpdateOrdersJsonFile();           
                 LoadNameAndPreview();
                 CalculateOverallTotal();
+                LoadAddressAndPhoneFromJson();
             }
             catch (Exception ex)
             {
@@ -607,6 +612,63 @@ namespace reme
             // Show the Receipt form
             settingsForm.Show();
         }
+
+        private void SaveAddressAndPhoneToJson(string address, string phoneNo)
+        {
+            try
+            {
+                // Create an object to hold address and phone number
+                var addressAndPhone = new { Address = address, PhoneNo = phoneNo };
+
+                // Serialize the object to JSON
+                string jsonData = JsonConvert.SerializeObject(addressAndPhone, Formatting.Indented);
+
+                // Write JSON data to the file
+                File.WriteAllText("address_phone.json", jsonData);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error saving address and phone number to address_phone.json: " + ex.Message);
+            }
+        }
+
+        private void LoadAddressAndPhoneFromJson()
+        {
+            try
+            {
+                if (File.Exists("address_phone.json"))
+                {
+                    string jsonData = File.ReadAllText("address_phone.json");
+
+                    if (!string.IsNullOrWhiteSpace(jsonData))
+                    {
+                        // Deserialize JSON data
+                        var addressAndPhone = JsonConvert.DeserializeObject<dynamic>(jsonData);
+                        string address = addressAndPhone.Address;
+                        string phoneNo = addressAndPhone.PhoneNo;
+
+                        // Set the loaded address and phone number to respective text boxes
+                        textBox_PreviewAddress.Text = address;
+                        textBox_PreviewPhoneNo.Text = phoneNo;
+                    }
+                    else
+                    {
+                        // Handle the case when JSON data is empty
+                    }
+                }
+                else
+                {
+                    // If the file doesn't exist, create it with default values or leave it empty
+                    File.WriteAllText("address_phone.json", "{}");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error loading address and phone number from address_phone.json: " + ex.Message);
+            }
+        }
+
+
     }
 
 }
