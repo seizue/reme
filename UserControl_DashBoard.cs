@@ -84,9 +84,12 @@ namespace reme
 
                 foreach (var entry in receiptEntries)
                 {
+                    // Concatenate all orders for display
+                    string orders = string.Join(", ", entry.Items.Select(item => item.Order));
+
                     // Populate GridInv with the entry details
                     string id = "0" + entry.ID;
-                    GridInv.Rows.Add(id, entry.DATE, entry.ReceiptName, entry.Address, entry.Phone, entry.TotalAmount);
+                    GridInv.Rows.Add(id, entry.DATE, entry.ReceiptName, entry.Address, entry.Phone, orders, entry.TotalAmount);
                 }
             }
             else
@@ -94,6 +97,7 @@ namespace reme
                 MessageBox.Show("GridInv is null.");
             }
         }
+
 
         private void SaveDataToJson()
         {
