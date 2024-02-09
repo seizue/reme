@@ -607,7 +607,6 @@ namespace reme
             // Show the Receipt form
             settingsForm.Show();
         }
-        
     }
 
 }

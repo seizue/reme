@@ -54,8 +54,6 @@
             this.label_Order = new System.Windows.Forms.Label();
             this.panel_Name = new System.Windows.Forms.Panel();
             this.label_Name = new System.Windows.Forms.Label();
-            this.metroTextBox3 = new MetroFramework.Controls.MetroTextBox();
-            this.textBox_Name = new MetroFramework.Controls.MetroTextBox();
             this.panel_StyleOQ = new System.Windows.Forms.Panel();
             this.panel_StyleN = new System.Windows.Forms.Panel();
             this.label_Discription1 = new System.Windows.Forms.Label();
@@ -95,8 +93,17 @@
             this.button_Dashboard = new System.Windows.Forms.Button();
             this.button_Home = new System.Windows.Forms.Button();
             this.button_Inventory = new System.Windows.Forms.Button();
-            this.userControl_DashBoard1 = new reme.UserControl_DashBoard();
+            this.textBox_Name = new System.Windows.Forms.TextBox();
+            this.textBox_Address = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.textBox_PhoneNo = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.textBox_PreviewAddress = new System.Windows.Forms.TextBox();
+            this.textBox_PreviewPhoneNo = new System.Windows.Forms.TextBox();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.userControl_Inventory1 = new reme.UserControl_Inventory();
+            this.userControl_DashBoard1 = new reme.UserControl_DashBoard();
             this.panel1.SuspendLayout();
             this.PanelReceipt.SuspendLayout();
             this.panel_OrderQuantity.SuspendLayout();
@@ -106,6 +113,7 @@
             this.panel28.SuspendLayout();
             this.panel22.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PicLogo)).BeginInit();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // MainBorder
@@ -144,7 +152,7 @@
             // panel_Status
             // 
             this.panel_Status.BackColor = System.Drawing.Color.MediumAquamarine;
-            this.panel_Status.Location = new System.Drawing.Point(20, 512);
+            this.panel_Status.Location = new System.Drawing.Point(16, 623);
             this.panel_Status.Name = "panel_Status";
             this.panel_Status.Size = new System.Drawing.Size(11, 11);
             this.panel_Status.TabIndex = 9;
@@ -153,7 +161,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.5F);
-            this.label6.Location = new System.Drawing.Point(35, 511);
+            this.label6.Location = new System.Drawing.Point(31, 622);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(41, 12);
             this.label6.TabIndex = 10;
@@ -186,23 +194,23 @@
             this.PanelReceipt.Dock = System.Windows.Forms.DockStyle.Left;
             this.PanelReceipt.Location = new System.Drawing.Point(0, 0);
             this.PanelReceipt.Name = "PanelReceipt";
-            this.PanelReceipt.Size = new System.Drawing.Size(393, 390);
+            this.PanelReceipt.Size = new System.Drawing.Size(393, 495);
             this.PanelReceipt.TabIndex = 0;
             // 
             // panel20
             // 
             this.panel20.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(231)))), ((int)(((byte)(227)))));
-            this.panel20.Location = new System.Drawing.Point(371, 320);
+            this.panel20.Location = new System.Drawing.Point(379, 352);
             this.panel20.Name = "panel20";
-            this.panel20.Size = new System.Drawing.Size(4, 25);
+            this.panel20.Size = new System.Drawing.Size(1, 25);
             this.panel20.TabIndex = 15;
             // 
             // panel19
             // 
             this.panel19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(231)))), ((int)(((byte)(227)))));
-            this.panel19.Location = new System.Drawing.Point(371, 296);
+            this.panel19.Location = new System.Drawing.Point(379, 328);
             this.panel19.Name = "panel19";
-            this.panel19.Size = new System.Drawing.Size(4, 21);
+            this.panel19.Size = new System.Drawing.Size(1, 21);
             this.panel19.TabIndex = 14;
             // 
             // button_Save
@@ -213,7 +221,7 @@
             this.button_Save.Font = new System.Drawing.Font("Bahnschrift", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_Save.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.button_Save.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button_Save.Location = new System.Drawing.Point(239, 259);
+            this.button_Save.Location = new System.Drawing.Point(239, 428);
             this.button_Save.Name = "button_Save";
             this.button_Save.Size = new System.Drawing.Size(86, 36);
             this.button_Save.TabIndex = 13;
@@ -224,7 +232,7 @@
             // panel_sepa2
             // 
             this.panel_sepa2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
-            this.panel_sepa2.Location = new System.Drawing.Point(330, 262);
+            this.panel_sepa2.Location = new System.Drawing.Point(330, 431);
             this.panel_sepa2.Name = "panel_sepa2";
             this.panel_sepa2.Size = new System.Drawing.Size(2, 29);
             this.panel_sepa2.TabIndex = 7;
@@ -232,7 +240,7 @@
             // panel_sepa1
             // 
             this.panel_sepa1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
-            this.panel_sepa1.Location = new System.Drawing.Point(232, 262);
+            this.panel_sepa1.Location = new System.Drawing.Point(232, 431);
             this.panel_sepa1.Name = "panel_sepa1";
             this.panel_sepa1.Size = new System.Drawing.Size(2, 29);
             this.panel_sepa1.TabIndex = 6;
@@ -240,9 +248,9 @@
             // panel_sepa3
             // 
             this.panel_sepa3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
-            this.panel_sepa3.Location = new System.Drawing.Point(371, 33);
+            this.panel_sepa3.Location = new System.Drawing.Point(379, 65);
             this.panel_sepa3.Name = "panel_sepa3";
-            this.panel_sepa3.Size = new System.Drawing.Size(4, 260);
+            this.panel_sepa3.Size = new System.Drawing.Size(1, 260);
             this.panel_sepa3.TabIndex = 4;
             // 
             // panel_OrderQuantity
@@ -252,23 +260,25 @@
             this.panel_OrderQuantity.Controls.Add(this.comboBox_Order);
             this.panel_OrderQuantity.Controls.Add(this.label_Quantity);
             this.panel_OrderQuantity.Controls.Add(this.label_Order);
-            this.panel_OrderQuantity.Location = new System.Drawing.Point(16, 141);
+            this.panel_OrderQuantity.Location = new System.Drawing.Point(16, 296);
             this.panel_OrderQuantity.Name = "panel_OrderQuantity";
-            this.panel_OrderQuantity.Size = new System.Drawing.Size(315, 76);
+            this.panel_OrderQuantity.Size = new System.Drawing.Size(331, 90);
             this.panel_OrderQuantity.TabIndex = 3;
             // 
             // comboBox_Quantity
             // 
+            this.comboBox_Quantity.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(236)))), ((int)(((byte)(236)))));
             this.comboBox_Quantity.Font = new System.Drawing.Font("Bahnschrift SemiLight", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox_Quantity.FormattingEnabled = true;
             this.comboBox_Quantity.Location = new System.Drawing.Point(209, 36);
             this.comboBox_Quantity.Name = "comboBox_Quantity";
-            this.comboBox_Quantity.Size = new System.Drawing.Size(85, 24);
+            this.comboBox_Quantity.Size = new System.Drawing.Size(105, 24);
             this.comboBox_Quantity.TabIndex = 7;
             this.comboBox_Quantity.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox_Quantity_KeyPress);
             // 
             // comboBox_Order
             // 
+            this.comboBox_Order.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(236)))), ((int)(((byte)(236)))));
             this.comboBox_Order.Font = new System.Drawing.Font("Bahnschrift SemiLight", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox_Order.FormattingEnabled = true;
             this.comboBox_Order.Location = new System.Drawing.Point(17, 36);
@@ -280,7 +290,7 @@
             // 
             this.label_Quantity.AutoSize = true;
             this.label_Quantity.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
-            this.label_Quantity.Location = new System.Drawing.Point(206, 18);
+            this.label_Quantity.Location = new System.Drawing.Point(205, 13);
             this.label_Quantity.Name = "label_Quantity";
             this.label_Quantity.Size = new System.Drawing.Size(62, 13);
             this.label_Quantity.TabIndex = 4;
@@ -290,7 +300,7 @@
             // 
             this.label_Order.AutoSize = true;
             this.label_Order.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
-            this.label_Order.Location = new System.Drawing.Point(14, 18);
+            this.label_Order.Location = new System.Drawing.Point(14, 13);
             this.label_Order.Name = "label_Order";
             this.label_Order.Size = new System.Drawing.Size(46, 13);
             this.label_Order.TabIndex = 3;
@@ -299,113 +309,34 @@
             // panel_Name
             // 
             this.panel_Name.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
+            this.panel_Name.Controls.Add(this.label2);
+            this.panel_Name.Controls.Add(this.textBox_PhoneNo);
+            this.panel_Name.Controls.Add(this.label1);
+            this.panel_Name.Controls.Add(this.textBox_Address);
+            this.panel_Name.Controls.Add(this.textBox_Name);
             this.panel_Name.Controls.Add(this.userControl_Inventory1);
             this.panel_Name.Controls.Add(this.label_Name);
-            this.panel_Name.Controls.Add(this.metroTextBox3);
-            this.panel_Name.Controls.Add(this.textBox_Name);
             this.panel_Name.Location = new System.Drawing.Point(16, 61);
             this.panel_Name.Name = "panel_Name";
-            this.panel_Name.Size = new System.Drawing.Size(315, 75);
+            this.panel_Name.Size = new System.Drawing.Size(331, 232);
             this.panel_Name.TabIndex = 2;
             // 
             // label_Name
             // 
             this.label_Name.AutoSize = true;
             this.label_Name.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
-            this.label_Name.Location = new System.Drawing.Point(15, 13);
+            this.label_Name.Location = new System.Drawing.Point(14, 21);
             this.label_Name.Name = "label_Name";
             this.label_Name.Size = new System.Drawing.Size(38, 13);
             this.label_Name.TabIndex = 3;
             this.label_Name.Text = "NAME";
             // 
-            // metroTextBox3
-            // 
-            this.metroTextBox3.BackColor = System.Drawing.Color.Gainsboro;
-            // 
-            // 
-            // 
-            this.metroTextBox3.CustomButton.Image = null;
-            this.metroTextBox3.CustomButton.Location = new System.Drawing.Point(8, 1);
-            this.metroTextBox3.CustomButton.Name = "";
-            this.metroTextBox3.CustomButton.Size = new System.Drawing.Size(25, 25);
-            this.metroTextBox3.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.metroTextBox3.CustomButton.TabIndex = 1;
-            this.metroTextBox3.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.metroTextBox3.CustomButton.UseSelectable = true;
-            this.metroTextBox3.CustomButton.Visible = false;
-            this.metroTextBox3.Enabled = false;
-            this.metroTextBox3.ForeColor = System.Drawing.Color.CadetBlue;
-            this.metroTextBox3.Lines = new string[0];
-            this.metroTextBox3.Location = new System.Drawing.Point(17, 32);
-            this.metroTextBox3.MaxLength = 32767;
-            this.metroTextBox3.Multiline = true;
-            this.metroTextBox3.Name = "metroTextBox3";
-            this.metroTextBox3.PasswordChar = '\0';
-            this.metroTextBox3.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.metroTextBox3.SelectedText = "";
-            this.metroTextBox3.SelectionLength = 0;
-            this.metroTextBox3.SelectionStart = 0;
-            this.metroTextBox3.ShortcutsEnabled = true;
-            this.metroTextBox3.Size = new System.Drawing.Size(34, 27);
-            this.metroTextBox3.Style = MetroFramework.MetroColorStyle.Teal;
-            this.metroTextBox3.TabIndex = 180;
-            this.metroTextBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.metroTextBox3.UseCustomBackColor = true;
-            this.metroTextBox3.UseCustomForeColor = true;
-            this.metroTextBox3.UseSelectable = true;
-            this.metroTextBox3.UseStyleColors = true;
-            this.metroTextBox3.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.metroTextBox3.WaterMarkFont = new System.Drawing.Font("Bahnschrift", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            // 
-            // textBox_Name
-            // 
-            // 
-            // 
-            // 
-            this.textBox_Name.CustomButton.AutoEllipsis = true;
-            this.textBox_Name.CustomButton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.textBox_Name.CustomButton.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
-            this.textBox_Name.CustomButton.FlatAppearance.BorderSize = 2;
-            this.textBox_Name.CustomButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.textBox_Name.CustomButton.Image = null;
-            this.textBox_Name.CustomButton.Location = new System.Drawing.Point(219, 1);
-            this.textBox_Name.CustomButton.Name = "";
-            this.textBox_Name.CustomButton.Size = new System.Drawing.Size(25, 25);
-            this.textBox_Name.CustomButton.Style = MetroFramework.MetroColorStyle.Teal;
-            this.textBox_Name.CustomButton.TabIndex = 1;
-            this.textBox_Name.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.textBox_Name.CustomButton.UseSelectable = true;
-            this.textBox_Name.DisplayIcon = true;
-            this.textBox_Name.Lines = new string[0];
-            this.textBox_Name.Location = new System.Drawing.Point(49, 32);
-            this.textBox_Name.MaxLength = 32767;
-            this.textBox_Name.Multiline = true;
-            this.textBox_Name.Name = "textBox_Name";
-            this.textBox_Name.PasswordChar = '\0';
-            this.textBox_Name.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.textBox_Name.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.textBox_Name.SelectedText = "";
-            this.textBox_Name.SelectionLength = 0;
-            this.textBox_Name.SelectionStart = 0;
-            this.textBox_Name.ShortcutsEnabled = true;
-            this.textBox_Name.ShowButton = true;
-            this.textBox_Name.ShowClearButton = true;
-            this.textBox_Name.Size = new System.Drawing.Size(245, 27);
-            this.textBox_Name.Style = MetroFramework.MetroColorStyle.Teal;
-            this.textBox_Name.TabIndex = 179;
-            this.textBox_Name.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.textBox_Name.UseCustomBackColor = true;
-            this.textBox_Name.UseSelectable = true;
-            this.textBox_Name.UseStyleColors = true;
-            this.textBox_Name.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.textBox_Name.WaterMarkFont = new System.Drawing.Font("Bahnschrift Light", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            // 
             // panel_StyleOQ
             // 
             this.panel_StyleOQ.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
-            this.panel_StyleOQ.Location = new System.Drawing.Point(17, 232);
+            this.panel_StyleOQ.Location = new System.Drawing.Point(17, 401);
             this.panel_StyleOQ.Name = "panel_StyleOQ";
-            this.panel_StyleOQ.Size = new System.Drawing.Size(315, 4);
+            this.panel_StyleOQ.Size = new System.Drawing.Size(331, 4);
             this.panel_StyleOQ.TabIndex = 2;
             // 
             // panel_StyleN
@@ -413,7 +344,7 @@
             this.panel_StyleN.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
             this.panel_StyleN.Location = new System.Drawing.Point(73, 42);
             this.panel_StyleN.Name = "panel_StyleN";
-            this.panel_StyleN.Size = new System.Drawing.Size(257, 4);
+            this.panel_StyleN.Size = new System.Drawing.Size(272, 4);
             this.panel_StyleN.TabIndex = 1;
             // 
             // label_Discription1
@@ -438,7 +369,7 @@
             // panel_sepa5
             // 
             this.panel_sepa5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
-            this.panel_sepa5.Location = new System.Drawing.Point(691, 351);
+            this.panel_sepa5.Location = new System.Drawing.Point(693, 431);
             this.panel_sepa5.Name = "panel_sepa5";
             this.panel_sepa5.Size = new System.Drawing.Size(2, 29);
             this.panel_sepa5.TabIndex = 9;
@@ -446,7 +377,7 @@
             // panel_sepa6
             // 
             this.panel_sepa6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
-            this.panel_sepa6.Location = new System.Drawing.Point(791, 351);
+            this.panel_sepa6.Location = new System.Drawing.Point(793, 431);
             this.panel_sepa6.Name = "panel_sepa6";
             this.panel_sepa6.Size = new System.Drawing.Size(2, 29);
             this.panel_sepa6.TabIndex = 10;
@@ -459,7 +390,7 @@
             this.button_Print.Font = new System.Drawing.Font("Bahnschrift", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_Print.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(239)))), ((int)(((byte)(236)))));
             this.button_Print.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button_Print.Location = new System.Drawing.Point(699, 346);
+            this.button_Print.Location = new System.Drawing.Point(701, 426);
             this.button_Print.Name = "button_Print";
             this.button_Print.Size = new System.Drawing.Size(86, 36);
             this.button_Print.TabIndex = 14;
@@ -475,7 +406,7 @@
             this.button_Reset.Font = new System.Drawing.Font("Bahnschrift", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_Reset.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.button_Reset.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button_Reset.Location = new System.Drawing.Point(598, 346);
+            this.button_Reset.Location = new System.Drawing.Point(600, 426);
             this.button_Reset.Name = "button_Reset";
             this.button_Reset.Size = new System.Drawing.Size(86, 36);
             this.button_Reset.TabIndex = 15;
@@ -486,7 +417,7 @@
             // panel_sepa4
             // 
             this.panel_sepa4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
-            this.panel_sepa4.Location = new System.Drawing.Point(590, 351);
+            this.panel_sepa4.Location = new System.Drawing.Point(592, 431);
             this.panel_sepa4.Name = "panel_sepa4";
             this.panel_sepa4.Size = new System.Drawing.Size(2, 29);
             this.panel_sepa4.TabIndex = 16;
@@ -556,7 +487,7 @@
             this.OrderPreview.EnableHeadersVisualStyles = false;
             this.OrderPreview.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.OrderPreview.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
-            this.OrderPreview.Location = new System.Drawing.Point(416, 109);
+            this.OrderPreview.Location = new System.Drawing.Point(416, 140);
             this.OrderPreview.Name = "OrderPreview";
             this.OrderPreview.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
@@ -575,7 +506,7 @@
             this.OrderPreview.RowsDefaultCellStyle = dataGridViewCellStyle5;
             this.OrderPreview.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
             this.OrderPreview.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.OrderPreview.Size = new System.Drawing.Size(374, 214);
+            this.OrderPreview.Size = new System.Drawing.Size(374, 242);
             this.OrderPreview.TabIndex = 199;
             this.OrderPreview.UseCustomBackColor = true;
             this.OrderPreview.UseCustomForeColor = true;
@@ -605,7 +536,7 @@
             this.panel17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
             this.panel17.Location = new System.Drawing.Point(411, 66);
             this.panel17.Name = "panel17";
-            this.panel17.Size = new System.Drawing.Size(5, 260);
+            this.panel17.Size = new System.Drawing.Size(5, 320);
             this.panel17.TabIndex = 200;
             // 
             // panel18
@@ -613,7 +544,7 @@
             this.panel18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
             this.panel18.Location = new System.Drawing.Point(788, 66);
             this.panel18.Name = "panel18";
-            this.panel18.Size = new System.Drawing.Size(5, 260);
+            this.panel18.Size = new System.Drawing.Size(5, 320);
             this.panel18.TabIndex = 201;
             // 
             // textBox_PreviewName
@@ -632,6 +563,7 @@
             // MainPanel
             // 
             this.MainPanel.Controls.Add(this.userControl_DashBoard1);
+            this.MainPanel.Controls.Add(this.panel2);
             this.MainPanel.Controls.Add(this.panel30);
             this.MainPanel.Controls.Add(this.panel24);
             this.MainPanel.Controls.Add(this.panel25);
@@ -656,7 +588,7 @@
             this.MainPanel.Controls.Add(this.label_Discription2);
             this.MainPanel.Location = new System.Drawing.Point(20, 107);
             this.MainPanel.Name = "MainPanel";
-            this.MainPanel.Size = new System.Drawing.Size(810, 390);
+            this.MainPanel.Size = new System.Drawing.Size(810, 495);
             this.MainPanel.TabIndex = 1;
             // 
             // panel30
@@ -732,7 +664,7 @@
             // panel23
             // 
             this.panel23.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
-            this.panel23.Location = new System.Drawing.Point(410, 323);
+            this.panel23.Location = new System.Drawing.Point(411, 382);
             this.panel23.Name = "panel23";
             this.panel23.Size = new System.Drawing.Size(383, 4);
             this.panel23.TabIndex = 206;
@@ -886,13 +818,100 @@
             this.button_Inventory.UseVisualStyleBackColor = false;
             this.button_Inventory.Click += new System.EventHandler(this.button_Inventory_Click);
             // 
-            // userControl_DashBoard1
+            // textBox_Name
             // 
-            this.userControl_DashBoard1.Location = new System.Drawing.Point(-1, 0);
-            this.userControl_DashBoard1.Name = "userControl_DashBoard1";
-            this.userControl_DashBoard1.Size = new System.Drawing.Size(814, 398);
-            this.userControl_DashBoard1.TabIndex = 213;
-            this.userControl_DashBoard1.Visible = false;
+            this.textBox_Name.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(236)))), ((int)(((byte)(236)))));
+            this.textBox_Name.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox_Name.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox_Name.Location = new System.Drawing.Point(17, 45);
+            this.textBox_Name.Name = "textBox_Name";
+            this.textBox_Name.Size = new System.Drawing.Size(297, 24);
+            this.textBox_Name.TabIndex = 186;
+            // 
+            // textBox_Address
+            // 
+            this.textBox_Address.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(236)))), ((int)(((byte)(236)))));
+            this.textBox_Address.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox_Address.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox_Address.Location = new System.Drawing.Point(17, 111);
+            this.textBox_Address.Name = "textBox_Address";
+            this.textBox_Address.Size = new System.Drawing.Size(297, 24);
+            this.textBox_Address.TabIndex = 189;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
+            this.label1.Location = new System.Drawing.Point(18, 87);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(59, 13);
+            this.label1.TabIndex = 190;
+            this.label1.Text = "ADDRESS";
+            // 
+            // textBox_PhoneNo
+            // 
+            this.textBox_PhoneNo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(236)))), ((int)(((byte)(236)))));
+            this.textBox_PhoneNo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox_PhoneNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox_PhoneNo.Location = new System.Drawing.Point(17, 181);
+            this.textBox_PhoneNo.Name = "textBox_PhoneNo";
+            this.textBox_PhoneNo.Size = new System.Drawing.Size(297, 24);
+            this.textBox_PhoneNo.TabIndex = 192;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
+            this.label2.Location = new System.Drawing.Point(14, 157);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(64, 13);
+            this.label2.TabIndex = 193;
+            this.label2.Text = "PHONE NO";
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.panel2.Controls.Add(this.panel3);
+            this.panel2.Controls.Add(this.textBox_PreviewAddress);
+            this.panel2.Controls.Add(this.textBox_PreviewPhoneNo);
+            this.panel2.Location = new System.Drawing.Point(416, 109);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(372, 29);
+            this.panel2.TabIndex = 214;
+            // 
+            // textBox_PreviewAddress
+            // 
+            this.textBox_PreviewAddress.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.textBox_PreviewAddress.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox_PreviewAddress.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox_PreviewAddress.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.textBox_PreviewAddress.Location = new System.Drawing.Point(13, 6);
+            this.textBox_PreviewAddress.Margin = new System.Windows.Forms.Padding(10, 3, 3, 3);
+            this.textBox_PreviewAddress.Name = "textBox_PreviewAddress";
+            this.textBox_PreviewAddress.ReadOnly = true;
+            this.textBox_PreviewAddress.Size = new System.Drawing.Size(181, 16);
+            this.textBox_PreviewAddress.TabIndex = 202;
+            // 
+            // textBox_PreviewPhoneNo
+            // 
+            this.textBox_PreviewPhoneNo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.textBox_PreviewPhoneNo.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox_PreviewPhoneNo.Font = new System.Drawing.Font("Tahoma", 9.75F);
+            this.textBox_PreviewPhoneNo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
+            this.textBox_PreviewPhoneNo.Location = new System.Drawing.Point(205, 6);
+            this.textBox_PreviewPhoneNo.Name = "textBox_PreviewPhoneNo";
+            this.textBox_PreviewPhoneNo.Size = new System.Drawing.Size(162, 16);
+            this.textBox_PreviewPhoneNo.TabIndex = 203;
+            this.textBox_PreviewPhoneNo.Text = "    ";
+            this.textBox_PreviewPhoneNo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.DarkGray;
+            this.panel3.Location = new System.Drawing.Point(197, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(1, 29);
+            this.panel3.TabIndex = 205;
             // 
             // userControl_Inventory1
             // 
@@ -901,11 +920,19 @@
             this.userControl_Inventory1.Size = new System.Drawing.Size(779, 43);
             this.userControl_Inventory1.TabIndex = 11;
             // 
+            // userControl_DashBoard1
+            // 
+            this.userControl_DashBoard1.Location = new System.Drawing.Point(-2, 0);
+            this.userControl_DashBoard1.Name = "userControl_DashBoard1";
+            this.userControl_DashBoard1.Size = new System.Drawing.Size(814, 495);
+            this.userControl_DashBoard1.TabIndex = 215;
+            this.userControl_DashBoard1.Visible = false;
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(850, 535);
+            this.ClientSize = new System.Drawing.Size(850, 647);
             this.Controls.Add(this.panel31);
             this.Controls.Add(this.panel10);
             this.Controls.Add(this.PicLogo);
@@ -940,6 +967,8 @@
             this.panel22.ResumeLayout(false);
             this.panel22.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PicLogo)).EndInit();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -969,8 +998,6 @@
         private System.Windows.Forms.Panel panel_Name;
         private UserControl_Inventory userControl_Inventory1;
         private System.Windows.Forms.Label label_Name;
-        private MetroFramework.Controls.MetroTextBox metroTextBox3;
-        private MetroFramework.Controls.MetroTextBox textBox_Name;
         private System.Windows.Forms.Panel panel_StyleOQ;
         private System.Windows.Forms.Panel panel_StyleN;
         private System.Windows.Forms.Label label_Discription1;
@@ -1007,10 +1034,19 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Panel panel24;
         private System.Windows.Forms.Panel panel30;
-        private UserControl_DashBoard userControl_DashBoard1;
         private System.Windows.Forms.Panel panel31;
         private System.Windows.Forms.Panel panel10;
         private System.Windows.Forms.Button button_Refresh;
+        private System.Windows.Forms.TextBox textBox_Address;
+        private System.Windows.Forms.TextBox textBox_Name;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox textBox_PhoneNo;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.TextBox textBox_PreviewAddress;
+        private System.Windows.Forms.TextBox textBox_PreviewPhoneNo;
+        private System.Windows.Forms.Panel panel3;
+        private UserControl_DashBoard userControl_DashBoard1;
     }
 }
 
