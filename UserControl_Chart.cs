@@ -37,32 +37,48 @@ namespace reme
                 {
                     string jsonData = File.ReadAllText(jsonFilePath);
 
-                    List<ReceiptEntry> receiptEntries = JsonConvert.DeserializeObject<List<ReceiptEntry>>(jsonData);
+                    if (!string.IsNullOrEmpty(jsonData))
+                    {
+                        List<ReceiptEntry> receiptEntries = JsonConvert.DeserializeObject<List<ReceiptEntry>>(jsonData);
 
-                    // Calculate total amount per day
-                    Dictionary<DateTime, int> totalAmountPerDay = CalculateTotalAmountPerDay(receiptEntries);
+                        if (receiptEntries != null && receiptEntries.Any())
+                        {
+                            // Calculate total amount per day
+                            Dictionary<DateTime, int> totalAmountPerDay = CalculateTotalAmountPerDay(receiptEntries);
 
-                    // Calculate items sold per day
-                    Dictionary<DateTime, Dictionary<string, int>> itemsSoldPerDay = CalculateItemsSoldPerDay(receiptEntries);
+                            // Calculate items sold per day
+                            Dictionary<DateTime, Dictionary<string, int>> itemsSoldPerDay = CalculateItemsSoldPerDay(receiptEntries);
 
-                    // Populate chart with data
-                    PopulateChart(totalAmountPerDay);
+                            // Populate chart with data
+                            PopulateChart(totalAmountPerDay);
 
-                  
-                    // Populate bar chart with data
-                    PopulateBarChart(totalAmountPerDay);
+                            // Populate bar chart with data
+                            PopulateBarChart(totalAmountPerDay);
 
-                    // Calculate yearly sales data
-                    Dictionary<DateTime, int> yearlySalesData = CalculateTotalAmountPerYear(totalAmountPerDay);
+                            // Calculate yearly sales data
+                            Dictionary<DateTime, int> yearlySalesData = CalculateTotalAmountPerYear(totalAmountPerDay);
 
-                    // Populate yearly sales chart
-                    PopulateYearlySalesChart(yearlySalesData);
+                            // Populate yearly sales chart
+                            PopulateYearlySalesChart(yearlySalesData);
 
-                    PopulateMostOrderedItemsChart(receiptEntries);
+                            PopulateMostOrderedItemsChart(receiptEntries);
+                        }
+                        else
+                        {
+                            // Handle case where receiptEntries is null or empty
+                            MessageBox.Show("No receipt entries found in inventory.");
+                        }
+                    }
+                    else
+                    {
+                        // Handle empty JSON file
+                        MessageBox.Show("Inventory JSON file is empty.");
+                    }
                 }
                 else
                 {
-
+                    // Handle case where JSON file does not exist
+                    MessageBox.Show("Inventory JSON file not found.");
                 }
             }
             catch (Exception ex)
@@ -77,20 +93,22 @@ namespace reme
         {
             Dictionary<DateTime, int> totalAmountPerDay = new Dictionary<DateTime, int>();
 
-            foreach (ReceiptEntry entry in receiptEntries)
+            if (receiptEntries != null)
             {
-                DateTime date = DateTime.Parse(entry.DATE).Date;
+                foreach (ReceiptEntry entry in receiptEntries)
+                {
+                    DateTime date = DateTime.Parse(entry.DATE).Date;
 
-                if (totalAmountPerDay.ContainsKey(date))
-                {
-                    totalAmountPerDay[date] += entry.TotalAmount;
-                }
-                else
-                {
-                    totalAmountPerDay[date] = entry.TotalAmount;
+                    if (totalAmountPerDay.ContainsKey(date))
+                    {
+                        totalAmountPerDay[date] += entry.TotalAmount;
+                    }
+                    else
+                    {
+                        totalAmountPerDay[date] = entry.TotalAmount;
+                    }
                 }
             }
-
             return totalAmountPerDay;
         }
 
@@ -107,21 +125,26 @@ namespace reme
                     itemsSoldPerDay[date] = new Dictionary<string, int>();
                 }
 
-                foreach (Item item in entry.Items)
+                // Check if Items property is not null
+                if (entry.Items != null)
                 {
-                    if (itemsSoldPerDay[date].ContainsKey(item.Order))
+                    foreach (Item item in entry.Items)
                     {
-                        itemsSoldPerDay[date][item.Order] += item.Quantity;
-                    }
-                    else
-                    {
-                        itemsSoldPerDay[date][item.Order] = item.Quantity;
+                        if (itemsSoldPerDay[date].ContainsKey(item.Order))
+                        {
+                            itemsSoldPerDay[date][item.Order] += item.Quantity;
+                        }
+                        else
+                        {
+                            itemsSoldPerDay[date][item.Order] = item.Quantity;
+                        }
                     }
                 }
             }
 
             return itemsSoldPerDay;
         }
+
 
         private void PopulateChart(Dictionary<DateTime, int> data)
         {
