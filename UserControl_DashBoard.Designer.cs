@@ -47,7 +47,6 @@
             this.button_Chart = new System.Windows.Forms.Button();
             this.button_History = new System.Windows.Forms.Button();
             this.userControl_Chart1 = new reme.UserControl_Chart();
-            this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GridInv)).BeginInit();
             this.SuspendLayout();
@@ -65,9 +64,9 @@
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
             this.panel1.Controls.Add(this.userControl_Chart1);
             this.panel1.Controls.Add(this.GridInv);
-            this.panel1.Location = new System.Drawing.Point(21, 107);
+            this.panel1.Location = new System.Drawing.Point(21, 88);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(768, 369);
+            this.panel1.Size = new System.Drawing.Size(768, 404);
             this.panel1.TabIndex = 206;
             // 
             // GridInv
@@ -112,7 +111,7 @@
             this.GridInv.EnableHeadersVisualStyles = false;
             this.GridInv.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.GridInv.GridColor = System.Drawing.Color.Silver;
-            this.GridInv.Location = new System.Drawing.Point(5, 3);
+            this.GridInv.Location = new System.Drawing.Point(5, 5);
             this.GridInv.Name = "GridInv";
             this.GridInv.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
@@ -131,7 +130,7 @@
             this.GridInv.RowsDefaultCellStyle = dataGridViewCellStyle5;
             this.GridInv.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
             this.GridInv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.GridInv.Size = new System.Drawing.Size(758, 350);
+            this.GridInv.Size = new System.Drawing.Size(758, 380);
             this.GridInv.TabIndex = 15;
             this.GridInv.UseCustomBackColor = true;
             this.GridInv.UseCustomForeColor = true;
@@ -243,30 +242,13 @@
             this.userControl_Chart1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.userControl_Chart1.Location = new System.Drawing.Point(0, 0);
             this.userControl_Chart1.Name = "userControl_Chart1";
-            this.userControl_Chart1.Size = new System.Drawing.Size(768, 369);
-            this.userControl_Chart1.TabIndex = 18;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.White;
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Bahnschrift SemiCondensed", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(37, 57);
-            this.button1.Name = "button1";
-            this.button1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.button1.Size = new System.Drawing.Size(38, 25);
-            this.button1.TabIndex = 211;
-            this.button1.UseVisualStyleBackColor = false;
+            this.userControl_Chart1.Size = new System.Drawing.Size(768, 404);
+            this.userControl_Chart1.TabIndex = 19;
             // 
             // UserControl_DashBoard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.panel_Style2);
             this.Controls.Add(this.panel_style1);
             this.Controls.Add(this.button_ExportInv);
@@ -294,9 +276,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn NAME;
         private System.Windows.Forms.DataGridViewTextBoxColumn ORDER;
         private System.Windows.Forms.DataGridViewTextBoxColumn TOTAL;
-        private UserControl_Chart userControl_Chart1;
         private System.Windows.Forms.Panel panel_Style2;
         private System.Windows.Forms.Panel panel_style1;
-        private System.Windows.Forms.Button button1;
+        private UserControl_Chart userControl_Chart1;
     }
 }
