@@ -35,6 +35,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.Border = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.userControl_Chart1 = new reme.UserControl_Chart();
             this.GridInv = new MetroFramework.Controls.MetroGrid();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DATE = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -46,7 +47,7 @@
             this.button_ExportInv = new System.Windows.Forms.Button();
             this.button_Chart = new System.Windows.Forms.Button();
             this.button_History = new System.Windows.Forms.Button();
-            this.userControl_Chart1 = new reme.UserControl_Chart();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GridInv)).BeginInit();
             this.SuspendLayout();
@@ -68,6 +69,15 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(768, 404);
             this.panel1.TabIndex = 206;
+            // 
+            // userControl_Chart1
+            // 
+            this.userControl_Chart1.BackColor = System.Drawing.Color.White;
+            this.userControl_Chart1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.userControl_Chart1.Location = new System.Drawing.Point(0, 0);
+            this.userControl_Chart1.Name = "userControl_Chart1";
+            this.userControl_Chart1.Size = new System.Drawing.Size(768, 404);
+            this.userControl_Chart1.TabIndex = 19;
             // 
             // GridInv
             // 
@@ -236,19 +246,30 @@
             this.button_History.UseVisualStyleBackColor = false;
             this.button_History.Click += new System.EventHandler(this.button_DB_Click);
             // 
-            // userControl_Chart1
+            // button1
             // 
-            this.userControl_Chart1.BackColor = System.Drawing.Color.White;
-            this.userControl_Chart1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.userControl_Chart1.Location = new System.Drawing.Point(0, 0);
-            this.userControl_Chart1.Name = "userControl_Chart1";
-            this.userControl_Chart1.Size = new System.Drawing.Size(768, 404);
-            this.userControl_Chart1.TabIndex = 19;
+            this.button1.BackColor = System.Drawing.Color.White;
+            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Bahnschrift SemiCondensed", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.button1.Image = global::reme.Properties.Resources.order_history_24px;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(496, 47);
+            this.button1.Name = "button1";
+            this.button1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.button1.Size = new System.Drawing.Size(114, 25);
+            this.button1.TabIndex = 211;
+            this.button1.Text = "SAVE D";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button1.UseVisualStyleBackColor = false;
             // 
             // UserControl_DashBoard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.panel_Style2);
             this.Controls.Add(this.panel_style1);
             this.Controls.Add(this.button_ExportInv);
@@ -279,5 +300,6 @@
         private System.Windows.Forms.Panel panel_Style2;
         private System.Windows.Forms.Panel panel_style1;
         private UserControl_Chart userControl_Chart1;
+        private System.Windows.Forms.Button button1;
     }
 }

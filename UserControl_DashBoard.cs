@@ -28,6 +28,7 @@ namespace reme
         {
             InitializeComponent();
             LoadDataFromJson();
+            LoadDataAndPopulateGrid(); // Load data and populate GridInv
 
             // Attach click events to the buttons
             button_Chart.Click += button_Chart_Click;
@@ -61,6 +62,19 @@ namespace reme
             }
         }
 
+        private void LoadDataAndPopulateGrid()
+        {
+            if (File.Exists(jsonFilePath))
+            {
+                string jsonData = File.ReadAllText(jsonFilePath);
+
+                if (!string.IsNullOrWhiteSpace(jsonData))
+                {
+                    receiptEntries = JsonConvert.DeserializeObject<List<ReceiptEntry>>(jsonData);
+                    PopulateGrid(); // Populate the GridInv with the loaded data
+                }
+            }
+        }
 
         private void PopulateGrid()
         {
@@ -70,14 +84,11 @@ namespace reme
 
                 foreach (var entry in receiptEntries)
                 {
-                    foreach (var item in entry.Items)
-                    {
-                        string id = "0" + nextID++;
-                        GridInv.Rows.Add(id, entry.DATE, entry.ReceiptName, item.Order, entry.TotalAmount);
-                    }
+                    // Populate GridInv with the entry details
+                    string id = "0" + entry.ID;
+                    GridInv.Rows.Add(id, entry.DATE, entry.ReceiptName, entry.Address, entry.Phone, entry.TotalAmount);
                 }
             }
-
             else
             {
                 MessageBox.Show("GridInv is null.");

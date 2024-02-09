@@ -21,10 +21,12 @@ namespace reme
         // Define a class to represent an entry in the receipt
         public class ReceiptEntry
         {
-            [JsonProperty("ID")] // Specify the property name in JSON
-            public int ID { get; set; } 
+            [JsonProperty("ID")]
+            public int ID { get; set; }
             public string DATE { get; set; }
             public string ReceiptName { get; set; }
+            public string Address { get; set; } // New field for Address
+            public string Phone { get; set; } // New field for Phone Number
             public List<Item> Items { get; set; }
             public int TotalAmount { get; set; }
         }
@@ -91,11 +93,12 @@ namespace reme
                 printDocument.Print();
             }
 
-            // Create a new receipt entry
             var receiptEntry = new ReceiptEntry
             {
                 DATE = textBox_ReceiptDate.Text,
                 ReceiptName = textBox_ReceiptName.Text,
+                Address = textBox_ReceiptAddress.Text, // Include Address
+                Phone = textBox_ReceiptPhone.Text, // Include Phone Number
                 Items = new List<Item>(),
                 TotalAmount = int.Parse(textBox_PrintTotalAmount.Text)
             };
@@ -124,7 +127,10 @@ namespace reme
 
             // Save the receipt entries to a JSON file
             SaveReceiptEntriesToJson();
+
+
         }
+
 
         private void PrintDocument_PrintPage(object sender, PrintPageEventArgs e)
         {
@@ -164,45 +170,39 @@ namespace reme
 
         private void SaveReceiptEntriesToJson()
         {
-            string jsonFilePath = "inventory.json";
-
             // Create a list to store the formatted receipt entries
-            List<object> formattedReceiptEntries = new List<object>();
+            List<ReceiptEntry> formattedReceiptEntries = new List<ReceiptEntry>();
 
-            // Format each receipt entry
+            // Iterate through each receipt entry
             foreach (var receiptEntry in receiptEntries)
             {
-                // Concatenate the order items into a single string separated by commas
-                string orders = string.Join(", ", receiptEntry.Items.Select(item => item.Order));
-
-                // Create a formatted entry object
-                var formattedEntry = new
+                // Add the receipt entry with all its details
+                formattedReceiptEntries.Add(new ReceiptEntry
                 {
-                    ID = receiptEntry.ID, // Include the ID property
+                    ID = receiptEntry.ID,
                     DATE = receiptEntry.DATE,
                     ReceiptName = receiptEntry.ReceiptName,
-                    Items = new[]
-                    {
-                    new
-                    {
-                        Order = orders,
-                        Quantity = receiptEntry.Items.Sum(item => item.Quantity) // Sum up quantities
-                    }
-                },
+                    Address = receiptEntry.Address,
+                    Phone = receiptEntry.Phone,
+                    Items = receiptEntry.Items,
                     TotalAmount = receiptEntry.TotalAmount
-                };
-
-                // Add the formatted entry to the list
-                formattedReceiptEntries.Add(formattedEntry);
+                });
             }
 
-            // Serialize the formatted receipt entries to JSON format
-            string jsonData = JsonConvert.SerializeObject(formattedReceiptEntries, Formatting.Indented);
+            try
+            {
+                // Serialize the formatted receipt entries to JSON format
+                string jsonData = JsonConvert.SerializeObject(formattedReceiptEntries, Formatting.Indented);
 
-            // Write the JSON data to the file
-            File.WriteAllText(jsonFilePath, jsonData);
-
+                // Write the JSON data to the file
+                File.WriteAllText(jsonFilePath, jsonData);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error saving receipt entries to JSON: {ex.Message}");
+            }
         }
+
 
         private int GenerateNextID()
         {
