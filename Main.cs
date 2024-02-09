@@ -669,7 +669,19 @@ namespace reme
             }
         }
 
+        private void textBox_PreviewName_TextChanged(object sender, EventArgs e)
+        {
+            // Convert the text to uppercase
+            textBox_PreviewName.Text = textBox_PreviewName.Text.ToUpper();
+            // Move the cursor to the end of the text to maintain the caret position
+            textBox_PreviewName.SelectionStart = textBox_PreviewName.Text.Length;
+        }
 
+        private void textBox_PreviewAddress_TextChanged(object sender, EventArgs e)
+        {
+            textBox_PreviewAddress.Text = textBox_PreviewAddress.Text.ToUpper();
+            textBox_PreviewAddress.SelectionStart = textBox_PreviewAddress.Text.Length;
+        }
     }
 
 }

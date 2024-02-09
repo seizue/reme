@@ -28,11 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle51 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle52 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle53 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle54 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle55 = new System.Windows.Forms.DataGridViewCellStyle();
             this.MainBorder = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel26 = new System.Windows.Forms.Panel();
@@ -58,7 +58,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.textBox_Address = new System.Windows.Forms.TextBox();
             this.textBox_Name = new System.Windows.Forms.TextBox();
-            this.userControl_Inventory1 = new reme.UserControl_Inventory();
             this.label_Name = new System.Windows.Forms.Label();
             this.panel_StyleOQ = new System.Windows.Forms.Panel();
             this.panel_StyleN = new System.Windows.Forms.Panel();
@@ -80,7 +79,6 @@
             this.panel18 = new System.Windows.Forms.Panel();
             this.textBox_PreviewName = new System.Windows.Forms.TextBox();
             this.MainPanel = new System.Windows.Forms.Panel();
-            this.userControl_DashBoard1 = new reme.UserControl_DashBoard();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.textBox_PreviewAddress = new System.Windows.Forms.TextBox();
@@ -104,6 +102,8 @@
             this.button_Dashboard = new System.Windows.Forms.Button();
             this.button_Home = new System.Windows.Forms.Button();
             this.button_Inventory = new System.Windows.Forms.Button();
+            this.userControl_DashBoard1 = new reme.UserControl_DashBoard();
+            this.userControl_Inventory1 = new reme.UserControl_Inventory();
             this.panel1.SuspendLayout();
             this.PanelReceipt.SuspendLayout();
             this.panel_OrderQuantity.SuspendLayout();
@@ -221,9 +221,9 @@
             this.button_Save.Font = new System.Drawing.Font("Bahnschrift", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_Save.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.button_Save.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button_Save.Location = new System.Drawing.Point(239, 428);
+            this.button_Save.Location = new System.Drawing.Point(213, 428);
             this.button_Save.Name = "button_Save";
-            this.button_Save.Size = new System.Drawing.Size(86, 36);
+            this.button_Save.Size = new System.Drawing.Size(119, 36);
             this.button_Save.TabIndex = 13;
             this.button_Save.Text = " SAVE";
             this.button_Save.UseVisualStyleBackColor = false;
@@ -232,7 +232,7 @@
             // panel_sepa2
             // 
             this.panel_sepa2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
-            this.panel_sepa2.Location = new System.Drawing.Point(330, 431);
+            this.panel_sepa2.Location = new System.Drawing.Point(338, 431);
             this.panel_sepa2.Name = "panel_sepa2";
             this.panel_sepa2.Size = new System.Drawing.Size(2, 29);
             this.panel_sepa2.TabIndex = 7;
@@ -240,7 +240,7 @@
             // panel_sepa1
             // 
             this.panel_sepa1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
-            this.panel_sepa1.Location = new System.Drawing.Point(232, 431);
+            this.panel_sepa1.Location = new System.Drawing.Point(206, 431);
             this.panel_sepa1.Name = "panel_sepa1";
             this.panel_sepa1.Size = new System.Drawing.Size(2, 29);
             this.panel_sepa1.TabIndex = 6;
@@ -371,13 +371,6 @@
             this.textBox_Name.Size = new System.Drawing.Size(297, 24);
             this.textBox_Name.TabIndex = 186;
             // 
-            // userControl_Inventory1
-            // 
-            this.userControl_Inventory1.Location = new System.Drawing.Point(-20, 313);
-            this.userControl_Inventory1.Name = "userControl_Inventory1";
-            this.userControl_Inventory1.Size = new System.Drawing.Size(779, 43);
-            this.userControl_Inventory1.TabIndex = 11;
-            // 
             // label_Name
             // 
             this.label_Name.AutoSize = true;
@@ -434,7 +427,7 @@
             // panel_sepa6
             // 
             this.panel_sepa6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
-            this.panel_sepa6.Location = new System.Drawing.Point(793, 431);
+            this.panel_sepa6.Location = new System.Drawing.Point(794, 431);
             this.panel_sepa6.Name = "panel_sepa6";
             this.panel_sepa6.Size = new System.Drawing.Size(2, 29);
             this.panel_sepa6.TabIndex = 10;
@@ -474,7 +467,7 @@
             // panel_sepa4
             // 
             this.panel_sepa4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
-            this.panel_sepa4.Location = new System.Drawing.Point(592, 431);
+            this.panel_sepa4.Location = new System.Drawing.Point(591, 431);
             this.panel_sepa4.Name = "panel_sepa4";
             this.panel_sepa4.Size = new System.Drawing.Size(2, 29);
             this.panel_sepa4.TabIndex = 16;
@@ -507,60 +500,60 @@
             // 
             this.OrderPreview.AllowUserToResizeColumns = false;
             this.OrderPreview.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(236)))), ((int)(((byte)(236)))));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(175)))), ((int)(((byte)(223)))), ((int)(((byte)(229)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.OrderPreview.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle51.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle51.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(236)))), ((int)(((byte)(236)))));
+            dataGridViewCellStyle51.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle51.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(175)))), ((int)(((byte)(223)))), ((int)(((byte)(229)))));
+            dataGridViewCellStyle51.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.OrderPreview.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle51;
             this.OrderPreview.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.OrderPreview.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
             this.OrderPreview.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.OrderPreview.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.OrderPreview.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.EnableAlwaysIncludeHeaderText;
             this.OrderPreview.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.OrderPreview.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle52.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle52.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle52.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle52.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle52.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle52.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            dataGridViewCellStyle52.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.OrderPreview.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle52;
             this.OrderPreview.ColumnHeadersHeight = 37;
             this.OrderPreview.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.OrderPreview.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ORDER,
             this.QUANTITY,
             this.SUBTOTAL});
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Bahnschrift SemiLight SemiConde", 10F);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(175)))), ((int)(((byte)(223)))), ((int)(((byte)(229)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.OrderPreview.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle53.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle53.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle53.Font = new System.Drawing.Font("Bahnschrift SemiLight SemiConde", 10F);
+            dataGridViewCellStyle53.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle53.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(175)))), ((int)(((byte)(223)))), ((int)(((byte)(229)))));
+            dataGridViewCellStyle53.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            dataGridViewCellStyle53.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.OrderPreview.DefaultCellStyle = dataGridViewCellStyle53;
             this.OrderPreview.EnableHeadersVisualStyles = false;
             this.OrderPreview.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.OrderPreview.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
             this.OrderPreview.Location = new System.Drawing.Point(416, 140);
             this.OrderPreview.Name = "OrderPreview";
             this.OrderPreview.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.OrderPreview.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle54.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle54.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle54.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle54.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle54.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle54.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle54.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.OrderPreview.RowHeadersDefaultCellStyle = dataGridViewCellStyle54;
             this.OrderPreview.RowHeadersVisible = false;
             this.OrderPreview.RowHeadersWidth = 45;
             this.OrderPreview.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.OrderPreview.RowsDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle55.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle55.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.OrderPreview.RowsDefaultCellStyle = dataGridViewCellStyle55;
             this.OrderPreview.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
             this.OrderPreview.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.OrderPreview.Size = new System.Drawing.Size(374, 242);
@@ -616,6 +609,7 @@
             this.textBox_PreviewName.ReadOnly = true;
             this.textBox_PreviewName.Size = new System.Drawing.Size(191, 16);
             this.textBox_PreviewName.TabIndex = 202;
+            this.textBox_PreviewName.TextChanged += new System.EventHandler(this.textBox_PreviewName_TextChanged);
             // 
             // MainPanel
             // 
@@ -648,14 +642,6 @@
             this.MainPanel.Size = new System.Drawing.Size(810, 495);
             this.MainPanel.TabIndex = 1;
             // 
-            // userControl_DashBoard1
-            // 
-            this.userControl_DashBoard1.Location = new System.Drawing.Point(-2, 470);
-            this.userControl_DashBoard1.Name = "userControl_DashBoard1";
-            this.userControl_DashBoard1.Size = new System.Drawing.Size(814, 25);
-            this.userControl_DashBoard1.TabIndex = 215;
-            this.userControl_DashBoard1.Visible = false;
-            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
@@ -669,8 +655,8 @@
             // 
             // panel3
             // 
-            this.panel3.BackColor = System.Drawing.Color.DarkGray;
-            this.panel3.Location = new System.Drawing.Point(197, 0);
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(186)))), ((int)(((byte)(155)))), ((int)(((byte)(145)))));
+            this.panel3.Location = new System.Drawing.Point(247, 0);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1, 29);
             this.panel3.TabIndex = 205;
@@ -681,12 +667,13 @@
             this.textBox_PreviewAddress.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox_PreviewAddress.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox_PreviewAddress.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.textBox_PreviewAddress.Location = new System.Drawing.Point(13, 6);
+            this.textBox_PreviewAddress.Location = new System.Drawing.Point(26, 6);
             this.textBox_PreviewAddress.Margin = new System.Windows.Forms.Padding(10, 3, 3, 3);
             this.textBox_PreviewAddress.Name = "textBox_PreviewAddress";
             this.textBox_PreviewAddress.ReadOnly = true;
             this.textBox_PreviewAddress.Size = new System.Drawing.Size(181, 16);
             this.textBox_PreviewAddress.TabIndex = 202;
+            this.textBox_PreviewAddress.TextChanged += new System.EventHandler(this.textBox_PreviewAddress_TextChanged);
             // 
             // textBox_PreviewPhoneNo
             // 
@@ -694,9 +681,9 @@
             this.textBox_PreviewPhoneNo.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox_PreviewPhoneNo.Font = new System.Drawing.Font("Tahoma", 9.75F);
             this.textBox_PreviewPhoneNo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
-            this.textBox_PreviewPhoneNo.Location = new System.Drawing.Point(205, 6);
+            this.textBox_PreviewPhoneNo.Location = new System.Drawing.Point(253, 6);
             this.textBox_PreviewPhoneNo.Name = "textBox_PreviewPhoneNo";
-            this.textBox_PreviewPhoneNo.Size = new System.Drawing.Size(162, 16);
+            this.textBox_PreviewPhoneNo.Size = new System.Drawing.Size(95, 16);
             this.textBox_PreviewPhoneNo.TabIndex = 203;
             this.textBox_PreviewPhoneNo.Text = "    ";
             this.textBox_PreviewPhoneNo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -738,7 +725,7 @@
             // 
             // panel29
             // 
-            this.panel29.BackColor = System.Drawing.Color.DarkGray;
+            this.panel29.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(186)))), ((int)(((byte)(155)))), ((int)(((byte)(145)))));
             this.panel29.Location = new System.Drawing.Point(224, 0);
             this.panel29.Name = "panel29";
             this.panel29.Size = new System.Drawing.Size(1, 29);
@@ -927,6 +914,21 @@
             this.button_Inventory.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button_Inventory.UseVisualStyleBackColor = false;
             this.button_Inventory.Click += new System.EventHandler(this.button_Inventory_Click);
+            // 
+            // userControl_DashBoard1
+            // 
+            this.userControl_DashBoard1.Location = new System.Drawing.Point(-2, 264);
+            this.userControl_DashBoard1.Name = "userControl_DashBoard1";
+            this.userControl_DashBoard1.Size = new System.Drawing.Size(814, 231);
+            this.userControl_DashBoard1.TabIndex = 215;
+            this.userControl_DashBoard1.Visible = false;
+            // 
+            // userControl_Inventory1
+            // 
+            this.userControl_Inventory1.Location = new System.Drawing.Point(-20, 313);
+            this.userControl_Inventory1.Name = "userControl_Inventory1";
+            this.userControl_Inventory1.Size = new System.Drawing.Size(779, 43);
+            this.userControl_Inventory1.TabIndex = 11;
             // 
             // Main
             // 
