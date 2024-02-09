@@ -41,16 +41,32 @@ namespace reme
 
         private void InitializeDataGridView()
         {
-            // Set up the DataGridView columns and bind it to the data list
-            // Load data from JSON file
-            if (File.Exists("data.json"))
+            try
             {
-                string jsonData = File.ReadAllText("data.json");
-                dataList = JsonConvert.DeserializeObject<BindingList<DataModel>>(jsonData);
-            }
+                // Load data from JSON file if it exists and contains data
+                if (File.Exists("data.json"))
+                {
+                    string jsonData = File.ReadAllText("data.json");
+                    if (!string.IsNullOrWhiteSpace(jsonData))
+                    {
+                        dataList = JsonConvert.DeserializeObject<BindingList<DataModel>>(jsonData);
+                    }
+                }
 
-            // Set the DataGridView data source to the binding list
-            GridOrderPreview.DataSource = dataList;
+                // Initialize an empty list if data loading fails or if the file doesn't exist
+                if (dataList == null)
+                {
+                    dataList = new BindingList<DataModel>();
+                }
+
+                // Set the DataGridView data source to the binding list
+                GridOrderPreview.DataSource = dataList;
+            }
+            catch (Exception ex)
+            {
+                // Handle deserialization errors or other exceptions
+                MessageBox.Show("Error loading data: " + ex.Message);
+            }
         }
 
 
