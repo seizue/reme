@@ -502,7 +502,8 @@ namespace reme
 
             // Pass the name from Main form to Receipt form
             receiptForm.TextBox_ReceiptName.Text = textBox_PreviewName.Text;
-
+            receiptForm.TextBox_ReceiptAddress.Text = textBox_PreviewAddress.Text;
+            receiptForm.TextBox_ReceiptPhoneNo.Text = textBox_PreviewPhoneNo.Text;
             // Show the Receipt form
             receiptForm.Show();       
         }

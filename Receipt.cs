@@ -46,6 +46,18 @@ namespace reme
             set { textBox_ReceiptName = value; }
         }
 
+        public TextBox TextBox_ReceiptAddress
+        {
+            get { return textBox_ReceiptAddress; }
+            set { textBox_ReceiptAddress = value; }
+        }
+
+        public TextBox TextBox_ReceiptPhoneNo
+        {
+            get { return textBox_ReceiptPhone; }
+            set { textBox_ReceiptPhone = value; }
+        }
+
 
         // List to store receipt entries
         private List<ReceiptEntry> receiptEntries = new List<ReceiptEntry>();
