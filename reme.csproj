@@ -251,5 +251,8 @@
   <ItemGroup>
     <None Include="Resources\order_history_24px.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\facebook_20px.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

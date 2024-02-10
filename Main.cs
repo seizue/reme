@@ -682,6 +682,8 @@ namespace reme
             textBox_PreviewAddress.Text = textBox_PreviewAddress.Text.ToUpper();
             textBox_PreviewAddress.SelectionStart = textBox_PreviewAddress.Text.Length;
         }
+
+    
     }
 
 }

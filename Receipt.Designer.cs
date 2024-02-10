@@ -28,11 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle25 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle81 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle82 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle83 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle84 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle85 = new System.Windows.Forms.DataGridViewCellStyle();
             this.metroTile_PrintReceipt = new MetroFramework.Controls.MetroTile();
             this.GridPrintReceipt = new MetroFramework.Controls.MetroGrid();
             this.ORDER = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -40,14 +40,12 @@
             this.PRICE = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
             this.textBox_ReceiptDate = new System.Windows.Forms.TextBox();
             this.textBox_ReceiptName = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.EnterNewItem_label = new System.Windows.Forms.Label();
-            this.PicLogo = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel_Print = new System.Windows.Forms.Panel();
@@ -60,18 +58,22 @@
             this.textBox_T = new System.Windows.Forms.TextBox();
             this.textBox_PrintTotalAmount = new System.Windows.Forms.TextBox();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.button_Dashboard = new System.Windows.Forms.Button();
+            this.PicLogo = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.GridPrintReceipt)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PicLogo)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel_Print.SuspendLayout();
             this.panel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PicLogo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // metroTile_PrintReceipt
             // 
             this.metroTile_PrintReceipt.ActiveControl = null;
-            this.metroTile_PrintReceipt.Location = new System.Drawing.Point(0, 535);
+            this.metroTile_PrintReceipt.Location = new System.Drawing.Point(0, 568);
             this.metroTile_PrintReceipt.Name = "metroTile_PrintReceipt";
             this.metroTile_PrintReceipt.Size = new System.Drawing.Size(369, 63);
             this.metroTile_PrintReceipt.TabIndex = 215;
@@ -84,39 +86,39 @@
             // 
             this.GridPrintReceipt.AllowUserToResizeColumns = false;
             this.GridPrintReceipt.AllowUserToResizeRows = false;
-            dataGridViewCellStyle21.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle21.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle21.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle21.SelectionForeColor = System.Drawing.Color.Black;
-            this.GridPrintReceipt.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle21;
+            dataGridViewCellStyle81.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle81.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle81.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle81.SelectionForeColor = System.Drawing.Color.Black;
+            this.GridPrintReceipt.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle81;
             this.GridPrintReceipt.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.GridPrintReceipt.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
             this.GridPrintReceipt.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.GridPrintReceipt.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.GridPrintReceipt.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.EnableWithoutHeaderText;
             this.GridPrintReceipt.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle22.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle22.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(236)))), ((int)(((byte)(236)))));
-            dataGridViewCellStyle22.Font = new System.Drawing.Font("Calibri", 8.75F);
-            dataGridViewCellStyle22.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            dataGridViewCellStyle22.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(236)))), ((int)(((byte)(236)))));
-            dataGridViewCellStyle22.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            dataGridViewCellStyle22.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.GridPrintReceipt.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle22;
+            dataGridViewCellStyle82.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle82.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(236)))), ((int)(((byte)(236)))));
+            dataGridViewCellStyle82.Font = new System.Drawing.Font("Calibri", 8.75F);
+            dataGridViewCellStyle82.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            dataGridViewCellStyle82.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(236)))), ((int)(((byte)(236)))));
+            dataGridViewCellStyle82.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            dataGridViewCellStyle82.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.GridPrintReceipt.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle82;
             this.GridPrintReceipt.ColumnHeadersHeight = 37;
             this.GridPrintReceipt.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.GridPrintReceipt.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ORDER,
             this.QUANTITY,
             this.PRICE});
-            dataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle23.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle23.Font = new System.Drawing.Font("Bahnschrift SemiLight SemiConde", 10F);
-            dataGridViewCellStyle23.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle23.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle23.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle23.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.GridPrintReceipt.DefaultCellStyle = dataGridViewCellStyle23;
+            dataGridViewCellStyle83.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle83.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle83.Font = new System.Drawing.Font("Bahnschrift SemiLight SemiConde", 10F);
+            dataGridViewCellStyle83.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle83.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle83.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle83.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.GridPrintReceipt.DefaultCellStyle = dataGridViewCellStyle83;
             this.GridPrintReceipt.EnableHeadersVisualStyles = false;
             this.GridPrintReceipt.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.GridPrintReceipt.GridColor = System.Drawing.Color.Silver;
@@ -126,20 +128,20 @@
             this.GridPrintReceipt.Name = "GridPrintReceipt";
             this.GridPrintReceipt.ReadOnly = true;
             this.GridPrintReceipt.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle24.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle24.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle24.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle24.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle24.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle24.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle24.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.GridPrintReceipt.RowHeadersDefaultCellStyle = dataGridViewCellStyle24;
+            dataGridViewCellStyle84.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle84.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle84.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle84.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle84.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle84.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle84.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.GridPrintReceipt.RowHeadersDefaultCellStyle = dataGridViewCellStyle84;
             this.GridPrintReceipt.RowHeadersVisible = false;
             this.GridPrintReceipt.RowHeadersWidth = 45;
             this.GridPrintReceipt.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            dataGridViewCellStyle25.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle25.ForeColor = System.Drawing.Color.Black;
-            this.GridPrintReceipt.RowsDefaultCellStyle = dataGridViewCellStyle25;
+            dataGridViewCellStyle85.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle85.ForeColor = System.Drawing.Color.Black;
+            this.GridPrintReceipt.RowsDefaultCellStyle = dataGridViewCellStyle85;
             this.GridPrintReceipt.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
             this.GridPrintReceipt.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.GridPrintReceipt.Size = new System.Drawing.Size(323, 181);
@@ -179,28 +181,18 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.label5.Location = new System.Drawing.Point(25, 452);
+            this.label5.Location = new System.Drawing.Point(20, 451);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(145, 13);
             this.label5.TabIndex = 232;
             this.label5.Text = "Just scan the QR code below! ";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::reme.Properties.Resources.four_squares_48px;
-            this.pictureBox1.Location = new System.Drawing.Point(282, 426);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(56, 48);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 231;
-            this.pictureBox1.TabStop = false;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.label4.Location = new System.Drawing.Point(25, 430);
+            this.label4.Location = new System.Drawing.Point(20, 430);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(201, 13);
             this.label4.TabIndex = 230;
@@ -270,16 +262,6 @@
             this.EnterNewItem_label.TabIndex = 222;
             this.EnterNewItem_label.Text = "THANK YOU!\r\n";
             // 
-            // PicLogo
-            // 
-            this.PicLogo.Image = global::reme.Properties.Resources.four_squares_48px;
-            this.PicLogo.Location = new System.Drawing.Point(25, 3);
-            this.PicLogo.Name = "PicLogo";
-            this.PicLogo.Size = new System.Drawing.Size(48, 48);
-            this.PicLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.PicLogo.TabIndex = 221;
-            this.PicLogo.TabStop = false;
-            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
@@ -300,6 +282,8 @@
             // panel_Print
             // 
             this.panel_Print.BackColor = System.Drawing.Color.White;
+            this.panel_Print.Controls.Add(this.label3);
+            this.panel_Print.Controls.Add(this.button_Dashboard);
             this.panel_Print.Controls.Add(this.textBox_ReceiptPhone);
             this.panel_Print.Controls.Add(this.textBox_ReceiptAddress);
             this.panel_Print.Controls.Add(this.label6);
@@ -321,7 +305,7 @@
             this.panel_Print.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.panel_Print.Location = new System.Drawing.Point(0, 28);
             this.panel_Print.Name = "panel_Print";
-            this.panel_Print.Size = new System.Drawing.Size(369, 481);
+            this.panel_Print.Size = new System.Drawing.Size(369, 534);
             this.panel_Print.TabIndex = 217;
             // 
             // textBox_ReceiptPhone
@@ -436,11 +420,62 @@
             this.panel4.Size = new System.Drawing.Size(337, 3);
             this.panel4.TabIndex = 234;
             // 
+            // button_Dashboard
+            // 
+            this.button_Dashboard.BackColor = System.Drawing.Color.Transparent;
+            this.button_Dashboard.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button_Dashboard.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.button_Dashboard.FlatAppearance.BorderSize = 0;
+            this.button_Dashboard.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_Dashboard.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_Dashboard.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.button_Dashboard.Image = global::reme.Properties.Resources.facebook_20px;
+            this.button_Dashboard.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button_Dashboard.Location = new System.Drawing.Point(22, 505);
+            this.button_Dashboard.Name = "button_Dashboard";
+            this.button_Dashboard.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.button_Dashboard.Size = new System.Drawing.Size(221, 25);
+            this.button_Dashboard.TabIndex = 243;
+            this.button_Dashboard.Text = "facebook.com/remelennusa2819";
+            this.button_Dashboard.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button_Dashboard.UseVisualStyleBackColor = false;
+            // 
+            // PicLogo
+            // 
+            this.PicLogo.Image = global::reme.Properties.Resources.four_squares_48px;
+            this.PicLogo.Location = new System.Drawing.Point(25, 3);
+            this.PicLogo.Name = "PicLogo";
+            this.PicLogo.Size = new System.Drawing.Size(48, 48);
+            this.PicLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.PicLogo.TabIndex = 221;
+            this.PicLogo.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::reme.Properties.Resources.four_squares_48px;
+            this.pictureBox1.Location = new System.Drawing.Point(282, 425);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(56, 48);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 231;
+            this.pictureBox1.TabStop = false;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.Black;
+            this.label3.Location = new System.Drawing.Point(23, 487);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(152, 14);
+            this.label3.TabIndex = 244;
+            this.label3.Text = "CONTACT AND FOR INQUIRY ";
+            // 
             // Receipt
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(369, 598);
+            this.ClientSize = new System.Drawing.Size(369, 631);
             this.Controls.Add(this.panel_Print);
             this.Controls.Add(this.metroTile_PrintReceipt);
             this.MaximizeBox = false;
@@ -448,13 +483,13 @@
             this.Style = MetroFramework.MetroColorStyle.Silver;
             this.TextAlign = MetroFramework.Forms.MetroFormTextAlign.Right;
             ((System.ComponentModel.ISupportInitialize)(this.GridPrintReceipt)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PicLogo)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel_Print.ResumeLayout(false);
             this.panel_Print.PerformLayout();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PicLogo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -487,5 +522,7 @@
         private System.Windows.Forms.TextBox textBox_ReceiptAddress;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Button button_Dashboard;
+        private System.Windows.Forms.Label label3;
     }
 }
