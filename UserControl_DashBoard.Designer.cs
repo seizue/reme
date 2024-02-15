@@ -37,11 +37,6 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.userControl_Chart1 = new reme.UserControl_Chart();
             this.GridInv = new MetroFramework.Controls.MetroGrid();
-            this.panel_Style2 = new System.Windows.Forms.Panel();
-            this.panel_style1 = new System.Windows.Forms.Panel();
-            this.button_ExportInv = new System.Windows.Forms.Button();
-            this.button_Chart = new System.Windows.Forms.Button();
-            this.button_History = new System.Windows.Forms.Button();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DATE = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NAME = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -49,6 +44,11 @@
             this.PHONE = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ORDER = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TOTAL = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panel_Style2 = new System.Windows.Forms.Panel();
+            this.panel_style1 = new System.Windows.Forms.Panel();
+            this.button_ExportInv = new System.Windows.Forms.Button();
+            this.button_Chart = new System.Windows.Forms.Button();
+            this.button_History = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GridInv)).BeginInit();
             this.SuspendLayout();
@@ -148,6 +148,41 @@
             this.GridInv.UseCustomForeColor = true;
             this.GridInv.UseStyleColors = true;
             // 
+            // ID
+            // 
+            this.ID.HeaderText = "ID";
+            this.ID.Name = "ID";
+            // 
+            // DATE
+            // 
+            this.DATE.HeaderText = "DATE";
+            this.DATE.Name = "DATE";
+            // 
+            // NAME
+            // 
+            this.NAME.HeaderText = "NAME";
+            this.NAME.Name = "NAME";
+            // 
+            // ADDRESS
+            // 
+            this.ADDRESS.HeaderText = "ADDRESS";
+            this.ADDRESS.Name = "ADDRESS";
+            // 
+            // PHONE
+            // 
+            this.PHONE.HeaderText = "PHONE";
+            this.PHONE.Name = "PHONE";
+            // 
+            // ORDER
+            // 
+            this.ORDER.HeaderText = "ORDER";
+            this.ORDER.Name = "ORDER";
+            // 
+            // TOTAL
+            // 
+            this.TOTAL.HeaderText = "TOTAL";
+            this.TOTAL.Name = "TOTAL";
+            // 
             // panel_Style2
             // 
             this.panel_Style2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(231)))), ((int)(((byte)(227)))));
@@ -222,41 +257,6 @@
             this.button_History.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button_History.UseVisualStyleBackColor = false;
             this.button_History.Click += new System.EventHandler(this.button_DB_Click);
-            // 
-            // ID
-            // 
-            this.ID.HeaderText = "ID";
-            this.ID.Name = "ID";
-            // 
-            // DATE
-            // 
-            this.DATE.HeaderText = "DATE";
-            this.DATE.Name = "DATE";
-            // 
-            // NAME
-            // 
-            this.NAME.HeaderText = "NAME";
-            this.NAME.Name = "NAME";
-            // 
-            // ADDRESS
-            // 
-            this.ADDRESS.HeaderText = "ADDRESS";
-            this.ADDRESS.Name = "ADDRESS";
-            // 
-            // PHONE
-            // 
-            this.PHONE.HeaderText = "PHONE";
-            this.PHONE.Name = "PHONE";
-            // 
-            // ORDER
-            // 
-            this.ORDER.HeaderText = "ORDER";
-            this.ORDER.Name = "ORDER";
-            // 
-            // TOTAL
-            // 
-            this.TOTAL.HeaderText = "TOTAL";
-            this.TOTAL.Name = "TOTAL";
             // 
             // UserControl_DashBoard
             // 
