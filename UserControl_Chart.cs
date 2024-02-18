@@ -26,16 +26,18 @@ namespace reme
             InitializeComponent();
             LoadDataFromJson();
         }
-
         private void LoadDataFromJson()
         {
             try
             {
-                string jsonFilePath = "inventory.json";
+                string jsonFilePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "inventory.json");
 
                 if (File.Exists(jsonFilePath))
                 {
                     string jsonData = File.ReadAllText(jsonFilePath);
+
+                    // Print jsonData to verify file content
+                    Console.WriteLine(jsonData);
 
                     if (!string.IsNullOrEmpty(jsonData))
                     {
@@ -81,11 +83,16 @@ namespace reme
                     MessageBox.Show("Inventory JSON file not found.");
                 }
             }
+            catch (FileNotFoundException)
+            {
+                MessageBox.Show("Inventory JSON file not found.");
+            }
             catch (Exception ex)
             {
                 MessageBox.Show($"Error loading data from JSON: {ex.Message}");
             }
         }
+
 
 
         //Calculate Amount PerDay

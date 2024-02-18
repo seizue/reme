@@ -41,18 +41,28 @@ namespace reme
 
         private void LoadDataFromJson()
         {
-            if (File.Exists(jsonFilePath))
+            try
             {
-                string jsonData = File.ReadAllText(jsonFilePath);
+                string jsonFilePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "inventory.json");
 
-                if (!string.IsNullOrWhiteSpace(jsonData))
+                if (File.Exists(jsonFilePath))
                 {
-                    receiptEntries = JsonConvert.DeserializeObject<List<ReceiptEntry>>(jsonData);
-                    PopulateGrid();
-                    UpdateNextID();
+                    string jsonData = File.ReadAllText(jsonFilePath);
+
+                    if (!string.IsNullOrWhiteSpace(jsonData))
+                    {
+                        receiptEntries = JsonConvert.DeserializeObject<List<ReceiptEntry>>(jsonData);
+                        PopulateGrid();
+                        UpdateNextID();
+                    }
                 }
             }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error loading data from JSON: {ex.Message}");
+            }
         }
+
 
         private void UpdateNextID()
         {
