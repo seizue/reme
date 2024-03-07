@@ -71,22 +71,14 @@ namespace reme
                             MessageBox.Show("No receipt entries found in inventory.");
                         }
                     }
-                    else
-                    {
-                        // Handle empty JSON file
-                        MessageBox.Show("Inventory JSON file is empty.");
-                    }
+              
                 }
                 else
                 {
-                    // Handle case where JSON file does not exist
-                    MessageBox.Show("Inventory JSON file not found.");
+                   
                 }
             }
-            catch (FileNotFoundException)
-            {
-                MessageBox.Show("Inventory JSON file not found.");
-            }
+         
             catch (Exception ex)
             {
                 MessageBox.Show($"Error loading data from JSON: {ex.Message}");
