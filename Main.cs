@@ -58,7 +58,6 @@ namespace reme
 
             OrderPreview.CellPainting += OrderPreview_CellPainting;
 
-
         }
 
         private void InitializeInventoryControl()
@@ -69,8 +68,22 @@ namespace reme
             // Set the data source for ORDER ComboBox
             comboBox_Order.DataSource = inventoryControl.OrderList;
             comboBox_Order.DisplayMember = "ORDER";
-            
+           
+            // Attach KeyPress event handler to the MaskedTextBox
+            maskedTextBox_Quantity.KeyPress += MaskedTextBox_Quantity_KeyPress;
+            textBox_PhoneNo.KeyPress += textBox_PhoneNo_KeyPress;
         }
+
+        private void MaskedTextBox_Quantity_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Check if the pressed key is a digit or a control key (like backspace or delete)
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                // If the key is not a digit or a control key, suppress the key press event
+                e.Handled = true;
+            }
+        }
+
 
         private void UserControl_Inventory_DataSaved(object sender, EventArgs e)
         {
@@ -679,7 +692,15 @@ namespace reme
             textBox_PreviewAddress.SelectionStart = textBox_PreviewAddress.Text.Length;
         }
 
-    
+        private void textBox_PhoneNo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Check if the pressed key is a digit or a control key (like backspace or delete)
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                // If the key is not a digit or a control key, suppress the key press event
+                e.Handled = true;
+            }
+        }
     }
 
 }
