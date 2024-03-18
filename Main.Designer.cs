@@ -97,7 +97,6 @@
             this.panel27 = new System.Windows.Forms.Panel();
             this.panel31 = new System.Windows.Forms.Panel();
             this.panel10 = new System.Windows.Forms.Panel();
-            this.PicLogo = new System.Windows.Forms.PictureBox();
             this.button_Refresh = new System.Windows.Forms.Button();
             this.button_Dashboard = new System.Windows.Forms.Button();
             this.button_Home = new System.Windows.Forms.Button();
@@ -114,7 +113,6 @@
             this.panel2.SuspendLayout();
             this.panel28.SuspendLayout();
             this.panel22.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PicLogo)).BeginInit();
             this.SuspendLayout();
             // 
             // MainBorder
@@ -822,16 +820,6 @@
             this.panel10.Size = new System.Drawing.Size(2, 25);
             this.panel10.TabIndex = 206;
             // 
-            // PicLogo
-            // 
-            this.PicLogo.Image = global::reme.Properties.Resources.four_squares_48px;
-            this.PicLogo.Location = new System.Drawing.Point(232, 32);
-            this.PicLogo.Name = "PicLogo";
-            this.PicLogo.Size = new System.Drawing.Size(42, 18);
-            this.PicLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.PicLogo.TabIndex = 7;
-            this.PicLogo.TabStop = false;
-            // 
             // button_Refresh
             // 
             this.button_Refresh.BackColor = System.Drawing.Color.Transparent;
@@ -931,7 +919,7 @@
             // 
             this.userControl_DashBoard1.Location = new System.Drawing.Point(-2, 0);
             this.userControl_DashBoard1.Name = "userControl_DashBoard1";
-            this.userControl_DashBoard1.Size = new System.Drawing.Size(814, 79);
+            this.userControl_DashBoard1.Size = new System.Drawing.Size(814, 495);
             this.userControl_DashBoard1.TabIndex = 215;
             this.userControl_DashBoard1.Visible = false;
             // 
@@ -949,7 +937,6 @@
             this.ClientSize = new System.Drawing.Size(850, 647);
             this.Controls.Add(this.panel31);
             this.Controls.Add(this.panel10);
-            this.Controls.Add(this.PicLogo);
             this.Controls.Add(this.button_Refresh);
             this.Controls.Add(this.panel27);
             this.Controls.Add(this.button_Dashboard);
@@ -982,7 +969,6 @@
             this.panel28.PerformLayout();
             this.panel22.ResumeLayout(false);
             this.panel22.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PicLogo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -993,7 +979,6 @@
         private System.Windows.Forms.Panel MainBorder;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel Border;
-        private System.Windows.Forms.PictureBox PicLogo;
         private System.Windows.Forms.Panel panel_Status;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label_Discription2;
