@@ -43,8 +43,6 @@ namespace reme
             userControl_Inventory1 = new UserControl_Inventory();
             userControl_Inventory1.Visible = false;
 
-            comboBox_Quantity.KeyPress += comboBox_Quantity_KeyPress;
-
             // Attach click events to the buttons
             button_Inventory.Click += button_Inventory_Click;
             button_Home.Click += button_Home_Click;
@@ -71,10 +69,7 @@ namespace reme
             // Set the data source for ORDER ComboBox
             comboBox_Order.DataSource = inventoryControl.OrderList;
             comboBox_Order.DisplayMember = "ORDER";
-
-            // Set the data source for Quantity ComboBox
-            comboBox_Quantity.DataSource = inventoryControl.QuantityList;
-
+            
         }
 
         private void UserControl_Inventory_DataSaved(object sender, EventArgs e)
@@ -95,12 +90,11 @@ namespace reme
 
         private void button_Save_Click(object sender, EventArgs e)
         {
-           
             try
             {
                 var dataList = userControl_Inventory1.dataList;
                 string selectedOrder = comboBox_Order.SelectedItem?.ToString();
-                int selectedQuantity = Convert.ToInt32(comboBox_Quantity.SelectedItem);
+                int selectedQuantity = Convert.ToInt32(maskedTextBox_Quantity.Text); // Change this line
                 int selectedPrice = dataList.FirstOrDefault(item => item.ORDER == selectedOrder)?.PRICE ?? 0;
                 int subtotal = selectedPrice * selectedQuantity;
                 string name = textBox_Name.Text.Trim();
@@ -129,9 +123,9 @@ namespace reme
                 {
                     // Add a new entry if the order doesn't exist
                     OrderPreview.Rows.Add(selectedOrder, selectedQuantity, subtotal);
-                }          
-            
-                UpdateOrdersJsonFile();           
+                }
+
+                UpdateOrdersJsonFile();
                 LoadNameAndPreview();
                 CalculateOverallTotal();
                 LoadAddressAndPhoneFromJson();
@@ -141,6 +135,7 @@ namespace reme
                 MessageBox.Show("Error saving data: " + ex.Message);
             }
         }
+
 
         private List<OrderItem> LoadExistingOrders()
         {
@@ -274,7 +269,7 @@ namespace reme
                 }
 
                 // Set the selected quantity from the DataGridView
-                comboBox_Quantity.SelectedItem = selectedRow.Cells["QUANTITY"].Value;
+                maskedTextBox_Quantity.Text = Convert.ToString(selectedRow.Cells["QUANTITY"].Value);
 
             }
         }
@@ -289,7 +284,7 @@ namespace reme
                 // Clear the text boxes and ComboBoxes
                 textBox_Name.Text = "";
                 comboBox_Order.SelectedIndex = -1;
-                comboBox_Quantity.SelectedIndex = -1;
+                maskedTextBox_Quantity.Text = "";
 
                 // Clear the data in the JSON file
                 File.WriteAllText("orders.json", "");
@@ -559,8 +554,9 @@ namespace reme
             // Clear the text boxes and ComboBoxes
             textBox_Name.Text = "";
             textBox_PreviewName.Text = "";
+            maskedTextBox_Quantity.Text = "";
             comboBox_Order.SelectedIndex = -1;
-            comboBox_Quantity.SelectedIndex = -1;
+            
 
             // Clear the data in the JSON file
             File.WriteAllText("orders.json", "");
